@@ -22,7 +22,7 @@ $ poetry add <package-name>
 You can start a Jupyter notebook server with:
 
 ```sh
-$ poetry run jupyter
+$ poetry run notebook
 ```
 
 This will add the `Pokemon Identification` kernel to Jupyter and open up `localhost:8888` for Jupyter hub. As a result, you will be able to access the up-to-date dependencies and local modules.

@@ -7,7 +7,7 @@ authors = ["haydendaly <hcd36@cornell.edu>"]
 [tool.poetry.scripts]
 lint = "src.scripts.lint:main"
 cgc = "src.scrape.source.cgc:main"
-jupyter = "python -m ipykernel install --user --name=pokemon_identification --display-name='Pokemon Identification' && poetry run jupyter notebook"
+notebook = "src.scripts.notebook:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
