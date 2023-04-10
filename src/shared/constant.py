@@ -1,0 +1,1 @@
+POKEMON_TITLE = "Pok\u00e9mon"

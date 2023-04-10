@@ -1,0 +1,5 @@
+db/cgc/**
+db/images/cgc/**
+*/__pycache__/**
+*.pyc
+*/*.DS_Store
