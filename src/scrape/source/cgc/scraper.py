@@ -8,55 +8,68 @@ import asyncio
 from PIL import Image
 
 from ....shared import json_dump_file, json_load_file, json_loads, POKEMON_TITLE
-from ....image import ImageStorage
+from ....image import ImageDatabase, ImageStorage, display_image
 from ...browser import SSRBrowser
-from .is_front import is_front
+from .label_classifier import LabelClassifier
 
 CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
-CGC_BASE_SUB_NUM = 4126544
+CGC_BASE_SUB_NUM = 3526544
+CGC_TOP_SUB_NUM = 4126544
 # cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
-CGC_BATCH_SIZE = 10  # how many submissions to process before persisting
+CGC_BATCH_SIZE = 50  # how many submissions to process before persisting to seen.json
+
+
+def swap_files(path_0, path_1):
+    os.rename(path_0, path_0 + '.temp')
+    os.rename(path_1, path_0)
+    os.rename(path_0 + '.temp', path_1)
 
 
 class CGCScraper:
     def __init__(self):
-        self.storage = ImageStorage("cgc")
+        self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
-        # self.num_threads = os.cpu_count()
-        self.num_threads = 1
+        self.num_threads = os.cpu_count() // 2
+        # self.num_threads = 1
         self.queue = asyncio.Queue()
 
         self.get_persisted()
+        self.label_classifier = LabelClassifier()
 
     async def parse_card_info(self, cert_num: str, data):
-        try:
-            dom = await self.browser.get_async(CGC_BASE_URL + cert_num)
-            card_info = {}
-            for dl in dom.select("div.certlookup-intro dl"):
-                key = dl.select_one("dt").text.strip()
-                value = dl.select_one("dd").text.strip()
-                card_info[key] = value
-            if len(card_info) == 0:
-                return False
-            card_data = {}
-            for key, value in card_info.items():
-                card_data[key.lower().replace(" ", "_", 3)] = value
-            image_url = ""
-            key = str(card_data["cert_#"])
-            images = dom.select("div.certlookup-images img")
-            for img in images:
-                # TODO MOVE async downloads into loop
-                image = self.storage.download_image_to_id(
-                    img["src"], key, return_img=True
-                )
-                if is_front(image):
-                    data.append(card_data)
-                    return True
+        if self.storage.has_image("0_" + cert_num):
+            print(f"Skipping {cert_num} because it already exists")
             return False
-        except Exception as e:
-            print(e)
+        dom = await self.browser.get_async(CGC_BASE_URL + cert_num)
+        card_info = {}
+        for dl in dom.select("div.certlookup-intro dl"):
+            key = dl.select_one("dt").text.strip()
+            value = dl.select_one("dd").text.strip()
+            card_info[key] = value
+        if len(card_info) == 0:
+            print(f"Failed to find card info for {cert_num}")
             return False
+        card_data = {}
+        for key, value in card_info.items():
+            card_data[key.lower().replace(" ", "_", 3)] = value
+
+        if card_data["game"] != POKEMON_TITLE:
+            return True
+
+        image_url = ""
+        images = dom.select("div.certlookup-images img")
+        image_urls = [img["src"] for img in images]
+        if len(image_urls) == 2:
+            path_0, image_0 = self.storage.download_image_to_id(
+                image_urls[0], "0_" + cert_num)
+            path_1, image_1 = self.storage.download_image_to_id(
+                image_urls[1], "1_" + cert_num)
+            if self.label_classifier.images_are_inverted(image_0, image_1):
+                swap_files(path_0, path_1)
+            return True
+        print(card_data, f"Failed to find images for {cert_num}")
+        return False
 
     def save_submission(self, sub_prefix, data):
         os.makedirs("./db/cgc/sub", exist_ok=True)
@@ -115,7 +128,7 @@ class CGCScraper:
                 if not await self.parse_card_info(cert_num, data):
                     break
                 # dip if we hit a non-pokemon card first
-                if i == 1 and data[-1]["game"] != POKEMON_TITLE:
+                if i == 1 and data and data[-1]["game"] != POKEMON_TITLE:
                     self.aborted.add(sub_prefix)
                     break
 
@@ -125,7 +138,7 @@ class CGCScraper:
             self.queue.task_done()
 
     async def run(self):
-        for sub_num in range(CGC_BASE_SUB_NUM, 0, -1):
+        for sub_num in range(CGC_TOP_SUB_NUM, CGC_BASE_SUB_NUM, -1):
             sub_prefix = "{:0>7}".format(sub_num)
             if sub_prefix not in self.seen:
                 await self.queue.put(sub_prefix)
@@ -154,3 +167,10 @@ def scrape_cgc():
 
 def main():
     asyncio.run(scrape_cgc())
+    # l = LabelClassifier()
+    # path_a, path_b = "/Volumes/T7/db/images/cgc/0_4126524003.jpg", "/Volumes/T7/db/images/cgc/1_4126524003.jpg"
+    # image_a, image_b = Image.open(
+    #     path_a), Image.open(path_b)
+    # display_image(l._preprocess_crop(image_a))
+    # display_image(l._preprocess_crop(image_b))
+    # print(l.images_are_inverted(image_a, image_b))

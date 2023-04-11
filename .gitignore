@@ -1,6 +1,6 @@
-db/cgc/**
-db/images/cgc/**
 */__pycache__/**
 *.pyc
 */*.DS_Store
 */*.ipynb_checkpoints
+db/cgc/labels/front/*
+db/cgc/labels/back/*

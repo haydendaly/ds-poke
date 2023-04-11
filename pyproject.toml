@@ -7,7 +7,9 @@ authors = ["haydendaly <hcd36@cornell.edu>"]
 [tool.poetry.scripts]
 lint = "src.scripts.lint:main"
 cgc = "src.scrape.source.cgc:main"
+label = "src.scrape.source.cgc.label_classifier:main"
 notebook = "src.scripts.notebook:main"
+precommit = "src.scripts.precommit:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -107,6 +109,10 @@ prisma = "0.8.1"
 aiohttp = "^3.8.4"
 chardet = "^5.1.0"
 urllib3 = "^1.26.15"
+scikit-learn = "^1.2.2"
+torch = "^2.0.0"
+torchvision = "^0.15.1"
+regex = "^2023.3.23"
 
 [tool.poetry.dev-dependencies]
 

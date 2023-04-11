@@ -20,19 +20,19 @@ class ImageStorage:
         if not os.path.exists(self.base_path):
             os.makedirs(self.base_path)
 
-    def download_image_to_id(self, url: str, image_id: str, return_img=False):
+    def download_image_to_id(self, url: str, image_id: str, return_img=True):
         try:
             path = f"{self.base_path}/{image_id}.jpg"
             response = requests.get(url)
             if response.status_code != 200:
-                return False
+                raise Exception(f"Failed to download {url}")
             with open(path, "wb") as f:
                 f.write(response.content)
             if return_img:
-                return Image.open(path)
+                return path, Image.open(path)
         except Exception as e:
             print(e)
-            return False
+            return "", None
 
     async def download_image_to_id_async(self, url: str, image_id: str):
         loop = asyncio.get_event_loop()
@@ -50,11 +50,14 @@ class ImageStorage:
         return False
 
     def get_image(self, image_id: str):
-        if not os.path.exists(f"{self.base_path}/{image_id}.jpg"):
+        if not self.has_image(image_id):
             return None
         return Image.open(f"{self.base_path}/{image_id}.jpg")
 
+    def has_image(self, image_id: str):
+        return os.path.exists(f"{self.base_path}/{image_id}.jpg")
+
     def delete_image(self, image_id: str):
-        if not os.path.exists(f"{self.base_path}/{image_id}.jpg"):
+        if not self.has_image(image_id):
             raise FileNotFoundError
         return os.remove(f"{self.base_path}/{image_id}.jpg")
