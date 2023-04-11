@@ -12,5 +12,6 @@
     "source.organizeImports": true
   },
   "python.poetry.enabled": true,
-  "python.poetry.autoInstall": false
+  "python.poetry.autoInstall": false,
+  "python.analysis.typeCheckingMode": "basic"
 }

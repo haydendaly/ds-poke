@@ -1,9 +1,7 @@
 import asyncio
 import os
-import uuid
 from enum import Enum
 
-import aiohttp
 import requests
 from PIL import Image
 

@@ -1,9 +1,6 @@
-from collections import Counter
-
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
 
 
 def get_dominant_color(image):
@@ -35,13 +32,6 @@ def color_distance(color1, color2):
     )
 
 
-def extract_color_histogram(image, bins=(8, 8, 8)):
-    hist = cv2.calcHist([image], [0, 1, 2], None,
-                        bins, [0, 256, 0, 256, 0, 256])
-    cv2.normalize(hist, hist)
-    return hist.flatten()
-
-
 def display_image(image):
     plt.imshow(image)
     plt.show()
@@ -61,8 +51,7 @@ def crop_image(image, top, right, bottom, left):
 
 
 def extract_color_histogram(image, bins=(8, 8, 8)):
-    hist = cv2.calcHist([image], [0, 1, 2], None,
-                        bins, [0, 256, 0, 256, 0, 256])
+    hist = cv2.calcHist([image], [0, 1, 2], None, bins, [0, 256, 0, 256, 0, 256])
     cv2.normalize(hist, hist)
     return hist.flatten()
 
