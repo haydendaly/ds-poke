@@ -1,23 +1,17 @@
 import os
 import time
-from collections import Counter
 
 import clip
-import cv2
 import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-import torchvision
 from PIL import Image
-from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
-from torchvision.transforms import Compose
 
-from ..image import crop_image, display_image
+from ..image import crop_image
 
 WEIGHTS_PATH = "./db/models/label_classifier/"
 

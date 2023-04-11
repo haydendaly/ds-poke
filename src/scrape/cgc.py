@@ -1,16 +1,10 @@
 import asyncio
 import concurrent.futures
-import json
 import os
-import threading
-import time
-
-import pandas as pd
-from PIL import Image
 
 from ..classification import LabelClassifier
-from ..image import ImageDatabase, ImageStorage, display_image
-from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, json_loads
+from ..image import ImageDatabase, ImageStorage
+from ..shared import POKEMON_TITLE, json_dump_file, json_load_file
 from .browser import SSRBrowser
 
 CGC_BASE_URL = "https://www.cgccards.com/certlookup/"

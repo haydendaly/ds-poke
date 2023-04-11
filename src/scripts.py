@@ -1,3 +1,4 @@
+import glob
 import subprocess
 import sys
 
@@ -8,11 +9,24 @@ argv = sys.argv[1:]
 
 def lint():
     if argv and argv[0] == "check":
-        subprocess.run(["poetry", "run", "black", "--check", "src"])
-        subprocess.run(["poetry", "run", "isort", "--check-only", "src"])
+        subprocess.run(["black", "--check", "src"])
+        subprocess.run(["isort", "--check-only", "src"])
     else:
-        subprocess.run(["poetry", "run", "black", "src"])
-        subprocess.run(["poetry", "run", "isort", "src"])
+        subprocess.run(["black", "src"])
+        subprocess.run(["isort", "src"])
+
+        for file in glob.glob("src/**/*.py"):
+            if "__init__.py" in file:
+                continue
+            subprocess.run(
+                [
+                    "autoflake",
+                    "--in-place",
+                    "--remove-all-unused-imports",
+                    file,
+                ]
+            )
+        print("Removed unused imports")
 
 
 def precommit():
@@ -38,15 +52,21 @@ def precommit():
 
 
 def notebook():
-    subprocess.run(["poetry", "run", "jupyter", "notebook"])
+    subprocess.run(["jupyter", "notebook"])
 
 
 def setup():
-    subprocess.run(["poetry", "run", "pre-commit", "install"])
+    subprocess.run(["pre-commit", "install"])
     try:
         subprocess.run(
             [
-                "poetry run python -m ipykernel install --user --name=pokemon_identification --display-name='Pokemon Identification'"
+                "python",
+                "-m",
+                "ipykernel",
+                "install",
+                "--user",
+                "--name=pokemon_identification",
+                "--display-name='Pokemon Identification'",
             ]
         )
     except:
@@ -55,4 +75,3 @@ def setup():
 
 if __name__ == "__main__":
     load_dotenv()
-    ignore_warnings()

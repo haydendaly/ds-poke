@@ -1,5 +1,4 @@
 import asyncio
-import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -14,7 +13,7 @@ from ..shared import NotImplementedError
 # import undetected_chromedriver as uc
 
 
-PROXY_KEY = ""
+# PROXY_KEY = ""
 
 
 class SSRBrowser:
