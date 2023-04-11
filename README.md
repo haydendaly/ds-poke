@@ -52,22 +52,31 @@ src
 ├── classification
 │   └── __init__.py
 ├── dataset
-│   └── __init__.py
+│   ├── __init__.py
+│   └── cgc.py # pandas DataFrame for CGC data
 ├── image
 │   ├── __init__.py
-│   ├── crop.py
-│   └── storage.py
-├── scrape
+│   ├── helpers
+│   │   ├── __init__.py
+│   │   ├── color.py
+│   │   ├── compare.py
+│   │   ├── crop.py
+│   │   └── display.py
+│   └── storage.py # CDN-esque interface for local storage
+├── main.ipynb
+├── scrape # data scraping scripts
 │   ├── __init__.py
 │   ├── browser.py
 │   └── source
 │       ├── __init__.py
 │       └── cgc
 │           ├── __init__.py
-│           ├── is_front.py
-│           └── main.py
-├── scripts
-│   └── lint.py
+│           ├── label_classifier.py # simple classifier for data cleaning
+│           └── scraper.py
+├── scripts # scripts for `poetry run [cmd]` commands
+│   ├── lint.py
+│   ├── notebook.py
+│   └── precommit.py
 ├── segmentation
 │   └── __init__.py
 └── shared
