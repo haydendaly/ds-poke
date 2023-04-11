@@ -4,29 +4,27 @@ import os
 
 from ..classification import LabelClassifier
 from ..image import ImageDatabase, ImageStorage
-from ..shared import POKEMON_TITLE, json_dump_file, json_load_file
+from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, swap_files
 from .browser import SSRBrowser
-
-CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
-CGC_BASE_SUB_NUM = 3526544
-CGC_TOP_SUB_NUM = 4126544
-# cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
-CGC_BATCH_SIZE = 50  # how many submissions to process before persisting to seen.json
-
-
-def swap_files(path_0, path_1):
-    os.rename(path_0, path_0 + ".temp")
-    os.rename(path_1, path_0)
-    os.rename(path_0 + ".temp", path_1)
 
 
 class CGCScraper:
-    def __init__(self):
-        self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
+    CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
+    CGC_BASE_SUB_NUM = 3526544
+    CGC_TOP_SUB_NUM = 4126544
+    # cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
+    CGC_BATCH_SIZE = (
+        50  # how many submissions to process before persisting to seen.json
+    )
+
+    def __init__(self, single_threaded=False):
+        self.storage = ImageStorage("cgc", db=ImageDatabase.LOCAL)
         self.browser = SSRBrowser()
 
-        self.num_threads = os.cpu_count() // 2
-        # self.num_threads = 1
+        cpus = os.cpu_count()
+        if cpus is None or single_threaded:
+            cpus = 1
+        self.num_threads = cpus
         self.queue = asyncio.Queue()
 
         self.get_persisted()
@@ -36,12 +34,17 @@ class CGCScraper:
         if self.storage.has_image("0_" + cert_num):
             print(f"Skipping {cert_num} because it already exists")
             return False
-        dom = await self.browser.get_async(CGC_BASE_URL + cert_num)
+        dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
         card_info = {}
         for dl in dom.select("div.certlookup-intro dl"):
-            key = dl.select_one("dt").text.strip()
-            value = dl.select_one("dd").text.strip()
-            card_info[key] = value
+            key, value = None, None
+            key_elem, value_elem = dl.select_one("dt"), dl.select_one("dd")
+            if key_elem is not None:
+                key = key_elem.text.strip()
+            if value_elem is not None:
+                value = value_elem.text.strip()
+            if key is not None and value is not None:
+                card_info[key] = value
         if len(card_info) == 0:
             print(f"Failed to find card info for {cert_num}")
             return False
@@ -52,10 +55,9 @@ class CGCScraper:
         if card_data["game"] != POKEMON_TITLE:
             return True
 
-        image_url = ""
         images = dom.select("div.certlookup-images img")
-        image_urls = [img["src"] for img in images]
-        if len(image_urls) == 2:
+        image_urls = [str(img["src"]) for img in images]
+        if len(image_urls) == 2 and self.storage:
             path_0, image_0 = self.storage.download_image_to_id(
                 image_urls[0], "0_" + cert_num
             )
@@ -105,7 +107,7 @@ class CGCScraper:
         while True:
             sub_prefix = await self.queue.get()
             l = self.queue.qsize()
-            if l % CGC_BATCH_SIZE == 0:
+            if l % self.CGC_BATCH_SIZE == 0:
                 print(f"Submissions remaining: {l}")
                 self.persist()
             if sub_prefix in self.seen:
@@ -135,7 +137,7 @@ class CGCScraper:
             self.queue.task_done()
 
     async def run(self):
-        for sub_num in range(CGC_TOP_SUB_NUM, CGC_BASE_SUB_NUM, -1):
+        for sub_num in range(self.CGC_TOP_SUB_NUM, self.CGC_BASE_SUB_NUM, -1):
             sub_prefix = "{:0>7}".format(sub_num)
             if sub_prefix not in self.seen:
                 await self.queue.put(sub_prefix)
@@ -158,7 +160,7 @@ class CGCScraper:
 
 
 def scrape_cgc():
-    scraper = CGCScraper()
+    scraper = CGCScraper(single_threaded=True)
     return scraper.run()
 
 

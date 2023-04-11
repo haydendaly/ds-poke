@@ -1,1 +1,1 @@
-from .cgc import *
+from .cards import *

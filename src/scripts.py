@@ -52,11 +52,6 @@ def precommit():
 
 
 def notebook():
-    subprocess.run(["jupyter", "notebook"])
-
-
-def setup():
-    subprocess.run(["pre-commit", "install"])
     try:
         subprocess.run(
             [
@@ -71,6 +66,11 @@ def setup():
         )
     except:
         print("Failed to install ipykernel")
+    subprocess.run(["jupyter", "notebook"])
+
+
+def setup():
+    subprocess.run(["pre-commit", "install"])
 
 
 if __name__ == "__main__":

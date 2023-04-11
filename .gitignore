@@ -4,3 +4,7 @@
 */*.ipynb_checkpoints
 db/cgc/labels/front/*
 db/cgc/labels/back/*
+db/pokemontcg.io/sets-eng/*
+db/pokemontcg.io/sets-jp/*
+db/cards/sets-eng/*
+db/cards/sets-jp/*

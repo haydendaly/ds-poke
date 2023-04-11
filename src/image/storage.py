@@ -31,7 +31,7 @@ class ImageStorage:
                 return path, Image.open(path)
         except Exception as e:
             print(e)
-            return "", None
+        return "", None
 
     async def download_image_to_id_async(self, url: str, image_id: str):
         loop = asyncio.get_event_loop()
