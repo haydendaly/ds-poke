@@ -1,16 +1,17 @@
-import os
-import json
-import time
-import concurrent.futures
-import pandas as pd
-import threading
 import asyncio
+import concurrent.futures
+import json
+import os
+import threading
+import time
+
+import pandas as pd
 from PIL import Image
 
-from ....shared import json_dump_file, json_load_file, json_loads, POKEMON_TITLE
-from ....image import ImageDatabase, ImageStorage, display_image
-from ...browser import SSRBrowser
-from .label_classifier import LabelClassifier
+from ..classification import LabelClassifier
+from ..image import ImageDatabase, ImageStorage, display_image
+from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, json_loads
+from .browser import SSRBrowser
 
 CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
 CGC_BASE_SUB_NUM = 3526544
@@ -20,9 +21,9 @@ CGC_BATCH_SIZE = 50  # how many submissions to process before persisting to seen
 
 
 def swap_files(path_0, path_1):
-    os.rename(path_0, path_0 + '.temp')
+    os.rename(path_0, path_0 + ".temp")
     os.rename(path_1, path_0)
-    os.rename(path_0 + '.temp', path_1)
+    os.rename(path_0 + ".temp", path_1)
 
 
 class CGCScraper:
@@ -62,9 +63,11 @@ class CGCScraper:
         image_urls = [img["src"] for img in images]
         if len(image_urls) == 2:
             path_0, image_0 = self.storage.download_image_to_id(
-                image_urls[0], "0_" + cert_num)
+                image_urls[0], "0_" + cert_num
+            )
             path_1, image_1 = self.storage.download_image_to_id(
-                image_urls[1], "1_" + cert_num)
+                image_urls[1], "1_" + cert_num
+            )
             if self.label_classifier.images_are_inverted(image_0, image_1):
                 swap_files(path_0, path_1)
             return True

@@ -1,8 +1,10 @@
-import requests
-import time
 import asyncio
+import time
 
+import requests
 from bs4 import BeautifulSoup
+
+from ..shared import NotImplementedError
 
 # from selenium import webdriver
 # from selenium.webdriver.chrome.options import Options
@@ -11,7 +13,6 @@ from bs4 import BeautifulSoup
 # from selenium.webdriver.common.action_chains import ActionChains
 # import undetected_chromedriver as uc
 
-from ..shared import NotImplementedError
 
 PROXY_KEY = ""
 

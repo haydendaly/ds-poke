@@ -7,6 +7,7 @@
 ```sh
 $ curl -sSL https://install.python-poetry.org | python3 -
 $ poetry install
+$ poetry run setup
 ```
 
 To add packages, you can use:
@@ -35,7 +36,13 @@ This will run in its own terminal and you can `CTRL-C` it to stop the server.
 $ poetry run lint
 ```
 
-### Data Scraping (WIP)
+### Test
+
+```sh
+$ poetry run pytest
+```
+
+### CGC Data Scraping (WIP)
 
 This spins up an async worker queue and writes images to an SSD.
 
@@ -50,38 +57,27 @@ The project is broken into different modules which export the methods / variable
 ```sh
 src
 ├── classification
-│   └── __init__.py
+│   ├── __init__.py
+│   └── cgc_label_classifier.py
 ├── dataset
 │   ├── __init__.py
-│   └── cgc.py # pandas DataFrame for CGC data
+│   └── cgc.py
 ├── image
 │   ├── __init__.py
-│   ├── helpers
-│   │   ├── __init__.py
-│   │   ├── color.py
-│   │   ├── compare.py
-│   │   ├── crop.py
-│   │   └── display.py
-│   └── storage.py # CDN-esque interface for local storage
+│   ├── helpers.py
+│   └── storage.py
 ├── main.ipynb
-├── scrape # data scraping scripts
+├── scrape
 │   ├── __init__.py
 │   ├── browser.py
-│   └── source
-│       ├── __init__.py
-│       └── cgc
-│           ├── __init__.py
-│           ├── label_classifier.py # simple classifier for data cleaning
-│           └── scraper.py
-├── scripts # scripts for `poetry run [cmd]` commands
-│   ├── lint.py
-│   ├── notebook.py
-│   └── precommit.py
+│   └── cgc.py
+├── scripts.py
 ├── segmentation
 │   └── __init__.py
 └── shared
     ├── __init__.py
     ├── constant.py
     ├── error.py
-    └── json.py
+    ├── json.py
+    └── warning.py
 ```

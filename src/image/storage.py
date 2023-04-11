@@ -1,10 +1,11 @@
-import requests
-import uuid
-import os
 import asyncio
-from PIL import Image
-import aiohttp
+import os
+import uuid
 from enum import Enum
+
+import aiohttp
+import requests
+from PIL import Image
 
 SSD_NAME = "T7"
 
