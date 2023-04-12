@@ -3,22 +3,20 @@ import time
 
 import clip
 import joblib
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
 from PIL import Image
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
 
-from ..image import crop_image
+from ..image import crop_image, display_image
 
 WEIGHTS_PATH = "./db/models/label_classifier/"
 
 
 class LabelClassifier:
-    CLIP_PATH = f"{WEIGHTS_PATH}clip_model.pth"
+    # CLIP_PATH = f"{WEIGHTS_PATH}clip_model.pth"
     PREPROCESS_PATH = f"{WEIGHTS_PATH}preprocess.pkl"
     CLASSIFIER_PATH = f"{WEIGHTS_PATH}classifier.joblib"
 
@@ -96,16 +94,15 @@ class LabelClassifier:
             if true_label != predicted_label:
                 print(f"Misidentified Image Index: {i}")
                 print(f"True label: {true_label}, Predicted label: {predicted_label}")
+
                 misidentified_image = Image.open(image_paths[i])
                 print(image_paths[i])
-
-                plt.imshow(misidentified_image)
-                plt.show()
+                display_image(misidentified_image)
 
         if accuracy > 0.99:
             if not os.path.exists(WEIGHTS_PATH):
                 os.makedirs(WEIGHTS_PATH)
-            torch.save(self.clip_model.state_dict(), self.CLIP_PATH)
+            # torch.save(self.clip_model.state_dict(), self.CLIP_PATH)
             joblib.dump(self._preprocess_clip, self.PREPROCESS_PATH)
             joblib.dump(self.clf, self.CLASSIFIER_PATH)
         else:
@@ -113,9 +110,9 @@ class LabelClassifier:
 
     def _load(self):
         self._preprocess_clip = joblib.load(self.PREPROCESS_PATH)
-        self.clip_model, self._preprocess_clip = clip.load("ViT-B/32", device="cpu")
-        self.clip_model.load_state_dict(torch.load(self.CLIP_PATH))
-        self.clip_model.eval()
+        # self.clip_model, self._preprocess_clip = clip.load("ViT-B/32", device="cpu")
+        # self.clip_model.load_state_dict(torch.load(self.CLIP_PATH))
+        # self.clip_model.eval()
         self.clf = joblib.load(self.CLASSIFIER_PATH)
 
     def images_are_inverted(self, image_a, image_b):
@@ -123,5 +120,4 @@ class LabelClassifier:
         prob_a = self.clf.predict_proba(features_a)[0]
         prob_b = self.clf.predict_proba(features_b)[0]
         classified_inverted = prob_a[0] < prob_b[0]
-        # TODO: add color check here to verify
         return classified_inverted

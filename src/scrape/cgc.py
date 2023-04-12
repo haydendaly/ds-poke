@@ -2,6 +2,7 @@ import asyncio
 import concurrent.futures
 import os
 
+
 from ..classification import LabelClassifier
 from ..image import ImageDatabase, ImageStorage
 from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, swap_files
@@ -169,12 +170,3 @@ def scrape_cgc():
 
 def main():
     asyncio.run(scrape_cgc())
-    # l = LabelClassifier(train=True)
-    # path_a, path_b = (
-    #     "./db/cgc/labels/front/0_4185553001.jpg",
-    #     "./db/cgc/labels/back/1_4185553001.jpg",
-    # )
-    # image_a, image_b = Image.open(path_a), Image.open(path_b)
-    # display_image(l._preprocess_crop(image_a))
-    # display_image(l._preprocess_crop(image_b))
-    # print(l.images_are_inverted(image_a, image_b))

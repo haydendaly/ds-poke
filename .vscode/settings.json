@@ -6,12 +6,15 @@
   },
   "python.linting.enabled": true,
   "editor.formatOnSave": true,
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "none",
   "python.formatting.blackArgs": ["--line-length", "88"],
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
   "python.poetry.enabled": true,
   "python.poetry.autoInstall": false,
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }
