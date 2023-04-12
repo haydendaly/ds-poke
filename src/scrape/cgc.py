@@ -18,13 +18,13 @@ class CGCScraper:
     )
 
     def __init__(self, single_threaded=False):
-        self.storage = ImageStorage("cgc", db=ImageDatabase.LOCAL)
+        self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
         cpus = os.cpu_count()
         if cpus is None or single_threaded:
-            cpus = 1
-        self.num_threads = cpus
+            cpus = 0.5
+        self.num_threads = cpus * 2
         self.queue = asyncio.Queue()
 
         self.get_persisted()
@@ -32,42 +32,45 @@ class CGCScraper:
 
     async def parse_card_info(self, cert_num: str, data):
         if self.storage.has_image("0_" + cert_num):
-            print(f"Skipping {cert_num} because it already exists")
+            # print(f"Skipping {cert_num} because it already exists")
             return False
-        dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
-        card_info = {}
-        for dl in dom.select("div.certlookup-intro dl"):
-            key, value = None, None
-            key_elem, value_elem = dl.select_one("dt"), dl.select_one("dd")
-            if key_elem is not None:
-                key = key_elem.text.strip()
-            if value_elem is not None:
-                value = value_elem.text.strip()
-            if key is not None and value is not None:
-                card_info[key] = value
-        if len(card_info) == 0:
-            print(f"Failed to find card info for {cert_num}")
-            return False
-        card_data = {}
-        for key, value in card_info.items():
-            card_data[key.lower().replace(" ", "_", 3)] = value
+        try:
+            dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
+            card_info = {}
+            for dl in dom.select("div.certlookup-intro dl"):
+                key, value = None, None
+                key_elem, value_elem = dl.select_one("dt"), dl.select_one("dd")
+                if key_elem is not None:
+                    key = key_elem.text.strip()
+                if value_elem is not None:
+                    value = value_elem.text.strip()
+                if key is not None and value is not None:
+                    card_info[key] = value
+            if len(card_info) == 0:
+                # print(f"Failed to find card info for {cert_num}")
+                return False
+            card_data = {}
+            for key, value in card_info.items():
+                card_data[key.lower().replace(" ", "_", 3)] = value
 
-        if card_data["game"] != POKEMON_TITLE:
-            return True
+            if card_data["game"] != POKEMON_TITLE:
+                return True
 
-        images = dom.select("div.certlookup-images img")
-        image_urls = [str(img["src"]) for img in images]
-        if len(image_urls) == 2 and self.storage:
-            path_0, image_0 = self.storage.download_image_to_id(
-                image_urls[0], "0_" + cert_num
-            )
-            path_1, image_1 = self.storage.download_image_to_id(
-                image_urls[1], "1_" + cert_num
-            )
-            if self.label_classifier.images_are_inverted(image_0, image_1):
-                swap_files(path_0, path_1)
-            return True
-        print(card_data, f"Failed to find images for {cert_num}")
+            images = dom.select("div.certlookup-images img")
+            image_urls = [str(img["src"]) for img in images]
+            if len(image_urls) == 2 and self.storage:
+                path_0, image_0 = self.storage.download_image_to_id(
+                    image_urls[0], "0_" + cert_num
+                )
+                path_1, image_1 = self.storage.download_image_to_id(
+                    image_urls[1], "1_" + cert_num
+                )
+                if self.label_classifier.images_are_inverted(image_0, image_1):
+                    swap_files(path_0, path_1)
+                data.append(card_data)
+                return True
+        except Exception as e:
+            print(e)
         return False
 
     def save_submission(self, sub_prefix, data):
@@ -160,16 +163,18 @@ class CGCScraper:
 
 
 def scrape_cgc():
-    scraper = CGCScraper(single_threaded=True)
+    scraper = CGCScraper()
     return scraper.run()
 
 
 def main():
     asyncio.run(scrape_cgc())
-    # l = LabelClassifier()
-    # path_a, path_b = "/Volumes/T7/db/images/cgc/0_4126524003.jpg", "/Volumes/T7/db/images/cgc/1_4126524003.jpg"
-    # image_a, image_b = Image.open(
-    #     path_a), Image.open(path_b)
+    # l = LabelClassifier(train=True)
+    # path_a, path_b = (
+    #     "./db/cgc/labels/front/0_4185553001.jpg",
+    #     "./db/cgc/labels/back/1_4185553001.jpg",
+    # )
+    # image_a, image_b = Image.open(path_a), Image.open(path_b)
     # display_image(l._preprocess_crop(image_a))
     # display_image(l._preprocess_crop(image_b))
     # print(l.images_are_inverted(image_a, image_b))

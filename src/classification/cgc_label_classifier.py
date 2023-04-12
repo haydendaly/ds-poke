@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 from PIL import Image
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
@@ -28,13 +29,12 @@ class LabelClassifier:
             self._load()
 
     def _preprocess_crop(self, image):
-        width, height = image.size
         return crop_image(image, top=0.05, right=0.1, bottom=0.72, left=0.1)
 
     def _preprocess(self, image):
         preprocessed_image = self._preprocess_clip(self._preprocess_crop(image))
         with torch.no_grad():
-            features_tensor = self._preprocess_clip(image).flatten()
+            features_tensor = preprocessed_image.flatten()
             features = np.vstack([features_tensor.numpy()])
         return features
 
@@ -76,11 +76,11 @@ class LabelClassifier:
                 )
 
         # Also tried LogisticRegression, SVC, and GradientBoostingClassifier
-        # self.clf = LogisticRegression()
-        # self.clf.fit(X_train, y_train)
-
-        self.clf = SVC(kernel="linear", probability=True)
+        self.clf = LogisticRegression()
         self.clf.fit(X_train, y_train)
+
+        # self.clf = SVC(kernel="linear", probability=True)
+        # self.clf.fit(X_train, y_train)
 
         # self.clf = GradientBoostingClassifier(
         #     n_estimators=100, learning_rate=0.1)

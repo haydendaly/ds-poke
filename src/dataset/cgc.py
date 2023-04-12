@@ -2,15 +2,15 @@ import os
 
 import pandas as pd
 
-from src.constants import POKEMON_TITLE
+from ..shared import POKEMON_TITLE
 
 
 def get_cgc_df():
     dfs = []
-    for file_name in os.listdir("./db/cgc/sub"):
+    for file_name in os.listdir("../db/cgc/sub"):
         if file_name.endswith(".json"):
             try:
-                df = pd.read_json(f"./db/cgc/sub/{file_name}")
+                df = pd.read_json(f"../db/cgc/sub/{file_name}")
                 dfs.append(df)
             except Exception as e:
                 print(e)

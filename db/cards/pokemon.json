@@ -1,0 +1,7212 @@
+[
+  {
+    "id": "bulbasaur",
+    "name": "Bulbasaur",
+    "japaneseName": "フシギダネ (Fushigidane)",
+    "number": 1,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "ivysaur",
+    "name": "Ivysaur",
+    "japaneseName": "フシギソウ (Fushigisou)",
+    "number": 2,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "venusaur",
+    "name": "Venusaur",
+    "japaneseName": "フシギバナ (Fushigibana)",
+    "number": 3,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "charmander",
+    "name": "Charmander",
+    "japaneseName": "ヒトカゲ (Hitokage)",
+    "number": 4,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "charmeleon",
+    "name": "Charmeleon",
+    "japaneseName": "リザード (Lizardo)",
+    "number": 5,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "charizard",
+    "name": "Charizard",
+    "japaneseName": "リザードン (Lizardon)",
+    "number": 6,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "squirtle",
+    "name": "Squirtle",
+    "japaneseName": "ゼニガメ (Zenigame)",
+    "number": 7,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "wartortle",
+    "name": "Wartortle",
+    "japaneseName": "カメール (Kameil)",
+    "number": 8,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "blastoise",
+    "name": "Blastoise",
+    "japaneseName": "カメックス (Kamex)",
+    "number": 9,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "caterpie",
+    "name": "Caterpie",
+    "japaneseName": "キャタピー (Caterpie)",
+    "number": 10,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "metapod",
+    "name": "Metapod",
+    "japaneseName": "トランセル (Transel)",
+    "number": 11,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "butterfree",
+    "name": "Butterfree",
+    "japaneseName": "バタフリー (Butterfree)",
+    "number": 12,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "weedle",
+    "name": "Weedle",
+    "japaneseName": "ビードル (Beedle)",
+    "number": 13,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kakuna",
+    "name": "Kakuna",
+    "japaneseName": "コクーン (Cocoon)",
+    "number": 14,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "beedrill",
+    "name": "Beedrill",
+    "japaneseName": "スピアー (Spear)",
+    "number": 15,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "pidgey",
+    "name": "Pidgey",
+    "japaneseName": "ポッポ (Poppo)",
+    "number": 16,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "pidgeotto",
+    "name": "Pidgeotto",
+    "japaneseName": "ピジョン (Pigeon)",
+    "number": 17,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "pidgeot",
+    "name": "Pidgeot",
+    "japaneseName": "ピジョット (Pigeot)",
+    "number": 18,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "rattata",
+    "name": "Rattata",
+    "japaneseName": "コラッタ (Koratta)",
+    "number": 19,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "raticate",
+    "name": "Raticate",
+    "japaneseName": "ラッタ (Ratta)",
+    "number": 20,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "spearow",
+    "name": "Spearow",
+    "japaneseName": "オニスズメ (Onisuzume)",
+    "number": 21,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "fearow",
+    "name": "Fearow",
+    "japaneseName": "オニドリル (Onidrill)",
+    "number": 22,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "ekans",
+    "name": "Ekans",
+    "japaneseName": "アーボ (Arbo)",
+    "number": 23,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "arbok",
+    "name": "Arbok",
+    "japaneseName": "アーボック (Arbok)",
+    "number": 24,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "pikachu",
+    "name": "Pikachu",
+    "japaneseName": "ピカチュウ (Pikachu)",
+    "number": 25,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "raichu",
+    "name": "Raichu",
+    "japaneseName": "ライチュウ (Raichu)",
+    "number": 26,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "sandshrew",
+    "name": "Sandshrew",
+    "japaneseName": "サンド (Sand)",
+    "number": 27,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "sandslash",
+    "name": "Sandslash",
+    "japaneseName": "サンドパン (Sandpan)",
+    "number": 28,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidoran♀",
+    "name": "Nidoran♀",
+    "japaneseName": "ニドラン♀ (Nidoran♀)",
+    "number": 29,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidorina",
+    "name": "Nidorina",
+    "japaneseName": "ニドリーナ (Nidorina)",
+    "number": 30,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidoqueen",
+    "name": "Nidoqueen",
+    "japaneseName": "ニドクイン (Nidoqueen)",
+    "number": 31,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidoran♂",
+    "name": "Nidoran♂",
+    "japaneseName": "ニドラン♂ (Nidoran♂)",
+    "number": 32,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidorino",
+    "name": "Nidorino",
+    "japaneseName": "ニドリーノ (Nidorino)",
+    "number": 33,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "nidoking",
+    "name": "Nidoking",
+    "japaneseName": "ニドキング (Nidoking)",
+    "number": 34,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "clefairy",
+    "name": "Clefairy",
+    "japaneseName": "ピッピ (Pippi)",
+    "number": 35,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "clefable",
+    "name": "Clefable",
+    "japaneseName": "ピクシー (Pixy)",
+    "number": 36,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "vulpix",
+    "name": "Vulpix",
+    "japaneseName": "ロコン (Rokon)",
+    "number": 37,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "ninetales",
+    "name": "Ninetales",
+    "japaneseName": "キュウコン (Kyukon)",
+    "number": 38,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "jigglypuff",
+    "name": "Jigglypuff",
+    "japaneseName": "プリン (Purin)",
+    "number": 39,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "wigglytuff",
+    "name": "Wigglytuff",
+    "japaneseName": "プクリン (Pukurin)",
+    "number": 40,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "zubat",
+    "name": "Zubat",
+    "japaneseName": "ズバット (Zubat)",
+    "number": 41,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "golbat",
+    "name": "Golbat",
+    "japaneseName": "ゴルバット (Golbat)",
+    "number": 42,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "oddish",
+    "name": "Oddish",
+    "japaneseName": "ナゾノクサ (Nazonokusa)",
+    "number": 43,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "gloom",
+    "name": "Gloom",
+    "japaneseName": "クサイハナ (Kusaihana)",
+    "number": 44,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "vileplume",
+    "name": "Vileplume",
+    "japaneseName": "ラフレシア (Ruffresia)",
+    "number": 45,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "paras",
+    "name": "Paras",
+    "japaneseName": "パラス (Paras)",
+    "number": 46,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "parasect",
+    "name": "Parasect",
+    "japaneseName": "パラセクト (Parasect)",
+    "number": 47,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "venonat",
+    "name": "Venonat",
+    "japaneseName": "コンパン (Kongpang)",
+    "number": 48,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "venomoth",
+    "name": "Venomoth",
+    "japaneseName": "モルフォン (Morphon)",
+    "number": 49,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "diglett",
+    "name": "Diglett",
+    "japaneseName": "ディグダ (Digda)",
+    "number": 50,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dugtrio",
+    "name": "Dugtrio",
+    "japaneseName": "ダグトリオ (Dugtrio)",
+    "number": 51,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "meowth",
+    "name": "Meowth",
+    "japaneseName": "ニャース (Nyarth)",
+    "number": 52,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "persian",
+    "name": "Persian",
+    "japaneseName": "ペルシアン (Persian)",
+    "number": 53,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "psyduck",
+    "name": "Psyduck",
+    "japaneseName": "コダック (Koduck)",
+    "number": 54,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "golduck",
+    "name": "Golduck",
+    "japaneseName": "ゴルダック (Golduck)",
+    "number": 55,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "mankey",
+    "name": "Mankey",
+    "japaneseName": "マンキー (Mankey)",
+    "number": 56,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "primeape",
+    "name": "Primeape",
+    "japaneseName": "オコリザル (Okorizaru)",
+    "number": 57,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "growlithe",
+    "name": "Growlithe",
+    "japaneseName": "ガーディ (Gardie)",
+    "number": 58,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "arcanine",
+    "name": "Arcanine",
+    "japaneseName": "ウインディ (Windie)",
+    "number": 59,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "poliwag",
+    "name": "Poliwag",
+    "japaneseName": "ニョロモ (Nyoromo)",
+    "number": 60,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "poliwhirl",
+    "name": "Poliwhirl",
+    "japaneseName": "ニョロゾ (Nyorozo)",
+    "number": 61,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "poliwrath",
+    "name": "Poliwrath",
+    "japaneseName": "ニョロボン (Nyorobon)",
+    "number": 62,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "abra",
+    "name": "Abra",
+    "japaneseName": "ケーシィ (Casey)",
+    "number": 63,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kadabra",
+    "name": "Kadabra",
+    "japaneseName": "ユンゲラー (Yungerer)",
+    "number": 64,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "alakazam",
+    "name": "Alakazam",
+    "japaneseName": "フーディン (Foodin)",
+    "number": 65,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "machop",
+    "name": "Machop",
+    "japaneseName": "ワンリキー (Wanriky)",
+    "number": 66,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "machoke",
+    "name": "Machoke",
+    "japaneseName": "ゴーリキー (Goriky)",
+    "number": 67,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "machamp",
+    "name": "Machamp",
+    "japaneseName": "カイリキー (Kairiky)",
+    "number": 68,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "bellsprout",
+    "name": "Bellsprout",
+    "japaneseName": "マダツボミ (Madatsubomi)",
+    "number": 69,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "weepinbell",
+    "name": "Weepinbell",
+    "japaneseName": "ウツドン (Utsudon)",
+    "number": 70,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "victreebel",
+    "name": "Victreebel",
+    "japaneseName": "ウツボット (Utsubot)",
+    "number": 71,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "tentacool",
+    "name": "Tentacool",
+    "japaneseName": "メノクラゲ (Menokurage)",
+    "number": 72,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "tentacruel",
+    "name": "Tentacruel",
+    "japaneseName": "ドククラゲ (Dokukurage)",
+    "number": 73,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "geodude",
+    "name": "Geodude",
+    "japaneseName": "イシツブテ (Isitsubute)",
+    "number": 74,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "graveler",
+    "name": "Graveler",
+    "japaneseName": "ゴローン (Golone)",
+    "number": 75,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "golem",
+    "name": "Golem",
+    "japaneseName": "ゴローニャ (Golonya)",
+    "number": 76,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "ponyta",
+    "name": "Ponyta",
+    "japaneseName": "ポニータ (Ponyta)",
+    "number": 77,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "rapidash",
+    "name": "Rapidash",
+    "japaneseName": "ギャロップ (Gallop)",
+    "number": 78,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "slowpoke",
+    "name": "Slowpoke",
+    "japaneseName": "ヤドン (Yadon)",
+    "number": 79,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "slowbro",
+    "name": "Slowbro",
+    "japaneseName": "ヤドラン (Yadoran)",
+    "number": 80,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "magnemite",
+    "name": "Magnemite",
+    "japaneseName": "コイル (Coil)",
+    "number": 81,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "magneton",
+    "name": "Magneton",
+    "japaneseName": "レアコイル (Rarecoil)",
+    "number": 82,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "farfetch'd",
+    "name": "Farfetch'd",
+    "japaneseName": "カモネギ (Kamonegi)",
+    "number": 83,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "doduo",
+    "name": "Doduo",
+    "japaneseName": "ドードー (Dodo)",
+    "number": 84,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dodrio",
+    "name": "Dodrio",
+    "japaneseName": "ドードリオ (Dodorio)",
+    "number": 85,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "seel",
+    "name": "Seel",
+    "japaneseName": "パウワウ (Pawou)",
+    "number": 86,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dewgong",
+    "name": "Dewgong",
+    "japaneseName": "ジュゴン (Jugon)",
+    "number": 87,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "grimer",
+    "name": "Grimer",
+    "japaneseName": "ベトベター (Betbeter)",
+    "number": 88,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "muk",
+    "name": "Muk",
+    "japaneseName": "ベトベトン (Betbeton)",
+    "number": 89,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "shellder",
+    "name": "Shellder",
+    "japaneseName": "シェルダー (Shellder)",
+    "number": 90,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "cloyster",
+    "name": "Cloyster",
+    "japaneseName": "パルシェン (Parshen)",
+    "number": 91,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "gastly",
+    "name": "Gastly",
+    "japaneseName": "ゴース (Ghos)",
+    "number": 92,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "haunter",
+    "name": "Haunter",
+    "japaneseName": "ゴースト (Ghost)",
+    "number": 93,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "gengar",
+    "name": "Gengar",
+    "japaneseName": "ゲンガー (Gangar)",
+    "number": 94,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "onix",
+    "name": "Onix",
+    "japaneseName": "イワーク (Iwark)",
+    "number": 95,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "drowzee",
+    "name": "Drowzee",
+    "japaneseName": "スリープ (Sleepe)",
+    "number": 96,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "hypno",
+    "name": "Hypno",
+    "japaneseName": "スリーパー (Sleeper)",
+    "number": 97,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "krabby",
+    "name": "Krabby",
+    "japaneseName": "クラブ (Crab)",
+    "number": 98,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kingler",
+    "name": "Kingler",
+    "japaneseName": "キングラー (Kingler)",
+    "number": 99,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "voltorb",
+    "name": "Voltorb",
+    "japaneseName": "ビリリダマ (Biriridama)",
+    "number": 100,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "electrode",
+    "name": "Electrode",
+    "japaneseName": "マルマイン (Marumine)",
+    "number": 101,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "exeggcute",
+    "name": "Exeggcute",
+    "japaneseName": "タマタマ (Tamatama)",
+    "number": 102,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "exeggutor",
+    "name": "Exeggutor",
+    "japaneseName": "ナッシー (Nassy)",
+    "number": 103,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "cubone",
+    "name": "Cubone",
+    "japaneseName": "カラカラ (Karakara)",
+    "number": 104,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "marowak",
+    "name": "Marowak",
+    "japaneseName": "ガラガラ (Garagara)",
+    "number": 105,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "hitmonlee",
+    "name": "Hitmonlee",
+    "japaneseName": "サワムラー (Sawamular)",
+    "number": 106,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "hitmonchan",
+    "name": "Hitmonchan",
+    "japaneseName": "エビワラー (Ebiwalar)",
+    "number": 107,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "lickitung",
+    "name": "Lickitung",
+    "japaneseName": "ベロリンガ (Beroringa)",
+    "number": 108,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "koffing",
+    "name": "Koffing",
+    "japaneseName": "ドガース (Dogars)",
+    "number": 109,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "weezing",
+    "name": "Weezing",
+    "japaneseName": "マタドガス (Matadogas)",
+    "number": 110,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "rhyhorn",
+    "name": "Rhyhorn",
+    "japaneseName": "サイホーン (Sihorn)",
+    "number": 111,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "rhydon",
+    "name": "Rhydon",
+    "japaneseName": "サイドン (Sidon)",
+    "number": 112,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "chansey",
+    "name": "Chansey",
+    "japaneseName": "ラッキー (Lucky)",
+    "number": 113,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "tangela",
+    "name": "Tangela",
+    "japaneseName": "モンジャラ (Monjara)",
+    "number": 114,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kangaskhan",
+    "name": "Kangaskhan",
+    "japaneseName": "ガルーラ (Garura)",
+    "number": 115,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "horsea",
+    "name": "Horsea",
+    "japaneseName": "タッツー (Tattu)",
+    "number": 116,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "seadra",
+    "name": "Seadra",
+    "japaneseName": "シードラ (Seadra)",
+    "number": 117,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "goldeen",
+    "name": "Goldeen",
+    "japaneseName": "トサキント (Tosakinto)",
+    "number": 118,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "seaking",
+    "name": "Seaking",
+    "japaneseName": "アズマオウ (Azumao)",
+    "number": 119,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "staryu",
+    "name": "Staryu",
+    "japaneseName": "ヒトデマン (Hitodeman)",
+    "number": 120,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "starmie",
+    "name": "Starmie",
+    "japaneseName": "スターミー (Starmie)",
+    "number": 121,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "mr.-mime",
+    "name": "Mr. Mime",
+    "japaneseName": "バリヤード (Barrierd)",
+    "number": 122,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "scyther",
+    "name": "Scyther",
+    "japaneseName": "ストライク (Strike)",
+    "number": 123,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "jynx",
+    "name": "Jynx",
+    "japaneseName": "ルージュラ (Rougela)",
+    "number": 124,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "electabuzz",
+    "name": "Electabuzz",
+    "japaneseName": "エレブー (Eleboo)",
+    "number": 125,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "magmar",
+    "name": "Magmar",
+    "japaneseName": "ブーバー (Boober)",
+    "number": 126,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "pinsir",
+    "name": "Pinsir",
+    "japaneseName": "カイロス (Kailios)",
+    "number": 127,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "tauros",
+    "name": "Tauros",
+    "japaneseName": "ケンタロス (Kentauros)",
+    "number": 128,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "magikarp",
+    "name": "Magikarp",
+    "japaneseName": "コイキング (Koiking)",
+    "number": 129,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "gyarados",
+    "name": "Gyarados",
+    "japaneseName": "ギャラドス (Gyarados)",
+    "number": 130,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "lapras",
+    "name": "Lapras",
+    "japaneseName": "ラプラス (Laplace)",
+    "number": 131,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "ditto",
+    "name": "Ditto",
+    "japaneseName": "メタモン (Metamon)",
+    "number": 132,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "eevee",
+    "name": "Eevee",
+    "japaneseName": "イーブイ (Eievui)",
+    "number": 133,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "vaporeon",
+    "name": "Vaporeon",
+    "japaneseName": "シャワーズ (Showers)",
+    "number": 134,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "jolteon",
+    "name": "Jolteon",
+    "japaneseName": "サンダース (Thunders)",
+    "number": 135,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "flareon",
+    "name": "Flareon",
+    "japaneseName": "ブースター (Booster)",
+    "number": 136,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "porygon",
+    "name": "Porygon",
+    "japaneseName": "ポリゴン (Porygon)",
+    "number": 137,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "omanyte",
+    "name": "Omanyte",
+    "japaneseName": "オムナイト (Omnite)",
+    "number": 138,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "omastar",
+    "name": "Omastar",
+    "japaneseName": "オムスター (Omstar)",
+    "number": 139,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kabuto",
+    "name": "Kabuto",
+    "japaneseName": "カブト (Kabuto)",
+    "number": 140,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "kabutops",
+    "name": "Kabutops",
+    "japaneseName": "カブトプス (Kabutops)",
+    "number": 141,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "aerodactyl",
+    "name": "Aerodactyl",
+    "japaneseName": "プテラ (Ptera)",
+    "number": 142,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "snorlax",
+    "name": "Snorlax",
+    "japaneseName": "カビゴン (Kabigon)",
+    "number": 143,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "articuno",
+    "name": "Articuno",
+    "japaneseName": "フリーザー (Freezer)",
+    "number": 144,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "zapdos",
+    "name": "Zapdos",
+    "japaneseName": "サンダー (Thunder)",
+    "number": 145,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "moltres",
+    "name": "Moltres",
+    "japaneseName": "ファイヤー (Fire)",
+    "number": 146,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dratini",
+    "name": "Dratini",
+    "japaneseName": "ミニリュウ (Miniryu)",
+    "number": 147,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dragonair",
+    "name": "Dragonair",
+    "japaneseName": "ハクリュー (Hakuryu)",
+    "number": 148,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "dragonite",
+    "name": "Dragonite",
+    "japaneseName": "カイリュー (Kairyu)",
+    "number": 149,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "mewtwo",
+    "name": "Mewtwo",
+    "japaneseName": "ミュウツー (Mewtwo)",
+    "number": 150,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "mew",
+    "name": "Mew",
+    "japaneseName": "ミュウ (Mew)",
+    "number": 151,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kanto",
+    "isLegendary": true
+  },
+  {
+    "id": "chikorita",
+    "name": "Chikorita",
+    "japaneseName": "チコリータ (Chicorita)",
+    "number": 152,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "bayleef",
+    "name": "Bayleef",
+    "japaneseName": "ベイリーフ (Bayleaf)",
+    "number": 153,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "meganium",
+    "name": "Meganium",
+    "japaneseName": "メガニウム (Meganium)",
+    "number": 154,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "cyndaquil",
+    "name": "Cyndaquil",
+    "japaneseName": "ヒノアラシ (Hinoarashi)",
+    "number": 155,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "quilava",
+    "name": "Quilava",
+    "japaneseName": "マグマラシ (Magmarashi)",
+    "number": 156,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "typhlosion",
+    "name": "Typhlosion",
+    "japaneseName": "バクフーン (Bakphoon)",
+    "number": 157,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "totodile",
+    "name": "Totodile",
+    "japaneseName": "ワニノコ (Waninoko)",
+    "number": 158,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "croconaw",
+    "name": "Croconaw",
+    "japaneseName": "アリゲイツ (Alligates)",
+    "number": 159,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "feraligatr",
+    "name": "Feraligatr",
+    "japaneseName": "オーダイル (Ordile)",
+    "number": 160,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "sentret",
+    "name": "Sentret",
+    "japaneseName": "オタチ (Otachi)",
+    "number": 161,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "furret",
+    "name": "Furret",
+    "japaneseName": "オオタチ (Ootachi)",
+    "number": 162,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "hoothoot",
+    "name": "Hoothoot",
+    "japaneseName": "ホーホー (Hoho)",
+    "number": 163,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "noctowl",
+    "name": "Noctowl",
+    "japaneseName": "ヨルノズク (Yorunozuku)",
+    "number": 164,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ledyba",
+    "name": "Ledyba",
+    "japaneseName": "レディバ (Rediba)",
+    "number": 165,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ledian",
+    "name": "Ledian",
+    "japaneseName": "レディアン (Redian)",
+    "number": 166,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "spinarak",
+    "name": "Spinarak",
+    "japaneseName": "イトマル (Itomaru)",
+    "number": 167,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ariados",
+    "name": "Ariados",
+    "japaneseName": "アリアドス (Ariados)",
+    "number": 168,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "crobat",
+    "name": "Crobat",
+    "japaneseName": "クロバット (Crobat)",
+    "number": 169,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "chinchou",
+    "name": "Chinchou",
+    "japaneseName": "チョンチー (Chonchie)",
+    "number": 170,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "lanturn",
+    "name": "Lanturn",
+    "japaneseName": "ランターン (Lantern)",
+    "number": 171,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "pichu",
+    "name": "Pichu",
+    "japaneseName": "ピチュー (Pichu)",
+    "number": 172,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "cleffa",
+    "name": "Cleffa",
+    "japaneseName": "ピィ (Py)",
+    "number": 173,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "igglybuff",
+    "name": "Igglybuff",
+    "japaneseName": "ププリン (Pupurin)",
+    "number": 174,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "togepi",
+    "name": "Togepi",
+    "japaneseName": "トゲピー (Togepy)",
+    "number": 175,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "togetic",
+    "name": "Togetic",
+    "japaneseName": "トゲチック (Togechick)",
+    "number": 176,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "natu",
+    "name": "Natu",
+    "japaneseName": "ネイティ (Naty)",
+    "number": 177,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "xatu",
+    "name": "Xatu",
+    "japaneseName": "ネイティオ (Natio)",
+    "number": 178,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "mareep",
+    "name": "Mareep",
+    "japaneseName": "メリープ (Merriep)",
+    "number": 179,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "flaaffy",
+    "name": "Flaaffy",
+    "japaneseName": "モココ (Mokoko)",
+    "number": 180,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ampharos",
+    "name": "Ampharos",
+    "japaneseName": "デンリュウ (Denryu)",
+    "number": 181,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "bellossom",
+    "name": "Bellossom",
+    "japaneseName": "キレイハナ (Kireihana)",
+    "number": 182,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "marill",
+    "name": "Marill",
+    "japaneseName": "マリル (Maril)",
+    "number": 183,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "azumarill",
+    "name": "Azumarill",
+    "japaneseName": "マリルリ (Marilli)",
+    "number": 184,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "sudowoodo",
+    "name": "Sudowoodo",
+    "japaneseName": "ウソッキー (Usokkie)",
+    "number": 185,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "politoed",
+    "name": "Politoed",
+    "japaneseName": "ニョロトノ (Nyorotono)",
+    "number": 186,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "hoppip",
+    "name": "Hoppip",
+    "japaneseName": "ハネッコ (Hanecco)",
+    "number": 187,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "skiploom",
+    "name": "Skiploom",
+    "japaneseName": "ポポッコ (Popocco)",
+    "number": 188,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "jumpluff",
+    "name": "Jumpluff",
+    "japaneseName": "ワタッコ (Watacco)",
+    "number": 189,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "aipom",
+    "name": "Aipom",
+    "japaneseName": "エイパム (Eipam)",
+    "number": 190,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "sunkern",
+    "name": "Sunkern",
+    "japaneseName": "ヒマナッツ (Himanuts)",
+    "number": 191,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "sunflora",
+    "name": "Sunflora",
+    "japaneseName": "キマワリ (Kimawari)",
+    "number": 192,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "yanma",
+    "name": "Yanma",
+    "japaneseName": "ヤンヤンマ (Yanyanma)",
+    "number": 193,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "wooper",
+    "name": "Wooper",
+    "japaneseName": "ウパー (Upah)",
+    "number": 194,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "quagsire",
+    "name": "Quagsire",
+    "japaneseName": "ヌオー (Nuoh)",
+    "number": 195,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "espeon",
+    "name": "Espeon",
+    "japaneseName": "エーフィ (Eifie)",
+    "number": 196,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "umbreon",
+    "name": "Umbreon",
+    "japaneseName": "ブラッキー (Blacky)",
+    "number": 197,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "murkrow",
+    "name": "Murkrow",
+    "japaneseName": "ヤミカラス (Yamikarasu)",
+    "number": 198,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "slowking",
+    "name": "Slowking",
+    "japaneseName": "ヤドキング (Yadoking)",
+    "number": 199,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "misdreavus",
+    "name": "Misdreavus",
+    "japaneseName": "ムウマ (Muma)",
+    "number": 200,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "unown",
+    "name": "Unown",
+    "japaneseName": "アンノーン (Unknown)",
+    "number": 201,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "wobbuffet",
+    "name": "Wobbuffet",
+    "japaneseName": "ソーナンス (Sonans)",
+    "number": 202,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "girafarig",
+    "name": "Girafarig",
+    "japaneseName": "キリンリキ (Kirinriki)",
+    "number": 203,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "pineco",
+    "name": "Pineco",
+    "japaneseName": "クヌギダマ (Kunugidama)",
+    "number": 204,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "forretress",
+    "name": "Forretress",
+    "japaneseName": "フォレトス (Foretos)",
+    "number": 205,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "dunsparce",
+    "name": "Dunsparce",
+    "japaneseName": "ノコッチ (Nokocchi)",
+    "number": 206,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "gligar",
+    "name": "Gligar",
+    "japaneseName": "グライガー (Gliger)",
+    "number": 207,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "steelix",
+    "name": "Steelix",
+    "japaneseName": "ハガネール (Haganeil)",
+    "number": 208,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "snubbull",
+    "name": "Snubbull",
+    "japaneseName": "ブルー (Bulu)",
+    "number": 209,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "granbull",
+    "name": "Granbull",
+    "japaneseName": "グランブル (Granbulu)",
+    "number": 210,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "qwilfish",
+    "name": "Qwilfish",
+    "japaneseName": "ハリーセン (Harysen)",
+    "number": 211,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "scizor",
+    "name": "Scizor",
+    "japaneseName": "ハッサム (Hassam)",
+    "number": 212,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "shuckle",
+    "name": "Shuckle",
+    "japaneseName": "ツボツボ (Tsubotsubo)",
+    "number": 213,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "heracross",
+    "name": "Heracross",
+    "japaneseName": "ヘラクロス (Heracros)",
+    "number": 214,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "sneasel",
+    "name": "Sneasel",
+    "japaneseName": "ニューラ (Nyula)",
+    "number": 215,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "teddiursa",
+    "name": "Teddiursa",
+    "japaneseName": "ヒメグマ (Himeguma)",
+    "number": 216,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ursaring",
+    "name": "Ursaring",
+    "japaneseName": "リングマ (Ringuma)",
+    "number": 217,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "slugma",
+    "name": "Slugma",
+    "japaneseName": "マグマッグ (Magmag)",
+    "number": 218,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "magcargo",
+    "name": "Magcargo",
+    "japaneseName": "マグカルゴ (Magcargot)",
+    "number": 219,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "swinub",
+    "name": "Swinub",
+    "japaneseName": "ウリムー (Urimoo)",
+    "number": 220,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "piloswine",
+    "name": "Piloswine",
+    "japaneseName": "イノムー (Inomoo)",
+    "number": 221,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "corsola",
+    "name": "Corsola",
+    "japaneseName": "サニーゴ (Sunnygo)",
+    "number": 222,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "remoraid",
+    "name": "Remoraid",
+    "japaneseName": "テッポウオ (Teppouo)",
+    "number": 223,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "octillery",
+    "name": "Octillery",
+    "japaneseName": "オクタン (Okutank)",
+    "number": 224,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "delibird",
+    "name": "Delibird",
+    "japaneseName": "デリバード (Delibird)",
+    "number": 225,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "mantine",
+    "name": "Mantine",
+    "japaneseName": "マンタイン (Mantain)",
+    "number": 226,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "skarmory",
+    "name": "Skarmory",
+    "japaneseName": "エアームド (Airmd)",
+    "number": 227,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "houndour",
+    "name": "Houndour",
+    "japaneseName": "デルビル (Delvil)",
+    "number": 228,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "houndoom",
+    "name": "Houndoom",
+    "japaneseName": "ヘルガー (Hellgar)",
+    "number": 229,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "kingdra",
+    "name": "Kingdra",
+    "japaneseName": "キングドラ (Kingdra)",
+    "number": 230,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "phanpy",
+    "name": "Phanpy",
+    "japaneseName": "ゴマゾウ (Gomazou)",
+    "number": 231,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "donphan",
+    "name": "Donphan",
+    "japaneseName": "ドンファン (Donfan)",
+    "number": 232,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "porygon2",
+    "name": "Porygon2",
+    "japaneseName": "ポリゴン２ (Porygon2)",
+    "number": 233,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "stantler",
+    "name": "Stantler",
+    "japaneseName": "オドシシ (Odoshishi)",
+    "number": 234,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "smeargle",
+    "name": "Smeargle",
+    "japaneseName": "ドーブル (Doble)",
+    "number": 235,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "tyrogue",
+    "name": "Tyrogue",
+    "japaneseName": "バルキー (Balkie)",
+    "number": 236,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "hitmontop",
+    "name": "Hitmontop",
+    "japaneseName": "カポエラー (Kapoerer)",
+    "number": 237,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "smoochum",
+    "name": "Smoochum",
+    "japaneseName": "ムチュール (Muchul)",
+    "number": 238,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "elekid",
+    "name": "Elekid",
+    "japaneseName": "エレキッド (Elekid)",
+    "number": 239,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "magby",
+    "name": "Magby",
+    "japaneseName": "ブビィ (Buby)",
+    "number": 240,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "miltank",
+    "name": "Miltank",
+    "japaneseName": "ミルタンク (Miltank)",
+    "number": 241,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "blissey",
+    "name": "Blissey",
+    "japaneseName": "ハピナス (Happinas)",
+    "number": 242,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "raikou",
+    "name": "Raikou",
+    "japaneseName": "ライコウ (Raikou)",
+    "number": 243,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "entei",
+    "name": "Entei",
+    "japaneseName": "エンテイ (Entei)",
+    "number": 244,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "suicune",
+    "name": "Suicune",
+    "japaneseName": "スイクン (Suicune)",
+    "number": 245,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "larvitar",
+    "name": "Larvitar",
+    "japaneseName": "ヨーギラス (Yogiras)",
+    "number": 246,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "pupitar",
+    "name": "Pupitar",
+    "japaneseName": "サナギラス (Sanagiras)",
+    "number": 247,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "tyranitar",
+    "name": "Tyranitar",
+    "japaneseName": "バンギラス (Bangiras)",
+    "number": 248,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "lugia",
+    "name": "Lugia",
+    "japaneseName": "ルギア (Lugia)",
+    "number": 249,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "ho-oh",
+    "name": "Ho-Oh",
+    "japaneseName": "ホウオウ (Houou)",
+    "number": 250,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "celebi",
+    "name": "Celebi",
+    "japaneseName": "セレビィ (Celebi)",
+    "number": 251,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Johto",
+    "isLegendary": true
+  },
+  {
+    "id": "treecko",
+    "name": "Treecko",
+    "japaneseName": "キモリ (Kimori)",
+    "number": 252,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "grovyle",
+    "name": "Grovyle",
+    "japaneseName": "ジュプトル (Juptile)",
+    "number": 253,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "sceptile",
+    "name": "Sceptile",
+    "japaneseName": "ジュカイン (Jukain)",
+    "number": 254,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "torchic",
+    "name": "Torchic",
+    "japaneseName": "アチャモ (Achamo)",
+    "number": 255,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "combusken",
+    "name": "Combusken",
+    "japaneseName": "ワカシャモ (Wakasyamo)",
+    "number": 256,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "blaziken",
+    "name": "Blaziken",
+    "japaneseName": "バシャーモ (Bursyamo)",
+    "number": 257,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "mudkip",
+    "name": "Mudkip",
+    "japaneseName": "ミズゴロウ (Mizugorou)",
+    "number": 258,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "marshtomp",
+    "name": "Marshtomp",
+    "japaneseName": "ヌマクロー (Numacraw)",
+    "number": 259,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "swampert",
+    "name": "Swampert",
+    "japaneseName": "ラグラージ (Laglarge)",
+    "number": 260,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "poochyena",
+    "name": "Poochyena",
+    "japaneseName": "ポチエナ (Pochiena)",
+    "number": 261,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "mightyena",
+    "name": "Mightyena",
+    "japaneseName": "グラエナ (Graena)",
+    "number": 262,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "zigzagoon",
+    "name": "Zigzagoon",
+    "japaneseName": "ジグザグマ (Jiguzaguma)",
+    "number": 263,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "linoone",
+    "name": "Linoone",
+    "japaneseName": "マッスグマ (Massuguma)",
+    "number": 264,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "wurmple",
+    "name": "Wurmple",
+    "japaneseName": "ケムッソ (Kemusso)",
+    "number": 265,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "silcoon",
+    "name": "Silcoon",
+    "japaneseName": "カラサリス (Karasalis)",
+    "number": 266,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "beautifly",
+    "name": "Beautifly",
+    "japaneseName": "アゲハント (Agehunt)",
+    "number": 267,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "cascoon",
+    "name": "Cascoon",
+    "japaneseName": "マユルド (Mayuld)",
+    "number": 268,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "dustox",
+    "name": "Dustox",
+    "japaneseName": "ドクケイル (Dokucale)",
+    "number": 269,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "lotad",
+    "name": "Lotad",
+    "japaneseName": "ハスボー (Hassboh)",
+    "number": 270,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "lombre",
+    "name": "Lombre",
+    "japaneseName": "ハスブレロ (Hasubrero)",
+    "number": 271,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "ludicolo",
+    "name": "Ludicolo",
+    "japaneseName": "ルンパッパ (Runpappa)",
+    "number": 272,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "seedot",
+    "name": "Seedot",
+    "japaneseName": "タネボー (Taneboh)",
+    "number": 273,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "nuzleaf",
+    "name": "Nuzleaf",
+    "japaneseName": "コノハナ (Konohana)",
+    "number": 274,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "shiftry",
+    "name": "Shiftry",
+    "japaneseName": "ダーテング (Dirteng)",
+    "number": 275,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "taillow",
+    "name": "Taillow",
+    "japaneseName": "スバメ (Subame)",
+    "number": 276,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "swellow",
+    "name": "Swellow",
+    "japaneseName": "オオスバメ (Ohsubame)",
+    "number": 277,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "wingull",
+    "name": "Wingull",
+    "japaneseName": "キャモメ (Camome)",
+    "number": 278,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "pelipper",
+    "name": "Pelipper",
+    "japaneseName": "ペリッパー (Pelipper)",
+    "number": 279,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "ralts",
+    "name": "Ralts",
+    "japaneseName": "ラルトス (Ralts)",
+    "number": 280,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "kirlia",
+    "name": "Kirlia",
+    "japaneseName": "キルリア (Kirlia)",
+    "number": 281,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "gardevoir",
+    "name": "Gardevoir",
+    "japaneseName": "サーナイト (Sirnight)",
+    "number": 282,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "surskit",
+    "name": "Surskit",
+    "japaneseName": "アメタマ (Ametama)",
+    "number": 283,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "masquerain",
+    "name": "Masquerain",
+    "japaneseName": "アメモース (Amemoth)",
+    "number": 284,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "shroomish",
+    "name": "Shroomish",
+    "japaneseName": "キノココ (Kinococo)",
+    "number": 285,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "breloom",
+    "name": "Breloom",
+    "japaneseName": "キノガッサ (Kinogassa)",
+    "number": 286,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "slakoth",
+    "name": "Slakoth",
+    "japaneseName": "ナマケロ (Namakero)",
+    "number": 287,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "vigoroth",
+    "name": "Vigoroth",
+    "japaneseName": "ヤルキモノ (Yarukimono)",
+    "number": 288,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "slaking",
+    "name": "Slaking",
+    "japaneseName": "ケッキング (Kekking)",
+    "number": 289,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "nincada",
+    "name": "Nincada",
+    "japaneseName": "ツチニン (Tutinin)",
+    "number": 290,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "ninjask",
+    "name": "Ninjask",
+    "japaneseName": "テッカニン (Tekkanin)",
+    "number": 291,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "shedinja",
+    "name": "Shedinja",
+    "japaneseName": "ヌケニン (Nukenin)",
+    "number": 292,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "whismur",
+    "name": "Whismur",
+    "japaneseName": "ゴニョニョ (Gonyonyo)",
+    "number": 293,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "loudred",
+    "name": "Loudred",
+    "japaneseName": "ドゴーム (Dogohmb)",
+    "number": 294,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "exploud",
+    "name": "Exploud",
+    "japaneseName": "バクオング (Bakuong)",
+    "number": 295,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "makuhita",
+    "name": "Makuhita",
+    "japaneseName": "マクノシタ (Makunoshita)",
+    "number": 296,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "hariyama",
+    "name": "Hariyama",
+    "japaneseName": "ハリテヤマ (Hariteyama)",
+    "number": 297,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "azurill",
+    "name": "Azurill",
+    "japaneseName": "ルリリ (Ruriri)",
+    "number": 298,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "nosepass",
+    "name": "Nosepass",
+    "japaneseName": "ノズパス (Nosepass)",
+    "number": 299,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "skitty",
+    "name": "Skitty",
+    "japaneseName": "エネコ (Eneco)",
+    "number": 300,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "delcatty",
+    "name": "Delcatty",
+    "japaneseName": "エネコロロ (Enekororo)",
+    "number": 301,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "sableye",
+    "name": "Sableye",
+    "japaneseName": "ヤミラミ (Yamirami)",
+    "number": 302,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "mawile",
+    "name": "Mawile",
+    "japaneseName": "クチート (Kucheat)",
+    "number": 303,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "aron",
+    "name": "Aron",
+    "japaneseName": "ココドラ (Cokodora)",
+    "number": 304,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "lairon",
+    "name": "Lairon",
+    "japaneseName": "コドラ (Kodora)",
+    "number": 305,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "aggron",
+    "name": "Aggron",
+    "japaneseName": "ボスゴドラ (Bossgodora)",
+    "number": 306,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "meditite",
+    "name": "Meditite",
+    "japaneseName": "アサナン (Asanan)",
+    "number": 307,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "medicham",
+    "name": "Medicham",
+    "japaneseName": "チャーレム (Charem)",
+    "number": 308,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "electrike",
+    "name": "Electrike",
+    "japaneseName": "ラクライ (Rakurai)",
+    "number": 309,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "manectric",
+    "name": "Manectric",
+    "japaneseName": "ライボルト (Livolt)",
+    "number": 310,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "plusle",
+    "name": "Plusle",
+    "japaneseName": "プラスル (Prasle)",
+    "number": 311,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "minun",
+    "name": "Minun",
+    "japaneseName": "マイナン (Minun)",
+    "number": 312,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "volbeat",
+    "name": "Volbeat",
+    "japaneseName": "バルビート (Barubeat)",
+    "number": 313,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "illumise",
+    "name": "Illumise",
+    "japaneseName": "イルミーゼ (Illumise)",
+    "number": 314,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "roselia",
+    "name": "Roselia",
+    "japaneseName": "ロゼリア (Roselia)",
+    "number": 315,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "gulpin",
+    "name": "Gulpin",
+    "japaneseName": "ゴクリン (Gokulin)",
+    "number": 316,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "swalot",
+    "name": "Swalot",
+    "japaneseName": "マルノーム (Marunoom)",
+    "number": 317,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "carvanha",
+    "name": "Carvanha",
+    "japaneseName": "キバニア (Kibanha)",
+    "number": 318,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "sharpedo",
+    "name": "Sharpedo",
+    "japaneseName": "サメハダー (Samehader)",
+    "number": 319,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "wailmer",
+    "name": "Wailmer",
+    "japaneseName": "ホエルコ (Hoeruko)",
+    "number": 320,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "wailord",
+    "name": "Wailord",
+    "japaneseName": "ホエルオー (Whaloh)",
+    "number": 321,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "numel",
+    "name": "Numel",
+    "japaneseName": "ドンメル (Donmel)",
+    "number": 322,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "camerupt",
+    "name": "Camerupt",
+    "japaneseName": "バクーダ (Bakuuda)",
+    "number": 323,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "torkoal",
+    "name": "Torkoal",
+    "japaneseName": "コータス (Cotoise)",
+    "number": 324,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "spoink",
+    "name": "Spoink",
+    "japaneseName": "バネブー (Baneboo)",
+    "number": 325,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "grumpig",
+    "name": "Grumpig",
+    "japaneseName": "ブーピッグ (Boopig)",
+    "number": 326,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "spinda",
+    "name": "Spinda",
+    "japaneseName": "パッチール (Patcheel)",
+    "number": 327,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "trapinch",
+    "name": "Trapinch",
+    "japaneseName": "ナックラー (Nuckrar)",
+    "number": 328,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "vibrava",
+    "name": "Vibrava",
+    "japaneseName": "ビブラーバ (Vibrava)",
+    "number": 329,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "flygon",
+    "name": "Flygon",
+    "japaneseName": "フライゴン (Flygon)",
+    "number": 330,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "cacnea",
+    "name": "Cacnea",
+    "japaneseName": "サボネア (Sabonea)",
+    "number": 331,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "cacturne",
+    "name": "Cacturne",
+    "japaneseName": "ノクタス (Noctus)",
+    "number": 332,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "swablu",
+    "name": "Swablu",
+    "japaneseName": "チルット (Tyltto)",
+    "number": 333,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "altaria",
+    "name": "Altaria",
+    "japaneseName": "チルタリス (Tyltalis)",
+    "number": 334,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "zangoose",
+    "name": "Zangoose",
+    "japaneseName": "ザングース (Zangoose)",
+    "number": 335,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "seviper",
+    "name": "Seviper",
+    "japaneseName": "ハブネーク (Habunake)",
+    "number": 336,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "lunatone",
+    "name": "Lunatone",
+    "japaneseName": "ルナトーン (Lunatone)",
+    "number": 337,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "solrock",
+    "name": "Solrock",
+    "japaneseName": "ソルロック (Solrock)",
+    "number": 338,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "barboach",
+    "name": "Barboach",
+    "japaneseName": "ドジョッチ (Dojoach)",
+    "number": 339,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "whiscash",
+    "name": "Whiscash",
+    "japaneseName": "ナマズン (Namazun)",
+    "number": 340,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "corphish",
+    "name": "Corphish",
+    "japaneseName": "ヘイガニ (Heigani)",
+    "number": 341,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "crawdaunt",
+    "name": "Crawdaunt",
+    "japaneseName": "シザリガー (Shizariger)",
+    "number": 342,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "baltoy",
+    "name": "Baltoy",
+    "japaneseName": "ヤジロン (Yajilon)",
+    "number": 343,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "claydol",
+    "name": "Claydol",
+    "japaneseName": "ネンドール (Nendoll)",
+    "number": 344,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "lileep",
+    "name": "Lileep",
+    "japaneseName": "リリーラ (Lilyla)",
+    "number": 345,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "cradily",
+    "name": "Cradily",
+    "japaneseName": "ユレイドル (Yuradle)",
+    "number": 346,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "anorith",
+    "name": "Anorith",
+    "japaneseName": "アノプス (Anopth)",
+    "number": 347,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "armaldo",
+    "name": "Armaldo",
+    "japaneseName": "アーマルド (Armaldo)",
+    "number": 348,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "feebas",
+    "name": "Feebas",
+    "japaneseName": "ヒンバス (Hinbass)",
+    "number": 349,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "milotic",
+    "name": "Milotic",
+    "japaneseName": "ミロカロス (Milokaross)",
+    "number": 350,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "castform",
+    "name": "Castform",
+    "japaneseName": "ポワルン (Powalen)",
+    "number": 351,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "kecleon",
+    "name": "Kecleon",
+    "japaneseName": "カクレオン (Kakureon)",
+    "number": 352,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "shuppet",
+    "name": "Shuppet",
+    "japaneseName": "カゲボウズ (Kagebouzu)",
+    "number": 353,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "banette",
+    "name": "Banette",
+    "japaneseName": "ジュペッタ (Juppeta)",
+    "number": 354,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "duskull",
+    "name": "Duskull",
+    "japaneseName": "ヨマワル (Yomawaru)",
+    "number": 355,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "dusclops",
+    "name": "Dusclops",
+    "japaneseName": "サマヨール (Samayouru)",
+    "number": 356,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "tropius",
+    "name": "Tropius",
+    "japaneseName": "トロピウス (Tropius)",
+    "number": 357,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "chimecho",
+    "name": "Chimecho",
+    "japaneseName": "チリーン (Chirean)",
+    "number": 358,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "absol",
+    "name": "Absol",
+    "japaneseName": "アブソル (Absol)",
+    "number": 359,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "wynaut",
+    "name": "Wynaut",
+    "japaneseName": "ソーナノ (Sohnano)",
+    "number": 360,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "snorunt",
+    "name": "Snorunt",
+    "japaneseName": "ユキワラシ (Yukiwarashi)",
+    "number": 361,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "glalie",
+    "name": "Glalie",
+    "japaneseName": "オニゴーリ (Onigohri)",
+    "number": 362,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "spheal",
+    "name": "Spheal",
+    "japaneseName": "タマザラシ (Tamazarashi)",
+    "number": 363,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "sealeo",
+    "name": "Sealeo",
+    "japaneseName": "トドグラー (Todoggler)",
+    "number": 364,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "walrein",
+    "name": "Walrein",
+    "japaneseName": "トドゼルガ (Todoseruga)",
+    "number": 365,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "clamperl",
+    "name": "Clamperl",
+    "japaneseName": "パールル (Pearlulu)",
+    "number": 366,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "huntail",
+    "name": "Huntail",
+    "japaneseName": "ハンテール (Huntail)",
+    "number": 367,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "gorebyss",
+    "name": "Gorebyss",
+    "japaneseName": "サクラビス (Sakurabyss)",
+    "number": 368,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "relicanth",
+    "name": "Relicanth",
+    "japaneseName": "ジーランス (Glanth)",
+    "number": 369,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "luvdisc",
+    "name": "Luvdisc",
+    "japaneseName": "ラブカス (Lovecus)",
+    "number": 370,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "bagon",
+    "name": "Bagon",
+    "japaneseName": "タツベイ (Tatsubay)",
+    "number": 371,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "shelgon",
+    "name": "Shelgon",
+    "japaneseName": "コモルー (Komoruu)",
+    "number": 372,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "salamence",
+    "name": "Salamence",
+    "japaneseName": "ボーマンダ (Bohmander)",
+    "number": 373,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "beldum",
+    "name": "Beldum",
+    "japaneseName": "ダンバル (Dumbber)",
+    "number": 374,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "metang",
+    "name": "Metang",
+    "japaneseName": "メタング (Metang)",
+    "number": 375,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "metagross",
+    "name": "Metagross",
+    "japaneseName": "メタグロス (Metagross)",
+    "number": 376,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "regirock",
+    "name": "Regirock",
+    "japaneseName": "レジロック (Regirock)",
+    "number": 377,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "regice",
+    "name": "Regice",
+    "japaneseName": "レジアイス (Regice)",
+    "number": 378,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "registeel",
+    "name": "Registeel",
+    "japaneseName": "レジスチル (Registeel)",
+    "number": 379,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "latias",
+    "name": "Latias",
+    "japaneseName": "ラティアス (Latias)",
+    "number": 380,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "latios",
+    "name": "Latios",
+    "japaneseName": "ラティオス (Latios)",
+    "number": 381,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "kyogre",
+    "name": "Kyogre",
+    "japaneseName": "カイオーガ (Kyogre)",
+    "number": 382,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "groudon",
+    "name": "Groudon",
+    "japaneseName": "グラードン (Groudon)",
+    "number": 383,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "rayquaza",
+    "name": "Rayquaza",
+    "japaneseName": "レックウザ (Rayquaza)",
+    "number": 384,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "jirachi",
+    "name": "Jirachi",
+    "japaneseName": "ジラーチ (Jirachi)",
+    "number": 385,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "deoxys",
+    "name": "Deoxys",
+    "japaneseName": "デオキシス (Deoxys)",
+    "number": 386,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Hoenn",
+    "isLegendary": true
+  },
+  {
+    "id": "turtwig",
+    "name": "Turtwig",
+    "japaneseName": "ナエトル (Naetle)",
+    "number": 387,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "grotle",
+    "name": "Grotle",
+    "japaneseName": "ハヤシガメ (Hayashigame)",
+    "number": 388,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "torterra",
+    "name": "Torterra",
+    "japaneseName": "ドダイトス (Dodaitose)",
+    "number": 389,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "chimchar",
+    "name": "Chimchar",
+    "japaneseName": "ヒコザル (Hikozaru)",
+    "number": 390,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "monferno",
+    "name": "Monferno",
+    "japaneseName": "モウカザル (Moukazaru)",
+    "number": 391,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "infernape",
+    "name": "Infernape",
+    "japaneseName": "ゴウカザル (Goukazaru)",
+    "number": 392,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "piplup",
+    "name": "Piplup",
+    "japaneseName": "ポッチャマ (Pochama)",
+    "number": 393,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "prinplup",
+    "name": "Prinplup",
+    "japaneseName": "ポッタイシ (Pottaishi)",
+    "number": 394,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "empoleon",
+    "name": "Empoleon",
+    "japaneseName": "エンペルト (Emperte)",
+    "number": 395,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "starly",
+    "name": "Starly",
+    "japaneseName": "ムックル (Mukkuru)",
+    "number": 396,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "staravia",
+    "name": "Staravia",
+    "japaneseName": "ムクバード (Mukubird)",
+    "number": 397,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "staraptor",
+    "name": "Staraptor",
+    "japaneseName": "ムクホーク (Mukuhawk)",
+    "number": 398,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bidoof",
+    "name": "Bidoof",
+    "japaneseName": "ビッパ (Bippa)",
+    "number": 399,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bibarel",
+    "name": "Bibarel",
+    "japaneseName": "ビーダル (Beadaru)",
+    "number": 400,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "kricketot",
+    "name": "Kricketot",
+    "japaneseName": "コロボーシ (Korobohshi)",
+    "number": 401,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "kricketune",
+    "name": "Kricketune",
+    "japaneseName": "コロトック (Korotock)",
+    "number": 402,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "shinx",
+    "name": "Shinx",
+    "japaneseName": "コリンク (Kolink)",
+    "number": 403,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "luxio",
+    "name": "Luxio",
+    "japaneseName": "ルクシオ (Luxio)",
+    "number": 404,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "luxray",
+    "name": "Luxray",
+    "japaneseName": "レントラー (Rentorar)",
+    "number": 405,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "budew",
+    "name": "Budew",
+    "japaneseName": "スボミー (Subomie)",
+    "number": 406,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "roserade",
+    "name": "Roserade",
+    "japaneseName": "ロズレイド (Roserade)",
+    "number": 407,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "cranidos",
+    "name": "Cranidos",
+    "japaneseName": "ズガイドス (Zugaidos)",
+    "number": 408,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "rampardos",
+    "name": "Rampardos",
+    "japaneseName": "ラムパルド (Rampald)",
+    "number": 409,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "shieldon",
+    "name": "Shieldon",
+    "japaneseName": "タテトプス (Tatetops)",
+    "number": 410,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bastiodon",
+    "name": "Bastiodon",
+    "japaneseName": "トリデプス (Torideps)",
+    "number": 411,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "burmy",
+    "name": "Burmy",
+    "japaneseName": "ミノムッチ (Minomucchi)",
+    "number": 412,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "wormadam",
+    "name": "Wormadam",
+    "japaneseName": "ミノマダム (Minomadam)",
+    "number": 413,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mothim",
+    "name": "Mothim",
+    "japaneseName": "ガーメイル (Gamale)",
+    "number": 414,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "combee",
+    "name": "Combee",
+    "japaneseName": "ミツハニー (Mitsuhoney)",
+    "number": 415,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "vespiquen",
+    "name": "Vespiquen",
+    "japaneseName": "ビークイン (Beequen)",
+    "number": 416,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "pachirisu",
+    "name": "Pachirisu",
+    "japaneseName": "パチリス (Pachirisu)",
+    "number": 417,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "buizel",
+    "name": "Buizel",
+    "japaneseName": "ブイゼル (Buoysel)",
+    "number": 418,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "floatzel",
+    "name": "Floatzel",
+    "japaneseName": "フローゼル (Floazel)",
+    "number": 419,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "cherubi",
+    "name": "Cherubi",
+    "japaneseName": "チェリンボ (Cherinbo)",
+    "number": 420,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "cherrim",
+    "name": "Cherrim",
+    "japaneseName": "チェリム (Cherrim)",
+    "number": 421,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "shellos",
+    "name": "Shellos",
+    "japaneseName": "カラナクシ (Karanakushi)",
+    "number": 422,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "gastrodon",
+    "name": "Gastrodon",
+    "japaneseName": "トリトドン (Tritodon)",
+    "number": 423,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "ambipom",
+    "name": "Ambipom",
+    "japaneseName": "エテボース (Eteboth)",
+    "number": 424,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "drifloon",
+    "name": "Drifloon",
+    "japaneseName": "フワンテ (Fuwante)",
+    "number": 425,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "drifblim",
+    "name": "Drifblim",
+    "japaneseName": "フワライド (Fuwaride)",
+    "number": 426,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "buneary",
+    "name": "Buneary",
+    "japaneseName": "ミミロル (Mimirol)",
+    "number": 427,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "lopunny",
+    "name": "Lopunny",
+    "japaneseName": "ミミロップ (Mimilop)",
+    "number": 428,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mismagius",
+    "name": "Mismagius",
+    "japaneseName": "ムウマージ (Mumargi)",
+    "number": 429,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "honchkrow",
+    "name": "Honchkrow",
+    "japaneseName": "ドンカラス (Dongkarasu)",
+    "number": 430,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "glameow",
+    "name": "Glameow",
+    "japaneseName": "ニャルマー (Nyarmar)",
+    "number": 431,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "purugly",
+    "name": "Purugly",
+    "japaneseName": "ブニャット (Bunyatto)",
+    "number": 432,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "chingling",
+    "name": "Chingling",
+    "japaneseName": "リーシャン (Lisyan)",
+    "number": 433,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "stunky",
+    "name": "Stunky",
+    "japaneseName": "スカンプー (Skunpuu)",
+    "number": 434,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "skuntank",
+    "name": "Skuntank",
+    "japaneseName": "スカタンク (Skutank)",
+    "number": 435,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bronzor",
+    "name": "Bronzor",
+    "japaneseName": "ドーミラー (Dohmirror)",
+    "number": 436,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bronzong",
+    "name": "Bronzong",
+    "japaneseName": "ドータクン (Dohtakun)",
+    "number": 437,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "bonsly",
+    "name": "Bonsly",
+    "japaneseName": "ウソハチ (Usohachi)",
+    "number": 438,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mime-jr.",
+    "name": "Mime Jr.",
+    "japaneseName": "マネネ (Manene)",
+    "number": 439,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "happiny",
+    "name": "Happiny",
+    "japaneseName": "ピンプク (Pinpuku)",
+    "number": 440,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "chatot",
+    "name": "Chatot",
+    "japaneseName": "ペラップ (Perap)",
+    "number": 441,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "spiritomb",
+    "name": "Spiritomb",
+    "japaneseName": "ミカルゲ (Mikaruge)",
+    "number": 442,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "gible",
+    "name": "Gible",
+    "japaneseName": "フカマル (Fukamaru)",
+    "number": 443,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "gabite",
+    "name": "Gabite",
+    "japaneseName": "ガバイト (Gabite)",
+    "number": 444,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "garchomp",
+    "name": "Garchomp",
+    "japaneseName": "ガブリアス (Gaburias)",
+    "number": 445,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "munchlax",
+    "name": "Munchlax",
+    "japaneseName": "ゴンベ (Gonbe)",
+    "number": 446,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "riolu",
+    "name": "Riolu",
+    "japaneseName": "リオル (Riolu)",
+    "number": 447,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "lucario",
+    "name": "Lucario",
+    "japaneseName": "ルカリオ (Lucario)",
+    "number": 448,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "hippopotas",
+    "name": "Hippopotas",
+    "japaneseName": "ヒポポタス (Hippopotas)",
+    "number": 449,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "hippowdon",
+    "name": "Hippowdon",
+    "japaneseName": "カバルドン (Kabaldon)",
+    "number": 450,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "skorupi",
+    "name": "Skorupi",
+    "japaneseName": "スコルピ (Scorupi)",
+    "number": 451,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "drapion",
+    "name": "Drapion",
+    "japaneseName": "ドラピオン (Dorapion)",
+    "number": 452,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "croagunk",
+    "name": "Croagunk",
+    "japaneseName": "グレッグル (Gureggru)",
+    "number": 453,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "toxicroak",
+    "name": "Toxicroak",
+    "japaneseName": "ドクロッグ (Dokurog)",
+    "number": 454,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "carnivine",
+    "name": "Carnivine",
+    "japaneseName": "マスキッパ (Muskippa)",
+    "number": 455,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "finneon",
+    "name": "Finneon",
+    "japaneseName": "ケイコウオ (Keikouo)",
+    "number": 456,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "lumineon",
+    "name": "Lumineon",
+    "japaneseName": "ネオラント (Neolant)",
+    "number": 457,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mantyke",
+    "name": "Mantyke",
+    "japaneseName": "タマンタ (Tamanta)",
+    "number": 458,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "snover",
+    "name": "Snover",
+    "japaneseName": "ユキカブリ (Yukikaburi)",
+    "number": 459,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "abomasnow",
+    "name": "Abomasnow",
+    "japaneseName": "ユキノオー (Yukinooh)",
+    "number": 460,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "weavile",
+    "name": "Weavile",
+    "japaneseName": "マニューラ (Manyula)",
+    "number": 461,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "magnezone",
+    "name": "Magnezone",
+    "japaneseName": "ジバコイル (Jibacoil)",
+    "number": 462,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "lickilicky",
+    "name": "Lickilicky",
+    "japaneseName": "ベロベルト (Berobelt)",
+    "number": 463,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "rhyperior",
+    "name": "Rhyperior",
+    "japaneseName": "ドサイドン (Dosidon)",
+    "number": 464,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "tangrowth",
+    "name": "Tangrowth",
+    "japaneseName": "モジャンボ (Mojumbo)",
+    "number": 465,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "electivire",
+    "name": "Electivire",
+    "japaneseName": "エレキブル (Elekible)",
+    "number": 466,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "magmortar",
+    "name": "Magmortar",
+    "japaneseName": "ブーバーン (Booburn)",
+    "number": 467,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "togekiss",
+    "name": "Togekiss",
+    "japaneseName": "トゲキッス (Togekiss)",
+    "number": 468,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "yanmega",
+    "name": "Yanmega",
+    "japaneseName": "メガヤンマ (Megayanma)",
+    "number": 469,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "leafeon",
+    "name": "Leafeon",
+    "japaneseName": "リーフィア (Leafia)",
+    "number": 470,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "glaceon",
+    "name": "Glaceon",
+    "japaneseName": "グレイシア (Glacia)",
+    "number": 471,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "gliscor",
+    "name": "Gliscor",
+    "japaneseName": "グライオン (Glion)",
+    "number": 472,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mamoswine",
+    "name": "Mamoswine",
+    "japaneseName": "マンムー (Mammoo)",
+    "number": 473,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "porygon-z",
+    "name": "Porygon-Z",
+    "japaneseName": "ポリゴンＺ (Porygon-Z)",
+    "number": 474,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "gallade",
+    "name": "Gallade",
+    "japaneseName": "エルレイド (Erureido)",
+    "number": 475,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "probopass",
+    "name": "Probopass",
+    "japaneseName": "ダイノーズ (Dainose)",
+    "number": 476,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "dusknoir",
+    "name": "Dusknoir",
+    "japaneseName": "ヨノワール (Yonoir)",
+    "number": 477,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "froslass",
+    "name": "Froslass",
+    "japaneseName": "ユキメノコ (Yukimenoko)",
+    "number": 478,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "rotom",
+    "name": "Rotom",
+    "japaneseName": "ロトム (Rotom)",
+    "number": 479,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "uxie",
+    "name": "Uxie",
+    "japaneseName": "ユクシー (Yuxie)",
+    "number": 480,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "mesprit",
+    "name": "Mesprit",
+    "japaneseName": "エムリット (Emrit)",
+    "number": 481,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "azelf",
+    "name": "Azelf",
+    "japaneseName": "アグノム (Agnome)",
+    "number": 482,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "dialga",
+    "name": "Dialga",
+    "japaneseName": "ディアルガ (Dialga)",
+    "number": 483,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "palkia",
+    "name": "Palkia",
+    "japaneseName": "パルキア (Palkia)",
+    "number": 484,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "heatran",
+    "name": "Heatran",
+    "japaneseName": "ヒードラン (Heatran)",
+    "number": 485,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "regigigas",
+    "name": "Regigigas",
+    "japaneseName": "レジギガス (Regigigas)",
+    "number": 486,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "giratina",
+    "name": "Giratina",
+    "japaneseName": "ギラティナ (Giratina)",
+    "number": 487,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "cresselia",
+    "name": "Cresselia",
+    "japaneseName": "クレセリア (Cresselia)",
+    "number": 488,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "phione",
+    "name": "Phione",
+    "japaneseName": "フィオネ (Phione)",
+    "number": 489,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "manaphy",
+    "name": "Manaphy",
+    "japaneseName": "マナフィ (Manaphy)",
+    "number": 490,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "darkrai",
+    "name": "Darkrai",
+    "japaneseName": "ダークライ (Darkrai)",
+    "number": 491,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "shaymin",
+    "name": "Shaymin",
+    "japaneseName": "シェイミ (Shaymin)",
+    "number": 492,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "arceus",
+    "name": "Arceus",
+    "japaneseName": "アルセウス (Arceus)",
+    "number": 493,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Sinnoh",
+    "isLegendary": true
+  },
+  {
+    "id": "victini",
+    "name": "Victini",
+    "japaneseName": "ビクティニ (Victini)",
+    "number": 494,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "snivy",
+    "name": "Snivy",
+    "japaneseName": "ツタージャ (Tsutarja)",
+    "number": 495,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "servine",
+    "name": "Servine",
+    "japaneseName": "ジャノビー (Janovy)",
+    "number": 496,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "serperior",
+    "name": "Serperior",
+    "japaneseName": "ジャローダ (Jalorda)",
+    "number": 497,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tepig",
+    "name": "Tepig",
+    "japaneseName": "ポカブ (Pokabu)",
+    "number": 498,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "pignite",
+    "name": "Pignite",
+    "japaneseName": "チャオブー (Chaoboo)",
+    "number": 499,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "emboar",
+    "name": "Emboar",
+    "japaneseName": "エンブオー (Enbuoh)",
+    "number": 500,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "oshawott",
+    "name": "Oshawott",
+    "japaneseName": "ミジュマル (Mijumaru)",
+    "number": 501,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "dewott",
+    "name": "Dewott",
+    "japaneseName": "フタチマル (Futachimaru)",
+    "number": 502,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "samurott",
+    "name": "Samurott",
+    "japaneseName": "ダイケンキ (Daikenki)",
+    "number": 503,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "patrat",
+    "name": "Patrat",
+    "japaneseName": "ミネズミ (Minezumi)",
+    "number": 504,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "watchog",
+    "name": "Watchog",
+    "japaneseName": "ミルホッグ (Miruhog)",
+    "number": 505,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "lillipup",
+    "name": "Lillipup",
+    "japaneseName": "ヨーテリー (Yorterrie)",
+    "number": 506,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "herdier",
+    "name": "Herdier",
+    "japaneseName": "ハーデリア (Herderrie)",
+    "number": 507,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "stoutland",
+    "name": "Stoutland",
+    "japaneseName": "ムーランド (Mooland)",
+    "number": 508,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "purrloin",
+    "name": "Purrloin",
+    "japaneseName": "チョロネコ (Choroneko)",
+    "number": 509,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "liepard",
+    "name": "Liepard",
+    "japaneseName": "レパルダス (Lepardas)",
+    "number": 510,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "pansage",
+    "name": "Pansage",
+    "japaneseName": "ヤナップ (Yanappu)",
+    "number": 511,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "simisage",
+    "name": "Simisage",
+    "japaneseName": "ヤナッキー (Yanakkie)",
+    "number": 512,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "pansear",
+    "name": "Pansear",
+    "japaneseName": "バオップ (Baoppu)",
+    "number": 513,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "simisear",
+    "name": "Simisear",
+    "japaneseName": "バオッキー (Baokkie)",
+    "number": 514,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "panpour",
+    "name": "Panpour",
+    "japaneseName": "ヒヤップ (Hiyappu)",
+    "number": 515,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "simipour",
+    "name": "Simipour",
+    "japaneseName": "ヒヤッキー (Hiyakkie)",
+    "number": 516,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "munna",
+    "name": "Munna",
+    "japaneseName": "ムンナ (Munna)",
+    "number": 517,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "musharna",
+    "name": "Musharna",
+    "japaneseName": "ムシャーナ (Musharna)",
+    "number": 518,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "pidove",
+    "name": "Pidove",
+    "japaneseName": "マメパト (Mamepato)",
+    "number": 519,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tranquill",
+    "name": "Tranquill",
+    "japaneseName": "ハトーボー (Hatoboh)",
+    "number": 520,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "unfezant",
+    "name": "Unfezant",
+    "japaneseName": "ケンホロウ (Kenhallow)",
+    "number": 521,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "blitzle",
+    "name": "Blitzle",
+    "japaneseName": "シママ (Shimama)",
+    "number": 522,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "zebstrika",
+    "name": "Zebstrika",
+    "japaneseName": "ゼブライカ (Zebraika)",
+    "number": 523,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "roggenrola",
+    "name": "Roggenrola",
+    "japaneseName": "ダンゴロ (Dangoro)",
+    "number": 524,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "boldore",
+    "name": "Boldore",
+    "japaneseName": "ガントル (Gantle)",
+    "number": 525,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "gigalith",
+    "name": "Gigalith",
+    "japaneseName": "ギガイアス (Gigaiath)",
+    "number": 526,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "woobat",
+    "name": "Woobat",
+    "japaneseName": "コロモリ (Koromori)",
+    "number": 527,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "swoobat",
+    "name": "Swoobat",
+    "japaneseName": "ココロモリ (Kokoromori)",
+    "number": 528,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "drilbur",
+    "name": "Drilbur",
+    "japaneseName": "モグリュー (Mogurew)",
+    "number": 529,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "excadrill",
+    "name": "Excadrill",
+    "japaneseName": "ドリュウズ (Doryuzu)",
+    "number": 530,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "audino",
+    "name": "Audino",
+    "japaneseName": "タブンネ (Tabunne)",
+    "number": 531,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "timburr",
+    "name": "Timburr",
+    "japaneseName": "ドッコラー (Dokkorer)",
+    "number": 532,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "gurdurr",
+    "name": "Gurdurr",
+    "japaneseName": "ドテッコツ (Dotekkotsu)",
+    "number": 533,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "conkeldurr",
+    "name": "Conkeldurr",
+    "japaneseName": "ローブシン (Roubushin)",
+    "number": 534,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tympole",
+    "name": "Tympole",
+    "japaneseName": "オタマロ (Otamaro)",
+    "number": 535,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "palpitoad",
+    "name": "Palpitoad",
+    "japaneseName": "ガマガル (Gamagaru)",
+    "number": 536,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "seismitoad",
+    "name": "Seismitoad",
+    "japaneseName": "ガマゲロゲ (Gamageroge)",
+    "number": 537,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "throh",
+    "name": "Throh",
+    "japaneseName": "ナゲキ (Nageki)",
+    "number": 538,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "sawk",
+    "name": "Sawk",
+    "japaneseName": "ダゲキ (Dageki)",
+    "number": 539,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "sewaddle",
+    "name": "Sewaddle",
+    "japaneseName": "クルミル (Kurumiru)",
+    "number": 540,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "swadloon",
+    "name": "Swadloon",
+    "japaneseName": "クルマユ (Kurumayu)",
+    "number": 541,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "leavanny",
+    "name": "Leavanny",
+    "japaneseName": "ハハコモリ (Hahakomori)",
+    "number": 542,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "venipede",
+    "name": "Venipede",
+    "japaneseName": "フシデ (Fushide)",
+    "number": 543,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "whirlipede",
+    "name": "Whirlipede",
+    "japaneseName": "ホイーガ (Wheega)",
+    "number": 544,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "scolipede",
+    "name": "Scolipede",
+    "japaneseName": "ペンドラー (Pendror)",
+    "number": 545,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cottonee",
+    "name": "Cottonee",
+    "japaneseName": "モンメン (Monmen)",
+    "number": 546,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "whimsicott",
+    "name": "Whimsicott",
+    "japaneseName": "エルフーン (Elfuun)",
+    "number": 547,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "petilil",
+    "name": "Petilil",
+    "japaneseName": "チュリネ (Churine)",
+    "number": 548,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "lilligant",
+    "name": "Lilligant",
+    "japaneseName": "ドレディア (Dredear)",
+    "number": 549,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "basculin",
+    "name": "Basculin",
+    "japaneseName": "バスラオ (Bassrao)",
+    "number": 550,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "sandile",
+    "name": "Sandile",
+    "japaneseName": "メグロコ (Meguroco)",
+    "number": 551,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "krokorok",
+    "name": "Krokorok",
+    "japaneseName": "ワルビル (Waruvile)",
+    "number": 552,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "krookodile",
+    "name": "Krookodile",
+    "japaneseName": "ワルビアル (Waruvial)",
+    "number": 553,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "darumaka",
+    "name": "Darumaka",
+    "japaneseName": "ダルマッカ (Darumakka)",
+    "number": 554,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "darmanitan",
+    "name": "Darmanitan",
+    "japaneseName": "ヒヒダルマ (Hihidaruma)",
+    "number": 555,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "maractus",
+    "name": "Maractus",
+    "japaneseName": "マラカッチ (Maracacchi)",
+    "number": 556,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "dwebble",
+    "name": "Dwebble",
+    "japaneseName": "イシズマイ (Ishizumai)",
+    "number": 557,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "crustle",
+    "name": "Crustle",
+    "japaneseName": "イワパレス (Iwapalace)",
+    "number": 558,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "scraggy",
+    "name": "Scraggy",
+    "japaneseName": "ズルッグ (Zuruggu)",
+    "number": 559,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "scrafty",
+    "name": "Scrafty",
+    "japaneseName": "ズルズキン (Zuruzukin)",
+    "number": 560,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "sigilyph",
+    "name": "Sigilyph",
+    "japaneseName": "シンボラー (Symboler)",
+    "number": 561,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "yamask",
+    "name": "Yamask",
+    "japaneseName": "デスマス (Desumasu)",
+    "number": 562,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cofagrigus",
+    "name": "Cofagrigus",
+    "japaneseName": "デスカーン (Desukarn)",
+    "number": 563,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tirtouga",
+    "name": "Tirtouga",
+    "japaneseName": "プロトーガ (Protoga)",
+    "number": 564,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "carracosta",
+    "name": "Carracosta",
+    "japaneseName": "アバゴーラ (Abagoura)",
+    "number": 565,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "archen",
+    "name": "Archen",
+    "japaneseName": "アーケン (Archen)",
+    "number": 566,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "archeops",
+    "name": "Archeops",
+    "japaneseName": "アーケオス (Archeos)",
+    "number": 567,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "trubbish",
+    "name": "Trubbish",
+    "japaneseName": "ヤブクロン (Yabukuron)",
+    "number": 568,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "garbodor",
+    "name": "Garbodor",
+    "japaneseName": "ダストダス (Dustdas)",
+    "number": 569,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "zorua",
+    "name": "Zorua",
+    "japaneseName": "ゾロア (Zorua)",
+    "number": 570,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "zoroark",
+    "name": "Zoroark",
+    "japaneseName": "ゾロアーク (Zoroark)",
+    "number": 571,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "minccino",
+    "name": "Minccino",
+    "japaneseName": "チラーミィ (Chillarmy)",
+    "number": 572,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cinccino",
+    "name": "Cinccino",
+    "japaneseName": "チラチーノ (Chillaccino)",
+    "number": 573,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "gothita",
+    "name": "Gothita",
+    "japaneseName": "ゴチム (Gothimu)",
+    "number": 574,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "gothorita",
+    "name": "Gothorita",
+    "japaneseName": "ゴチミル (Gothimiru)",
+    "number": 575,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "gothitelle",
+    "name": "Gothitelle",
+    "japaneseName": "ゴチルゼル (Gothiruselle)",
+    "number": 576,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "solosis",
+    "name": "Solosis",
+    "japaneseName": "ユニラン (Uniran)",
+    "number": 577,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "duosion",
+    "name": "Duosion",
+    "japaneseName": "ダブラン (Doublan)",
+    "number": 578,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "reuniclus",
+    "name": "Reuniclus",
+    "japaneseName": "ランクルス (Lanculus)",
+    "number": 579,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "ducklett",
+    "name": "Ducklett",
+    "japaneseName": "コアルヒー (Koaruhie)",
+    "number": 580,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "swanna",
+    "name": "Swanna",
+    "japaneseName": "スワンナ (Swanna)",
+    "number": 581,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "vanillite",
+    "name": "Vanillite",
+    "japaneseName": "バニプッチ (Vanipeti)",
+    "number": 582,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "vanillish",
+    "name": "Vanillish",
+    "japaneseName": "バニリッチ (Vanirich)",
+    "number": 583,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "vanilluxe",
+    "name": "Vanilluxe",
+    "japaneseName": "バイバニラ (Baivanilla)",
+    "number": 584,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "deerling",
+    "name": "Deerling",
+    "japaneseName": "シキジカ (Shikijika)",
+    "number": 585,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "sawsbuck",
+    "name": "Sawsbuck",
+    "japaneseName": "メブキジカ (Mebukijika)",
+    "number": 586,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "emolga",
+    "name": "Emolga",
+    "japaneseName": "エモンガ (Emonga)",
+    "number": 587,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "karrablast",
+    "name": "Karrablast",
+    "japaneseName": "カブルモ (Kaburumo)",
+    "number": 588,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "escavalier",
+    "name": "Escavalier",
+    "japaneseName": "シュバルゴ (Chevargo)",
+    "number": 589,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "foongus",
+    "name": "Foongus",
+    "japaneseName": "タマゲタケ (Tamagetake)",
+    "number": 590,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "amoonguss",
+    "name": "Amoonguss",
+    "japaneseName": "モロバレル (Morobareru)",
+    "number": 591,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "frillish",
+    "name": "Frillish",
+    "japaneseName": "プルリル (Pururill)",
+    "number": 592,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "jellicent",
+    "name": "Jellicent",
+    "japaneseName": "ブルンゲル (Burungel)",
+    "number": 593,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "alomomola",
+    "name": "Alomomola",
+    "japaneseName": "ママンボウ (Mamanbou)",
+    "number": 594,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "joltik",
+    "name": "Joltik",
+    "japaneseName": "バチュル (Bachuru)",
+    "number": 595,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "galvantula",
+    "name": "Galvantula",
+    "japaneseName": "デンチュラ (Dentula)",
+    "number": 596,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "ferroseed",
+    "name": "Ferroseed",
+    "japaneseName": "テッシード (Tesseed)",
+    "number": 597,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "ferrothorn",
+    "name": "Ferrothorn",
+    "japaneseName": "ナットレイ (Nutrey)",
+    "number": 598,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "klink",
+    "name": "Klink",
+    "japaneseName": "ギアル (Giaru)",
+    "number": 599,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "klang",
+    "name": "Klang",
+    "japaneseName": "ギギアル (Gigiaru)",
+    "number": 600,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "klinklang",
+    "name": "Klinklang",
+    "japaneseName": "ギギギアル (Gigigiaru)",
+    "number": 601,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tynamo",
+    "name": "Tynamo",
+    "japaneseName": "シビシラス (Shibishirasu)",
+    "number": 602,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "eelektrik",
+    "name": "Eelektrik",
+    "japaneseName": "シビビール (Shibibeel)",
+    "number": 603,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "eelektross",
+    "name": "Eelektross",
+    "japaneseName": "シビルドン (Shibirudon)",
+    "number": 604,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "elgyem",
+    "name": "Elgyem",
+    "japaneseName": "リグレー (Ligray)",
+    "number": 605,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "beheeyem",
+    "name": "Beheeyem",
+    "japaneseName": "オーベム (Ohbem)",
+    "number": 606,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "litwick",
+    "name": "Litwick",
+    "japaneseName": "ヒトモシ (Hitomoshi)",
+    "number": 607,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "lampent",
+    "name": "Lampent",
+    "japaneseName": "ランプラー (Lampler)",
+    "number": 608,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "chandelure",
+    "name": "Chandelure",
+    "japaneseName": "シャンデラ (Chandela)",
+    "number": 609,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "axew",
+    "name": "Axew",
+    "japaneseName": "キバゴ (Kibago)",
+    "number": 610,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "fraxure",
+    "name": "Fraxure",
+    "japaneseName": "オノンド (Onondo)",
+    "number": 611,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "haxorus",
+    "name": "Haxorus",
+    "japaneseName": "オノノクス (Ononokus)",
+    "number": 612,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cubchoo",
+    "name": "Cubchoo",
+    "japaneseName": "クマシュン (Kumasyun)",
+    "number": 613,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "beartic",
+    "name": "Beartic",
+    "japaneseName": "ツンベアー (Tunbear)",
+    "number": 614,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cryogonal",
+    "name": "Cryogonal",
+    "japaneseName": "フリージオ (Freegeo)",
+    "number": 615,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "shelmet",
+    "name": "Shelmet",
+    "japaneseName": "チョボマキ (Chobomaki)",
+    "number": 616,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "accelgor",
+    "name": "Accelgor",
+    "japaneseName": "アギルダー (Agilder)",
+    "number": 617,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "stunfisk",
+    "name": "Stunfisk",
+    "japaneseName": "マッギョ (Maggyo)",
+    "number": 618,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "mienfoo",
+    "name": "Mienfoo",
+    "japaneseName": "コジョフー (Kojofu)",
+    "number": 619,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "mienshao",
+    "name": "Mienshao",
+    "japaneseName": "コジョンド (Kojondo)",
+    "number": 620,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "druddigon",
+    "name": "Druddigon",
+    "japaneseName": "クリムガン (Crimgan)",
+    "number": 621,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "golett",
+    "name": "Golett",
+    "japaneseName": "ゴビット (Gobit)",
+    "number": 622,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "golurk",
+    "name": "Golurk",
+    "japaneseName": "ゴルーグ (Goloog)",
+    "number": 623,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "pawniard",
+    "name": "Pawniard",
+    "japaneseName": "コマタナ (Komatana)",
+    "number": 624,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "bisharp",
+    "name": "Bisharp",
+    "japaneseName": "キリキザン (Kirikizan)",
+    "number": 625,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "bouffalant",
+    "name": "Bouffalant",
+    "japaneseName": "バッフロン (Buffron)",
+    "number": 626,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "rufflet",
+    "name": "Rufflet",
+    "japaneseName": "ワシボン (Washibon)",
+    "number": 627,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "braviary",
+    "name": "Braviary",
+    "japaneseName": "ウォーグル (Warrgle)",
+    "number": 628,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "vullaby",
+    "name": "Vullaby",
+    "japaneseName": "バルチャイ (Valchai)",
+    "number": 629,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "mandibuzz",
+    "name": "Mandibuzz",
+    "japaneseName": "バルジーナ (Vulgina)",
+    "number": 630,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "heatmor",
+    "name": "Heatmor",
+    "japaneseName": "クイタラン (Kuitaran)",
+    "number": 631,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "durant",
+    "name": "Durant",
+    "japaneseName": "アイアント (Aiant)",
+    "number": 632,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "deino",
+    "name": "Deino",
+    "japaneseName": "モノズ (Monozu)",
+    "number": 633,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "zweilous",
+    "name": "Zweilous",
+    "japaneseName": "ジヘッド (Dihead)",
+    "number": 634,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "hydreigon",
+    "name": "Hydreigon",
+    "japaneseName": "サザンドラ (Sazandora)",
+    "number": 635,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "larvesta",
+    "name": "Larvesta",
+    "japaneseName": "メラルバ (Merlarva)",
+    "number": 636,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "volcarona",
+    "name": "Volcarona",
+    "japaneseName": "ウルガモス (Ulgamoth)",
+    "number": 637,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "cobalion",
+    "name": "Cobalion",
+    "japaneseName": "コバルオン (Cobalon)",
+    "number": 638,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "terrakion",
+    "name": "Terrakion",
+    "japaneseName": "テラキオン (Terrakion)",
+    "number": 639,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "virizion",
+    "name": "Virizion",
+    "japaneseName": "ビリジオン (Virizion)",
+    "number": 640,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "tornadus",
+    "name": "Tornadus",
+    "japaneseName": "トルネロス (Tornelos)",
+    "number": 641,
+    "type": "Flying",
+    "secondaryType": "Flying",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "thundurus",
+    "name": "Thundurus",
+    "japaneseName": "ボルトロス (Voltolos)",
+    "number": 642,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "reshiram",
+    "name": "Reshiram",
+    "japaneseName": "レシラム (Reshiram)",
+    "number": 643,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "zekrom",
+    "name": "Zekrom",
+    "japaneseName": "ゼクロム (Zekrom)",
+    "number": 644,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "landorus",
+    "name": "Landorus",
+    "japaneseName": "ランドロス (Landlos)",
+    "number": 645,
+    "type": "Ground",
+    "secondaryType": "Ground",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "kyurem",
+    "name": "Kyurem",
+    "japaneseName": "キュレム (Kyurem)",
+    "number": 646,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "keldeo",
+    "name": "Keldeo",
+    "japaneseName": "ケルディオ (Keldeo)",
+    "number": 647,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "meloetta",
+    "name": "Meloetta",
+    "japaneseName": "メロエッタ (Meloetta)",
+    "number": 648,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "genesect",
+    "name": "Genesect",
+    "japaneseName": "ゲノセクト (Genesect)",
+    "number": 649,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Unova",
+    "isLegendary": true
+  },
+  {
+    "id": "chespin",
+    "name": "Chespin",
+    "japaneseName": "ハリマロン (Harimaron)",
+    "number": 650,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "quilladin",
+    "name": "Quilladin",
+    "japaneseName": "ハリボーグ (Hariborg)",
+    "number": 651,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "chesnaught",
+    "name": "Chesnaught",
+    "japaneseName": "ブリガロン (Brigarron)",
+    "number": 652,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "fennekin",
+    "name": "Fennekin",
+    "japaneseName": "フォッコ (Fokko)",
+    "number": 653,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "braixen",
+    "name": "Braixen",
+    "japaneseName": "テールナー (Tairenar)",
+    "number": 654,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "delphox",
+    "name": "Delphox",
+    "japaneseName": "マフォクシー (Mahoxy)",
+    "number": 655,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "froakie",
+    "name": "Froakie",
+    "japaneseName": "ケロマツ (Keromatsu)",
+    "number": 656,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "frogadier",
+    "name": "Frogadier",
+    "japaneseName": "ゲコガシラ (Gekogashira)",
+    "number": 657,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "greninja",
+    "name": "Greninja",
+    "japaneseName": "ゲッコウガ (Gekkouga)",
+    "number": 658,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "bunnelby",
+    "name": "Bunnelby",
+    "japaneseName": "ホルビー (Horubee)",
+    "number": 659,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "diggersby",
+    "name": "Diggersby",
+    "japaneseName": "ホルード (Horudo)",
+    "number": 660,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "fletchling",
+    "name": "Fletchling",
+    "japaneseName": "ヤヤコマ (Yayakoma)",
+    "number": 661,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "fletchinder",
+    "name": "Fletchinder",
+    "japaneseName": "ヒノヤコマ (Hinoyakoma)",
+    "number": 662,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "talonflame",
+    "name": "Talonflame",
+    "japaneseName": "ファイアロー (Fiarrow)",
+    "number": 663,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "scatterbug",
+    "name": "Scatterbug",
+    "japaneseName": "コフキムシ (Kofukimushi)",
+    "number": 664,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "spewpa",
+    "name": "Spewpa",
+    "japaneseName": "コフーライ (Kofuurai)",
+    "number": 665,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "vivillon",
+    "name": "Vivillon",
+    "japaneseName": "ビビヨン (Viviyon)",
+    "number": 666,
+    "type": "Bug",
+    "secondaryType": "Bug",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "litleo",
+    "name": "Litleo",
+    "japaneseName": "シシコ (Shishiko)",
+    "number": 667,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "pyroar",
+    "name": "Pyroar",
+    "japaneseName": "カエンジシ (Kaenjishi)",
+    "number": 668,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "flabébé",
+    "name": "Flabébé",
+    "japaneseName": "フラベベ (Flabebe)",
+    "number": 669,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "floette",
+    "name": "Floette",
+    "japaneseName": "フラエッテ (Floette)",
+    "number": 670,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "florges",
+    "name": "Florges",
+    "japaneseName": "フラージェス (Florges)",
+    "number": 671,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "skiddo",
+    "name": "Skiddo",
+    "japaneseName": "メェークル (Meecle)",
+    "number": 672,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "gogoat",
+    "name": "Gogoat",
+    "japaneseName": "ゴーゴート (Gogoat)",
+    "number": 673,
+    "type": "Grass",
+    "secondaryType": "Grass",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "pancham",
+    "name": "Pancham",
+    "japaneseName": "ヤンチャム (Yancham)",
+    "number": 674,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "pangoro",
+    "name": "Pangoro",
+    "japaneseName": "ゴロンダ (Goronda)",
+    "number": 675,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "furfrou",
+    "name": "Furfrou",
+    "japaneseName": "トリミアン (Trimmien)",
+    "number": 676,
+    "type": "Normal",
+    "secondaryType": "Normal",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "espurr",
+    "name": "Espurr",
+    "japaneseName": "ニャスパー (Nyasper)",
+    "number": 677,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "meowstic",
+    "name": "Meowstic",
+    "japaneseName": "ニャオニクス (Nyaonix)",
+    "number": 678,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "honedge",
+    "name": "Honedge",
+    "japaneseName": "ヒトツキ (Hitotsuki)",
+    "number": 679,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "doublade",
+    "name": "Doublade",
+    "japaneseName": "ニダンギル (Nidangill)",
+    "number": 680,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "aegislash",
+    "name": "Aegislash",
+    "japaneseName": "ギルガルド (Gillgard)",
+    "number": 681,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "spritzee",
+    "name": "Spritzee",
+    "japaneseName": "シュシュプ (Shushupu)",
+    "number": 682,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "aromatisse",
+    "name": "Aromatisse",
+    "japaneseName": "フレフワン (Frefuwan)",
+    "number": 683,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "swirlix",
+    "name": "Swirlix",
+    "japaneseName": "ペロッパフ (Peroppafu)",
+    "number": 684,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "slurpuff",
+    "name": "Slurpuff",
+    "japaneseName": "ペロリーム (Peroream)",
+    "number": 685,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "inkay",
+    "name": "Inkay",
+    "japaneseName": "マーイーカ (Maaiika)",
+    "number": 686,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "malamar",
+    "name": "Malamar",
+    "japaneseName": "カラマネロ (Calamanero)",
+    "number": 687,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "binacle",
+    "name": "Binacle",
+    "japaneseName": "カメテテ (Kametete)",
+    "number": 688,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "barbaracle",
+    "name": "Barbaracle",
+    "japaneseName": "ガメノデス (Gamenodes)",
+    "number": 689,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "skrelp",
+    "name": "Skrelp",
+    "japaneseName": "クズモー (Kuzumo)",
+    "number": 690,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "dragalge",
+    "name": "Dragalge",
+    "japaneseName": "ドラミドロ (Dramidoro)",
+    "number": 691,
+    "type": "Poison",
+    "secondaryType": "Poison",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "clauncher",
+    "name": "Clauncher",
+    "japaneseName": "ウデッポウ (Udeppou)",
+    "number": 692,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "clawitzer",
+    "name": "Clawitzer",
+    "japaneseName": "ブロスター (Bloster)",
+    "number": 693,
+    "type": "Water",
+    "secondaryType": "Water",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "helioptile",
+    "name": "Helioptile",
+    "japaneseName": "エリキテル (Erikiteru)",
+    "number": 694,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "heliolisk",
+    "name": "Heliolisk",
+    "japaneseName": "エレザード (Elezard)",
+    "number": 695,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "tyrunt",
+    "name": "Tyrunt",
+    "japaneseName": "チゴラス (Chigoras)",
+    "number": 696,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "tyrantrum",
+    "name": "Tyrantrum",
+    "japaneseName": "ガチゴラス (Gachigoras)",
+    "number": 697,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "amaura",
+    "name": "Amaura",
+    "japaneseName": "アマルス (Amarus)",
+    "number": 698,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "aurorus",
+    "name": "Aurorus",
+    "japaneseName": "アマルルガ (Amaruruga)",
+    "number": 699,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "sylveon",
+    "name": "Sylveon",
+    "japaneseName": "ニンフィア (Nymphia)",
+    "number": 700,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "hawlucha",
+    "name": "Hawlucha",
+    "japaneseName": "ルチャブル (Luchabull)",
+    "number": 701,
+    "type": "Fighting",
+    "secondaryType": "Fighting",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "dedenne",
+    "name": "Dedenne",
+    "japaneseName": "デデンネ (Dedenne)",
+    "number": 702,
+    "type": "Electric",
+    "secondaryType": "Electric",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "carbink",
+    "name": "Carbink",
+    "japaneseName": "メレシー (Melecie)",
+    "number": 703,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "goomy",
+    "name": "Goomy",
+    "japaneseName": "ヌメラ (Numera)",
+    "number": 704,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "sliggoo",
+    "name": "Sliggoo",
+    "japaneseName": "ヌメイル (Numeil)",
+    "number": 705,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "goodra",
+    "name": "Goodra",
+    "japaneseName": "ヌメルゴン (Numelgon)",
+    "number": 706,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "klefki",
+    "name": "Klefki",
+    "japaneseName": "クレッフィ (Cleffy)",
+    "number": 707,
+    "type": "Steel",
+    "secondaryType": "Steel",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "phantump",
+    "name": "Phantump",
+    "japaneseName": "ボクレー (Bokurei)",
+    "number": 708,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "trevenant",
+    "name": "Trevenant",
+    "japaneseName": "オーロット (Ohrot)",
+    "number": 709,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "pumpkaboo",
+    "name": "Pumpkaboo",
+    "japaneseName": "バケッチャ (Bakeccha)",
+    "number": 710,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "gourgeist",
+    "name": "Gourgeist",
+    "japaneseName": "パンプジン (Pumpjin)",
+    "number": 711,
+    "type": "Ghost",
+    "secondaryType": "Ghost",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "bergmite",
+    "name": "Bergmite",
+    "japaneseName": "カチコール (Kachikohru)",
+    "number": 712,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "avalugg",
+    "name": "Avalugg",
+    "japaneseName": "クレベース (Crebase)",
+    "number": 713,
+    "type": "Ice",
+    "secondaryType": "Ice",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "noibat",
+    "name": "Noibat",
+    "japaneseName": "オンバット (Onbat)",
+    "number": 714,
+    "type": "Flying",
+    "secondaryType": "Flying",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "noivern",
+    "name": "Noivern",
+    "japaneseName": "オンバーン (Onvern)",
+    "number": 715,
+    "type": "Flying",
+    "secondaryType": "Flying",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "xerneas",
+    "name": "Xerneas",
+    "japaneseName": "ゼルネアス (Xerneas)",
+    "number": 716,
+    "type": "Fairy",
+    "secondaryType": "Fairy",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "yveltal",
+    "name": "Yveltal",
+    "japaneseName": "イベルタル (Yveltal)",
+    "number": 717,
+    "type": "Dark",
+    "secondaryType": "Dark",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "zygarde",
+    "name": "Zygarde",
+    "japaneseName": "ジガルデ (Zygarde)",
+    "number": 718,
+    "type": "Dragon",
+    "secondaryType": "Dragon",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "diancie",
+    "name": "Diancie",
+    "japaneseName": "ディアンシー (Diancie)",
+    "number": 719,
+    "type": "Rock",
+    "secondaryType": "Rock",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "hoopa",
+    "name": "Hoopa",
+    "japaneseName": "フーパ (Hoopa)",
+    "number": 720,
+    "type": "Psychic",
+    "secondaryType": "Psychic",
+    "generation": "Kalos",
+    "isLegendary": true
+  },
+  {
+    "id": "volcanion",
+    "name": "Volcanion",
+    "japaneseName": "ボルケニオン (Volcanion)",
+    "number": 721,
+    "type": "Fire",
+    "secondaryType": "Fire",
+    "generation": "Kalos",
+    "isLegendary": true
+  }
+]
