@@ -23,10 +23,6 @@ def get_eng_checklists():
                 df = pd.read_json(f)
                 dfs.append(df)
     sets_eng_df = pd.concat(dfs)
-
-    # variant = {
-
-    # }
     print_map = {
         "FirstEdition": "fe",
         "Shadowless": "s",
@@ -52,7 +48,7 @@ def get_eng_checklists():
     return sets_eng_df
 
 
-def get_eng_df():
+def get_pokemontcg_df():
     image_folder = "../db/pokemontcg.io/sets-eng/"
     image_files = glob.glob(image_folder + "**/*.jpg", recursive=True)
     return pd.DataFrame(image_files, columns=["file_path"])

@@ -11,3 +11,4 @@ db/cards/sets-jp/*
 db/cgc/sub/*
 db/cgc/seen.json
 db/cgc/*.json
+db/pokumon/*.json

@@ -25,7 +25,7 @@ class CGCScraper:
         if cpus is None or single_threaded:
             cpus = 1
         else:
-            cpus *= 2
+            cpus *= 4
         self.num_threads = cpus
         self.queue = asyncio.Queue()
 

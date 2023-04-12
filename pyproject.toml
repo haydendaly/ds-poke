@@ -9,8 +9,8 @@ setup = "src.scripts:setup"
 lint = "src.scripts:lint"
 precommit = "src.scripts:precommit"
 cgc = "src.scrape.cgc:main"
+pokumon = "src.scrape.pokumon:main"
 notebook = "src.scripts:notebook"
-df = "src.dataset:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"

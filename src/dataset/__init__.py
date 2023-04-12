@@ -1,2 +1,3 @@
-from .cards import *
 from .cgc import *
+from .pokemontcg import *
+from .pokumon import *
