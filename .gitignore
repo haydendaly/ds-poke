@@ -10,3 +10,4 @@ db/cards/sets-eng/*
 db/cards/sets-jp/*
 db/cgc/sub/*
 db/cgc/seen.json
+db/cgc/*.json

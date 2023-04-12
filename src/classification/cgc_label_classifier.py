@@ -121,3 +121,8 @@ class LabelClassifier:
         prob_b = self.clf.predict_proba(features_b)[0]
         classified_inverted = prob_a[0] < prob_b[0]
         return classified_inverted
+
+    def is_front(self, image):
+        features = self._preprocess(image)
+        prob = self.clf.predict_proba(features)[0]
+        return prob[0] > prob[1]

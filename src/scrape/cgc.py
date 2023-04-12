@@ -2,7 +2,6 @@ import asyncio
 import concurrent.futures
 import os
 
-
 from ..classification import LabelClassifier
 from ..image import ImageDatabase, ImageStorage
 from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, swap_files
@@ -11,7 +10,7 @@ from .browser import SSRBrowser
 
 class CGCScraper:
     CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
-    CGC_BASE_SUB_NUM = 3526544
+    CGC_BASE_SUB_NUM = 2000000
     CGC_TOP_SUB_NUM = 4126544
     # cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
     CGC_BATCH_SIZE = (
@@ -24,8 +23,10 @@ class CGCScraper:
 
         cpus = os.cpu_count()
         if cpus is None or single_threaded:
-            cpus = 0.5
-        self.num_threads = cpus * 2
+            cpus = 1
+        else:
+            cpus *= 2
+        self.num_threads = cpus
         self.queue = asyncio.Queue()
 
         self.get_persisted()
@@ -63,13 +64,14 @@ class CGCScraper:
                 path_0, image_0 = self.storage.download_image_to_id(
                     image_urls[0], "0_" + cert_num
                 )
-                path_1, image_1 = self.storage.download_image_to_id(
-                    image_urls[1], "1_" + cert_num
-                )
-                if self.label_classifier.images_are_inverted(image_0, image_1):
-                    swap_files(path_0, path_1)
-                data.append(card_data)
-                return True
+                if not self.label_classifier.is_front(image_0):
+                    path_1, image_1 = self.storage.download_image_to_id(
+                        image_urls[1], "1_" + cert_num
+                    )
+                    if self.label_classifier.images_are_inverted(image_0, image_1):
+                        swap_files(path_0, path_1)
+                    data.append(card_data)
+                    return True
         except Exception as e:
             print(e)
         return False
