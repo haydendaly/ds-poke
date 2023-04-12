@@ -18,7 +18,7 @@ class CGCScraper:
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
     )
-    MAX_CONNECTIONS = 40
+    MAX_CONNECTIONS = 60
 
     def __init__(self, single_threaded=False):
         self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
@@ -30,7 +30,7 @@ class CGCScraper:
         if cpus is None or single_threaded:
             cpus = 1
         else:
-            cpus *= 4
+            cpus *= 5
         self.num_threads = cpus
         self.queue = asyncio.Queue()
 

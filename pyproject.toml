@@ -5,11 +5,8 @@ description = ""
 authors = ["haydendaly <hcd36@cornell.edu>"]
 
 [tool.poetry.scripts]
-setup = "src.scripts:setup"
 lint = "src.scripts:lint"
-precommit = "src.scripts:precommit"
 cgc = "src.scrape.cgc:main"
-pokumon = "src.scrape.pokumon:main"
 notebook = "src.scripts:notebook"
 
 [tool.poetry.dependencies]

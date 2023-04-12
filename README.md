@@ -5,9 +5,10 @@
 ## Setup
 
 ```sh
+# Install Poetry
 $ curl -sSL https://install.python-poetry.org | python3 -
+# Install dependencies
 $ poetry install
-$ poetry run setup
 ```
 
 To add packages, you can use:
@@ -61,8 +62,9 @@ src
 │   └── cgc_label_classifier.py
 ├── dataset
 │   ├── __init__.py
-│   ├── cards.py
-│   └── cgc.py
+│   ├── cgc.py
+│   ├── pokemontcg.py
+│   └── pokumon.py
 ├── image
 │   ├── __init__.py
 │   ├── helpers.py
@@ -71,7 +73,8 @@ src
 ├── scrape
 │   ├── __init__.py
 │   ├── browser.py
-│   └── cgc.py
+│   ├── cgc.py
+│   └── pokumon.py
 ├── scripts.py
 ├── segmentation
 │   └── __init__.py

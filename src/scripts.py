@@ -29,28 +29,6 @@ def lint():
         print("Removed unused imports")
 
 
-def precommit():
-    try:
-        subprocess.run(
-            [
-                "find",
-                ".",
-                "-name",
-                "'.DS_Store'",
-                "-type",
-                "f",
-                "-exec",
-                "rm",
-                "-f",
-                "{}",
-                "+",
-            ]
-        )
-    except:
-        pass
-    lint()
-
-
 def notebook():
     try:
         subprocess.run(
@@ -69,8 +47,8 @@ def notebook():
     subprocess.run(["jupyter", "notebook"])
 
 
-def setup():
-    subprocess.run(["pre-commit", "install"])
+# def setup():
+#     subprocess.run(["pre-commit", "install"])
 
 
 if __name__ == "__main__":
