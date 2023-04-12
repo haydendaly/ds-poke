@@ -18,8 +18,8 @@ class PokumonScraper:
         cpus = os.cpu_count()
         if cpus is None or single_threaded:
             cpus = 1
-        # else:
-        #     cpus *= 2
+        else:
+            cpus *= 2
         self.num_threads = cpus
         self.queue = asyncio.Queue()
 

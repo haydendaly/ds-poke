@@ -1,6 +1,4 @@
-import asyncio
-
-import requests
+import aiohttp
 from bs4 import BeautifulSoup
 
 from ..shared import NotImplementedError
@@ -18,10 +16,7 @@ from ..shared import NotImplementedError
 
 class SSRBrowser:
     def __init__(self, has_proxy=False):
-        self.session = requests.Session()
-        self.session.headers = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"
-        }
+        # self.session = aiohttp.ClientSession()
         self.has_proxy = has_proxy
 
     def get(self, url):
@@ -41,11 +36,19 @@ class SSRBrowser:
 
         return BeautifulSoup(res.text, "html.parser")
 
+    # async def get_async(self, url):
+    #     loop = asyncio.get_event_loop()
+    #     # TODO merge implementations
+    #     res = await loop.run_in_executor(None, requests.get, url)
+    #     return BeautifulSoup(res.text, "html.parser")
+
     async def get_async(self, url):
-        loop = asyncio.get_event_loop()
-        # TODO merge implementations
-        res = await loop.run_in_executor(None, requests.get, url)
-        return BeautifulSoup(res.text, "html.parser")
+        timeout = aiohttp.ClientTimeout(total=10)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            async with session.get(url) as response:
+                content = await response.read()
+                dom = BeautifulSoup(content, "html.parser")
+            return dom
 
 
 # class CSRBrowser:

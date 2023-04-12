@@ -1,6 +1,8 @@
 import asyncio
 import concurrent.futures
 import os
+import time
+from collections import deque
 
 from ..classification import LabelClassifier
 from ..image import ImageDatabase, ImageStorage
@@ -16,10 +18,13 @@ class CGCScraper:
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
     )
+    MAX_CONNECTIONS = 40
 
     def __init__(self, single_threaded=False):
         self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
         self.browser = SSRBrowser()
+
+        self.times = deque()
 
         cpus = os.cpu_count()
         if cpus is None or single_threaded:
@@ -30,51 +35,58 @@ class CGCScraper:
         self.queue = asyncio.Queue()
 
         self.get_persisted()
+        self.semaphore = asyncio.Semaphore(self.MAX_CONNECTIONS)
         self.label_classifier = LabelClassifier()
 
     async def parse_card_info(self, cert_num: str, data):
-        if self.storage.has_image("0_" + cert_num):
-            # print(f"Skipping {cert_num} because it already exists")
-            return False
-        try:
-            dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
-            card_info = {}
-            for dl in dom.select("div.certlookup-intro dl"):
-                key, value = None, None
-                key_elem, value_elem = dl.select_one("dt"), dl.select_one("dd")
-                if key_elem is not None:
-                    key = key_elem.text.strip()
-                if value_elem is not None:
-                    value = value_elem.text.strip()
-                if key is not None and value is not None:
-                    card_info[key] = value
-            if len(card_info) == 0:
-                # print(f"Failed to find card info for {cert_num}")
+        async with self.semaphore:
+            if self.storage.has_image("0_" + cert_num):
+                # print(f"Skipping {cert_num} because it already exists")
                 return False
-            card_data = {}
-            for key, value in card_info.items():
-                card_data[key.lower().replace(" ", "_", 3)] = value
+            try:
+                try:
+                    dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
+                except Exception as e:
+                    print(f"Failed to get {cert_num} because {e}")
+                    return False
+                card_info = {}
+                for dl in dom.select("div.certlookup-intro dl"):
+                    key, value = None, None
+                    key_elem, value_elem = dl.select_one("dt"), dl.select_one("dd")
+                    if key_elem is not None:
+                        key = key_elem.text.strip()
+                    if value_elem is not None:
+                        value = value_elem.text.strip()
+                    if key is not None and value is not None:
+                        card_info[key] = value
+                if len(card_info) == 0:
+                    # print(f"Failed to find card info for {cert_num}")
+                    return False
+                card_data = {}
+                for key, value in card_info.items():
+                    card_data[key.lower().replace(" ", "_", 3)] = value
 
-            if card_data["game"] != POKEMON_TITLE:
-                return True
-
-            images = dom.select("div.certlookup-images img")
-            image_urls = [str(img["src"]) for img in images]
-            if len(image_urls) == 2 and self.storage:
-                path_0, image_0 = self.storage.download_image_to_id(
-                    image_urls[0], "0_" + cert_num
-                )
-                if not self.label_classifier.is_front(image_0):
-                    path_1, image_1 = self.storage.download_image_to_id(
-                        image_urls[1], "1_" + cert_num
-                    )
-                    if self.label_classifier.images_are_inverted(image_0, image_1):
-                        swap_files(path_0, path_1)
-                    data.append(card_data)
+                if card_data["game"] != POKEMON_TITLE:
                     return True
-        except Exception as e:
-            print(e)
-        return False
+
+                images = dom.select("div.certlookup-images img")
+                image_urls = [str(img["src"]) for img in images]
+                if len(image_urls) == 2 and self.storage:
+                    path_0, image_0 = self.storage.download_image_to_id(
+                        image_urls[0], "0_" + cert_num
+                    )
+                    if not self.label_classifier.is_front(image_0):
+                        path_1, image_1 = self.storage.download_image_to_id(
+                            image_urls[1], "1_" + cert_num
+                        )
+                        if self.label_classifier.images_are_inverted(image_0, image_1):
+                            swap_files(path_0, path_1)
+                        data.append(card_data)
+                        return True
+            except Exception as e:
+                # print("Error", e)
+                pass
+            return False
 
     def save_submission(self, sub_prefix, data):
         os.makedirs("./db/cgc/sub", exist_ok=True)
@@ -114,7 +126,16 @@ class CGCScraper:
             sub_prefix = await self.queue.get()
             l = self.queue.qsize()
             if l % self.CGC_BATCH_SIZE == 0:
-                print(f"Submissions remaining: {l}")
+                self.times.append(time.time())
+                print(f"{thread_num}: Submissions remaining: {l}")
+                if len(self.times) > 2:
+                    submission_rate = (
+                        self.CGC_BATCH_SIZE
+                        * len(self.times)
+                        / (self.times[-1] - self.times[0])
+                    )
+                    print(f"Submissions / second: {submission_rate}")
+                    print("Time remaining (hours):", l / submission_rate / 3600)
                 self.persist()
             if sub_prefix in self.seen:
                 self.queue.task_done()
