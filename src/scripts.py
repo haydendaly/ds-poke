@@ -47,8 +47,19 @@ def notebook():
     subprocess.run(["jupyter", "notebook"])
 
 
-# def setup():
-#     subprocess.run(["pre-commit", "install"])
+def setup():
+    # subprocess.run(["pre-commit", "install"])
+    shared_repo = "https://github.com/haydendaly/ds-poke-shared.git"
+    subprocess.run(["cd", "./db"])
+    try:
+        subprocess.run(["git", "clone", shared_repo])
+        subprocess.run(["mv", "ds-poke-shared", "shared"])
+        subprocess.run(["cd", ".."])
+    except:
+        print(
+            "Failed to clone shared repo, make sure you accepted the invitation to",
+            shared_repo,
+        )
 
 
 if __name__ == "__main__":

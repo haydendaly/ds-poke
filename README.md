@@ -9,6 +9,7 @@
 $ curl -sSL https://install.python-poetry.org | python3 -
 # Install dependencies
 $ poetry install
+$ poetry run setup
 ```
 
 To add packages, you can use:
@@ -43,7 +44,7 @@ $ poetry run lint
 $ poetry run pytest
 ```
 
-### CGC Data Scraping (WIP)
+### CGC Data Scraping
 
 This spins up an async worker queue and writes images to an SSD.
 
@@ -64,7 +65,8 @@ src
 │   ├── __init__.py
 │   ├── cgc.py
 │   ├── pokemontcg.py
-│   └── pokumon.py
+│   ├── pokumon.py
+│   └── segmentation.py
 ├── image
 │   ├── __init__.py
 │   ├── helpers.py
@@ -77,7 +79,9 @@ src
 │   └── pokumon.py
 ├── scripts.py
 ├── segmentation
-│   └── __init__.py
+│   ├── __init__.py
+│   ├── segmentation.ipynb
+│   └── segmentation_prepare_dataset.ipynb
 └── shared
     ├── __init__.py
     ├── constant.py

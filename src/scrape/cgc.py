@@ -18,7 +18,7 @@ class CGCScraper:
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
     )
-    MAX_CONNECTIONS = 60
+    MAX_CONNECTIONS = 59
 
     def __init__(self, single_threaded=False):
         self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
@@ -30,7 +30,7 @@ class CGCScraper:
         if cpus is None or single_threaded:
             cpus = 1
         else:
-            cpus *= 5
+            cpus *= 6
         self.num_threads = cpus
         self.queue = asyncio.Queue()
 
@@ -47,6 +47,7 @@ class CGCScraper:
                 try:
                     dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
                 except Exception as e:
+                    time.sleep(0.1)
                     print(f"Failed to get {cert_num} because {e}")
                     return False
                 card_info = {}

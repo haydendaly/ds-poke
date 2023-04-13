@@ -50,6 +50,18 @@ def crop_image(image, top, right, bottom, left):
     return cropped
 
 
+def crop_image_px(image, top, right, bottom, left):
+    cropped = image.crop(
+        (
+            left,
+            top,
+            right,
+            bottom,
+        )
+    )
+    return cropped
+
+
 def extract_color_histogram(image, bins=(8, 8, 8)):
     hist = cv2.calcHist([image], [0, 1, 2], None, bins, [0, 256, 0, 256, 0, 256])
     cv2.normalize(hist, hist)

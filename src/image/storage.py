@@ -11,6 +11,7 @@ SSD_NAME = "T7"
 class ImageDatabase(Enum):
     LOCAL = "db/images"
     SAMSUNG_T7 = f"/Volumes/{SSD_NAME}/db/images"
+    SHARED = "db/shared"
 
 
 class ImageStorage:
@@ -60,3 +61,9 @@ class ImageStorage:
         if not self.has_image(image_id):
             raise FileNotFoundError
         return os.remove(f"{self.base_path}/{image_id}.jpg")
+
+    def get_all_keys(self):
+        return [p[:-4] for p in os.listdir(self.base_path)]
+
+    def size(self):
+        return len(os.listdir(self.base_path))
