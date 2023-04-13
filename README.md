@@ -9,13 +9,8 @@
 $ curl -sSL https://install.python-poetry.org | python3 -
 # Install dependencies
 $ poetry install
+# Download datasets
 $ poetry run setup
-```
-
-To add packages, you can use:
-
-```sh
-$ poetry add <package-name>
 ```
 
 ## Usage
