@@ -8,6 +8,7 @@ authors = ["haydendaly <hcd36@cornell.edu>"]
 lint = "src.scripts:lint"
 cgc = "src.scrape.cgc:main"
 notebook = "src.scripts:notebook"
+setup = "src.scripts:setup"
 
 [tool.poetry.dependencies]
 python = "^3.9"

@@ -13,6 +13,8 @@ $ poetry install
 $ poetry run setup
 ```
 
+If setup fails, make sure you have accepted the invite to `haydendaly/ds-poke-shared` which contains a dataset.
+
 ## Usage
 
 ### Jupyter
