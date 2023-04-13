@@ -49,6 +49,6 @@ def get_eng_checklists():
 
 
 def get_pokemontcg_df():
-    image_folder = "../db/pokemontcg.io/sets-eng/"
+    image_folder = "./db/pokemontcg.io/sets-eng/"
     image_files = glob.glob(image_folder + "**/*.jpg", recursive=True)
     return pd.DataFrame(image_files, columns=["file_path"])

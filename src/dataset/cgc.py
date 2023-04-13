@@ -10,10 +10,10 @@ def get_cgc_df():
     storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
 
     dfs = []
-    for file_name in os.listdir("../db/cgc/sub"):
+    for file_name in os.listdir("./db/cgc/sub"):
         if file_name.endswith(".json"):
             try:
-                df = pd.read_json(f"../db/cgc/sub/{file_name}")
+                df = pd.read_json(f"./db/cgc/sub/{file_name}")
                 dfs.append(df)
             except Exception as e:
                 print(e)
