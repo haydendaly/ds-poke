@@ -2,9 +2,8 @@ import asyncio
 import concurrent.futures
 import os
 
-from ..image import ImageDatabase, ImageStorage
-from ..shared import json_dump_file, json_load_file
-from .browser import SSRBrowser
+from src.scrape.browser import SSRBrowser
+from src.shared.storage import Database, ImageStorage, JSONStorage
 
 
 class PokumonScraper:
@@ -12,7 +11,8 @@ class PokumonScraper:
     POKUMON_BATCH_SIZE = 50
 
     def __init__(self, single_threaded=False):
-        self.storage = ImageStorage("pokumon", db=ImageDatabase.SAMSUNG_T7)
+        self.image_storage = ImageStorage("pokumon", db=Database.SAMSUNG_T7)
+        self.json_storage = JSONStorage("pokumon", db=Database.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
         cpus = os.cpu_count()
@@ -26,38 +26,14 @@ class PokumonScraper:
         self.get_persisted()
 
     def persist(self):
-        os.makedirs("./db/pokumon", exist_ok=True)
-
-        with open(f"./db/pokumon/card_links.json", "w") as f:
-            json_dump_file(list(self.card_links), f)
-        with open(f"./db/pokumon/pages.json", "w") as f:
-            json_dump_file(list(self.pages), f)
-        with open(f"./db/pokumon/cards.json", "w") as f:
-            json_dump_file(self.cards, f)
+        self.json_storage.set("card_links", list(self.card_links))
+        self.json_storage.set("pages", list(self.pages))
+        self.json_storage.set("cards", self.cards)
 
     def get_persisted(self):
-        os.makedirs("./db/pokumon", exist_ok=True)
-
-        self.card_links = set()
-        self.pages = set()
-        self.cards = dict()
-
-        os.makedirs("./db/pokumon", exist_ok=True)
-        try:
-            with open(f"./db/pokumon/card_links.json", "r") as f:
-                self.card_links = set(json_load_file(f))
-        except:
-            pass
-        try:
-            with open(f"./db/pokumon/pages.json", "r") as f:
-                self.pages = set(json_load_file(f))
-        except:
-            pass
-        try:
-            with open(f"./db/pokumon/cards.json", "r") as f:
-                self.cards = dict(json_load_file(f))
-        except:
-            pass
+        self.card_links = set(self.json_storage.get("card_links") or [])
+        self.pages = set(self.json_storage.get("pages") or [])
+        self.cards = dict(self.json_storage.get("cards") or {})
 
     async def get_page_links(self, page_num):
         self.pages.add(page_num)
@@ -109,7 +85,7 @@ class PokumonScraper:
             card_info = await self.get_card_info(url)
             if card_info is not None:
                 self.cards[url] = card_info
-                await self.storage.download_image_to_id_async(
+                await self.image_storage.download_to_id_async(
                     card_info["image_url"], card_info["id"]
                 )
             self.queue.task_done()

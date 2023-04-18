@@ -1,27 +1,24 @@
-import glob
-import json
 import os
 
 import pandas as pd
 
+from src.shared.storage import Database, JSONStorage
+
 
 def get_eng_checklists():
-    json_folder = "./db/cards/sets-eng/"
-    # open json_folder / sets-eng.json
-    sets_eng = None
-    with open("./db/cards/sets-eng.json") as f:
-        sets_eng = json.load(f)
+    pokemontcg_storage = JSONStorage("pokemontcg", db=Database.SAMSUNG_T7)
+    sets_eng = pokemontcg_storage.get("sets-eng", default=[])
 
     dfs = []
     id_to_set = dict()
 
     for set_obj in sets_eng:
-        set_path = json_folder + set_obj["id"] + ".json"
         id_to_set[set_obj["id"]] = set_obj
-        if os.path.exists(set_path):
-            with open(set_path) as f:
-                df = pd.read_json(f)
-                dfs.append(df)
+        set_data = pokemontcg_storage.get("sets-eng/" + set_obj["id"], default=None)
+        if set_data:
+            df = pd.DataFrame(set_data)
+            dfs.append(df)
+
     sets_eng_df = pd.concat(dfs)
     print_map = {
         "FirstEdition": "fe",
@@ -38,7 +35,7 @@ def get_eng_checklists():
         print_run = ""
         if row["print"]:
             print_run = print_map[row["print"]]
-        return f"./db/pokemontcg.io/sets-eng/{name}/{num}{print_run}.jpg"
+        return f"{pokemontcg_storage.base_path}/sets-eng/{name}/{num}{print_run}.jpg"
 
     def path_exists(row):
         return os.path.exists(row["path"])
@@ -49,6 +46,7 @@ def get_eng_checklists():
 
 
 def get_pokemontcg_df():
-    image_folder = "./db/pokemontcg.io/sets-eng/"
-    image_files = glob.glob(image_folder + "**/*.jpg", recursive=True)
+    pokemontcg_storage = JSONStorage("pokemontcg/sets-eng", db=Database.SAMSUNG_T7)
+    image_files = pokemontcg_storage.get_all_keys_recursive()
+
     return pd.DataFrame(image_files, columns=["file_path"])

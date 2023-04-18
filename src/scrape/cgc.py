@@ -4,10 +4,11 @@ import os
 import time
 from collections import deque
 
-from ..classification import LabelClassifier
-from ..image import ImageDatabase, ImageStorage
-from ..shared import POKEMON_TITLE, json_dump_file, json_load_file, swap_files
-from .browser import SSRBrowser
+from src.classification import LabelClassifier
+from src.scrape.browser import SSRBrowser
+from src.shared.constant import POKEMON_TITLE
+from src.shared.file import swap_files
+from src.shared.storage import Database, ImageStorage, JSONStorage
 
 
 class CGCScraper:
@@ -21,7 +22,8 @@ class CGCScraper:
     MAX_CONNECTIONS = 38
 
     def __init__(self, single_threaded=False):
-        self.storage = ImageStorage("cgc", db=ImageDatabase.SAMSUNG_T7)
+        self.image_storage = ImageStorage("cgc", db=Database.SAMSUNG_T7)
+        self.json_storage = JSONStorage("cgc", db=Database.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
         self.times = deque()
@@ -40,7 +42,7 @@ class CGCScraper:
 
     async def parse_card_info(self, cert_num: str, data):
         async with self.semaphore:
-            if self.storage.has_image("0_" + cert_num):
+            if self.image_storage.has("0_" + cert_num):
                 # print(f"Skipping {cert_num} because it already exists")
                 return False
             try:
@@ -72,12 +74,12 @@ class CGCScraper:
 
                 images = dom.select("div.certlookup-images img")
                 image_urls = [str(img["src"]) for img in images]
-                if len(image_urls) == 2 and self.storage:
-                    path_0, image_0 = self.storage.download_image_to_id(
+                if len(image_urls) == 2 and self.image_storage:
+                    path_0, image_0 = self.image_storage.download_to_id(
                         image_urls[0], "0_" + cert_num
                     )
                     if not self.label_classifier.is_front(image_0):
-                        path_1, image_1 = self.storage.download_image_to_id(
+                        path_1, image_1 = self.image_storage.download_to_id(
                             image_urls[1], "1_" + cert_num
                         )
                         if self.label_classifier.images_are_inverted(image_0, image_1):
@@ -90,37 +92,20 @@ class CGCScraper:
             return False
 
     def save_submission(self, sub_prefix, data):
-        os.makedirs("./db/cgc/sub", exist_ok=True)
+        self.json_storage.set(f"sub/{sub_prefix}", data)
 
-        with open(f"./db/cgc/sub/{sub_prefix}.json", "w") as f:
-            json_dump_file(data, f)
+    def has_submission(self, sub_prefix):
+        return self.json_storage.has(f"sub/{sub_prefix}")
 
     def persist(self):
-        os.makedirs("./db/cgc", exist_ok=True)
-
-        with open(f"./db/cgc/seen.json", "w") as f:
-            json_dump_file(list(self.seen), f)
-        with open(f"./db/cgc/aborted.json", "w") as f:
-            json_dump_file(list(self.aborted), f)
-        with open(f"./db/cgc/failed.json", "w") as f:
-            json_dump_file(list(self.failed), f)
+        self.json_storage.set("seen", list(self.seen))
+        self.json_storage.set("aborted", list(self.aborted))
+        self.json_storage.set("failed", list(self.failed))
 
     def get_persisted(self):
-        os.makedirs("./db/cgc", exist_ok=True)
-
-        self.seen = set()
-        self.aborted = set()
-        self.failed = set()
-
-        if os.path.exists("./db/cgc/seen.json"):
-            with open("./db/cgc/seen.json", "r") as f:
-                self.seen = set(json_load_file(f))
-        if os.path.exists("./db/cgc/aborted.json"):
-            with open("./db/cgc/aborted.json", "r") as f:
-                self.aborted = set(json_load_file(f))
-        if os.path.exists("./db/cgc/failed.json"):
-            with open("./db/cgc/failed.json", "r") as f:
-                self.failed = set(json_load_file(f))
+        self.seen = set(self.json_storage.get("seen", default=[]))
+        self.aborted = set(self.json_storage.get("aborted", default=[]))
+        self.failed = set(self.json_storage.get("failed", default=[]))
 
     async def cgc_worker(self, thread_num):
         while True:
@@ -141,10 +126,7 @@ class CGCScraper:
             if sub_prefix in self.seen:
                 self.queue.task_done()
                 continue
-            if (
-                os.path.exists(f"./db/cgc/sub/{sub_prefix}.json")
-                or sub_prefix in self.aborted
-            ):
+            if self.has_submission(sub_prefix) or sub_prefix in self.aborted:
                 self.seen.add(sub_prefix)
                 self.queue.task_done()
                 continue

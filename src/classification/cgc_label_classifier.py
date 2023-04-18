@@ -10,9 +10,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
-from ..image import crop_image, display_image
+from src.shared.image import crop_image, display_image
 
-WEIGHTS_PATH = "./db/models/label_classifier/"
+WEIGHTS_PATH = "./db/shared/models/label_classifier/"
 
 
 class LabelClassifier:
@@ -37,7 +37,7 @@ class LabelClassifier:
         return features
 
     def _train(self):
-        base_path = "./db/cgc/labels/"
+        base_path = "./db/local/labels/"
         front, back = os.listdir(base_path + "front/"), os.listdir(base_path + "back/")
         image_paths = [f"{base_path}front/{img}" for img in front]
         image_paths.extend([f"{base_path}back/{img}" for img in back])

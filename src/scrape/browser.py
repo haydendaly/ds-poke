@@ -1,7 +1,8 @@
 import aiohttp
+import requests
 from bs4 import BeautifulSoup
 
-from ..shared import NotImplementedError
+from src.shared.error import NotImplementedError
 
 # from selenium import webdriver
 # from selenium.webdriver.chrome.options import Options
@@ -32,7 +33,7 @@ class SSRBrowser:
             #     }
             # )
         else:
-            res = self.session.get(url)
+            res = requests.get(url)
 
         return BeautifulSoup(res.text, "html.parser")
 

@@ -16,7 +16,7 @@ def lint():
         subprocess.run(["isort", "src"])
 
         for file in glob.glob("src/**/*.py"):
-            if "__init__.py" in file:
+            if "__init__.py" in file or "archive/" in file:
                 continue
             subprocess.run(
                 [

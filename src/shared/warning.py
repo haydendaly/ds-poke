@@ -1,6 +1,6 @@
 import warnings
 
-from requests import RequestsDependencyWarning
+from requests import RequestsDependencyWarning  # type: ignore
 from setuptools import SetuptoolsDeprecationWarning
 
 

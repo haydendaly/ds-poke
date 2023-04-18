@@ -2,13 +2,4 @@
 *.pyc
 **/*.DS_Store
 **/*.ipynb_checkpoints
-db/cgc/labels/front/*
-db/cgc/labels/back/*
-db/pokemontcg.io/sets-eng/*
-db/pokemontcg.io/sets-jp/*
-db/cards/sets-eng/*
-db/cards/sets-jp/*
-db/cgc/sub/*
-db/cgc/seen.json
-db/cgc/*.json
-db/pokumon/*.json
+db/local/*
