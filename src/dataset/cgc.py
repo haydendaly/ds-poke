@@ -25,7 +25,7 @@ def get_cgc_df():
     images = set(image_storage.get_all_keys())
 
     def exists(row):
-        return str(row["cert_#"]) in images
+        return "0_" + str(row["cert_#"]) in images
 
     cgc_df["exists"] = cgc_df.apply(exists, axis=1)
     cgc_df = cgc_df[cgc_df["exists"]]

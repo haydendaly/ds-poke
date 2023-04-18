@@ -34,22 +34,3 @@ class JSONStorage(Storage):
 
     def get_df(self, json_id: str):
         return pd.DataFrame(self.get(json_id))
-
-    def get_all_keys(self):
-        return [
-            p[: -(len(self.extension) + 1)]
-            for p in os.listdir(self.base_path)
-            if p.endswith(self.extension) and p[0:2] != "._"
-        ]
-
-    def get_all_keys_recursive(self):
-        result = []
-        for root, dirs, files in os.walk(self.base_path):
-            for file in files:
-                if file.endswith(self.extension) and not file.startswith("._"):
-                    relative_path = os.path.relpath(root, self.base_path)
-                    key = os.path.join(
-                        relative_path, file[: -(len(self.extension) + 1)]
-                    )
-                    result.append(key)
-        return result

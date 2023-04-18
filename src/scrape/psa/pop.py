@@ -82,10 +82,10 @@ class PSAPopScraper:
         for i, set_number in enumerate(self.sets):
             try:
                 if self.scrape_set(set_number):
-                    time.sleep(1)
+                    time.sleep(5)
             except Exception as e:
                 print(e, set_number)
-                time.sleep(2)
+                time.sleep(10)
             if i % 10 == 0:
                 print(f"Scraped {i}/{len(self.sets)} sets")
 
@@ -99,20 +99,23 @@ class PSAPopScraper:
         if set_id:
             sets = [set_id]
         else:
+            if not self.sets:
+                self.get_persisted()
             sets = self.sets.keys()
 
         for set_number in sets:
             existing_data = self.sets_storage.get(set_number, default=None)
 
-            if existing_data:
-                cards_data = existing_data["data"]
-                for card in cards_data.values():
-                    all_cards.append(card)
+            try:
+                if existing_data:
+                    cards_data = existing_data
+                    for card in cards_data.values():
+                        all_cards.append(card)
+            except Exception as e:
+                print(e, set_number, existing_data)
+                break
 
-        return pd.DataFrame(all_cards)
-
-
-def main():
-    scraper = PSAPopScraper()
-    scraper.scrape()
-    print(len(scraper.sets))
+        cards_df = pd.DataFrame(all_cards)
+        cards_df = cards_df.set_index("SpecID")
+        cards_df = cards_df[~cards_df.index.duplicated(keep="first")]
+        return cards_df

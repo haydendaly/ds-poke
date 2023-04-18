@@ -14,7 +14,7 @@ from src.shared.storage import Database, ImageStorage, JSONStorage
 class CGCScraper:
     CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
     CGC_BASE_SUB_NUM = 2000000
-    CGC_TOP_SUB_NUM = 4126544
+    CGC_TOP_SUB_NUM = 4226544
     # cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
@@ -42,7 +42,7 @@ class CGCScraper:
 
     async def parse_card_info(self, cert_num: str, data):
         async with self.semaphore:
-            if self.image_storage.has("0_" + cert_num):
+            if self.image_storage.has("0_" + cert_num) or cert_num in self.failed:
                 # print(f"Skipping {cert_num} because it already exists")
                 return False
             try:
@@ -50,6 +50,7 @@ class CGCScraper:
                     dom = await self.browser.get_async(self.CGC_BASE_URL + cert_num)
                 except Exception as e:
                     time.sleep(0.1)
+                    self.failed.add(cert_num)
                     print(f"Failed to get {cert_num} because {e}")
                     return False
                 card_info = {}
@@ -64,6 +65,7 @@ class CGCScraper:
                         card_info[key] = value
                 if len(card_info) == 0:
                     # print(f"Failed to find card info for {cert_num}")
+                    self.failed.add(cert_num)
                     return False
                 card_data = {}
                 for key, value in card_info.items():
@@ -88,7 +90,7 @@ class CGCScraper:
                         return True
             except Exception as e:
                 # print("Error", e)
-                pass
+                self.failed.add(cert_num)
             return False
 
     def save_submission(self, sub_prefix, data):
@@ -123,7 +125,7 @@ class CGCScraper:
                     print(f"Submissions / second: {submission_rate}")
                     print("Time remaining (hours):", l / submission_rate / 3600)
                 self.persist()
-            if sub_prefix in self.seen:
+            if sub_prefix in self.seen or sub_prefix in self.aborted:
                 self.queue.task_done()
                 continue
             if self.has_submission(sub_prefix) or sub_prefix in self.aborted:
@@ -135,6 +137,8 @@ class CGCScraper:
             for i in range(1, 1000):
                 cert_num = sub_prefix + "{:0>3}".format(i)
                 if not await self.parse_card_info(cert_num, data):
+                    if i == 1:
+                        self.aborted.add(sub_prefix)
                     break
                 # dip if we hit a non-pokemon card first
                 if i == 1 and data and data[-1]["game"] != POKEMON_TITLE:
@@ -149,7 +153,7 @@ class CGCScraper:
     async def run(self):
         for sub_num in range(self.CGC_TOP_SUB_NUM, self.CGC_BASE_SUB_NUM, -1):
             sub_prefix = "{:0>7}".format(sub_num)
-            if sub_prefix not in self.seen:
+            if sub_prefix not in self.seen and sub_prefix not in self.aborted:
                 await self.queue.put(sub_prefix)
 
         print(
