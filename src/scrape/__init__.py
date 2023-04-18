@@ -1,2 +1,2 @@
 from .browser import *
-from .cgc import *
+from .cgc.cert import *

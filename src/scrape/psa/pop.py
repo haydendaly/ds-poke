@@ -1,10 +1,11 @@
+import time
 from datetime import datetime
 
 import pandas as pd
 import requests
 
 from src.scrape.browser import SSRBrowser
-from src.shared.storage import JSONStorage
+from src.shared.storage import Database, JSONStorage
 
 
 class PSAPopScraper:
@@ -14,13 +15,14 @@ class PSAPopScraper:
     def __init__(self):
         self.ssr_browser = SSRBrowser()
         self.sets = dict()
-        self.set_storage = JSONStorage("psa/pop")
+        self.set_list_storage = JSONStorage("psa/pop", db=Database.SAMSUNG_T7)
+        self.sets_storage = JSONStorage("psa/pop/sets", db=Database.SAMSUNG_T7)
 
     def persist(self):
-        self.set_storage.set("sets", self.sets)
+        self.set_list_storage.set("sets", self.sets)
 
     def get_persisted(self):
-        self.sets = self.set_storage.get("sets", default={})
+        self.sets = self.set_list_storage.get("sets", default={})
 
     def scrape_set_search(self):
         payload = {
@@ -39,11 +41,12 @@ class PSAPopScraper:
                 self.sets[set_info["HeadingID"]] = set_info
 
     def scrape_set(self, set_number):
-        existing_data = self.set_storage.get(f"sets/{set_number}", default=None)
+        existing_data, last_updated = self.sets_storage.get_with_metadata(
+            set_number, default=None
+        )
 
         if existing_data:
-            last_scraped_date = datetime.strptime(existing_data["date"], "%Y-%m-%d")
-            if (datetime.now() - last_scraped_date).days < 10:
+            if (datetime.now() - last_updated).days < 10:
                 return
 
         payload = {
@@ -59,7 +62,6 @@ class PSAPopScraper:
 
         if response.get("recordsFiltered") > 0 and "data" in response:
             set_data = {}
-            date_scraped = datetime.now().strftime("%Y-%m-%d")
 
             for item in response["data"]:
                 if item["SpecID"] == 0:
@@ -67,18 +69,23 @@ class PSAPopScraper:
 
                 set_data[item["SpecID"]] = item
 
-            formatted_data = {"date": date_scraped, "data": set_data}
-
-            self.set_storage.set(f"sets/{set_number}", formatted_data)
+            self.sets_storage.set(set_number, set_data)
+            return True
 
     def scrape(self):
         self.get_persisted()
 
         if not self.sets:
             self.scrape_set_search()
+            self.persist()
 
         for i, set_number in enumerate(self.sets):
-            self.scrape_set(set_number)
+            try:
+                if self.scrape_set(set_number):
+                    time.sleep(1)
+            except Exception as e:
+                print(e, set_number)
+                time.sleep(2)
             if i % 10 == 0:
                 print(f"Scraped {i}/{len(self.sets)} sets")
 
@@ -95,7 +102,7 @@ class PSAPopScraper:
             sets = self.sets.keys()
 
         for set_number in sets:
-            existing_data = self.set_storage.get(f"sets/{set_number}", default=None)
+            existing_data = self.sets_storage.get(set_number, default=None)
 
             if existing_data:
                 cards_data = existing_data["data"]

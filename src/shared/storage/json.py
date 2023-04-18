@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 import pandas as pd
 
@@ -17,6 +18,14 @@ class JSONStorage(Storage):
         with open(f"{self.base_path}/{json_id}.{self.extension}", "r") as f:
             data = json_load_file(f)
             return data["data"]
+
+    def get_with_metadata(self, json_id: str, default=[]):
+        if not self.has(json_id):
+            return default, datetime.now()
+        with open(f"{self.base_path}/{json_id}.{self.extension}", "r") as f:
+            data = json_load_file(f)
+            last_updated = datetime.strptime(data["last_updated"], "%Y-%m-%d %H:%M:%S")
+            return data["data"], last_updated
 
     def set(self, json_id: str, data):
         data_with_metadata = {"last_updated": get_date_time_str(), "data": data}
