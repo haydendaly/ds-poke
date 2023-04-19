@@ -19,11 +19,12 @@ class CGCScraper:
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
     )
-    MAX_CONNECTIONS = 38
+    MAX_CONNECTIONS = 58
 
     def __init__(self, single_threaded=False):
         self.image_storage = ImageStorage("cgc", db=Database.SAMSUNG_T7)
         self.json_storage = JSONStorage("cgc", db=Database.SAMSUNG_T7)
+        self.sub_storage = JSONStorage("cgc/sub", db=Database.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
         self.times = deque()
@@ -32,7 +33,7 @@ class CGCScraper:
         if cpus is None or single_threaded:
             cpus = 1
         else:
-            cpus *= 4
+            cpus *= 6
         self.num_threads = cpus
         self.queue = asyncio.Queue()
 
@@ -42,7 +43,7 @@ class CGCScraper:
 
     async def parse_card_info(self, cert_num: str, data):
         async with self.semaphore:
-            if self.image_storage.has("0_" + cert_num) or cert_num in self.failed:
+            if cert_num in self.failed:
                 # print(f"Skipping {cert_num} because it already exists")
                 return False
             try:
@@ -71,41 +72,42 @@ class CGCScraper:
                 for key, value in card_info.items():
                     card_data[key.lower().replace(" ", "_", 3)] = value
 
-                if card_data["game"] != POKEMON_TITLE:
-                    return True
-
                 images = dom.select("div.certlookup-images img")
                 image_urls = [str(img["src"]) for img in images]
-                if len(image_urls) == 2 and self.image_storage:
-                    path_0, image_0 = self.image_storage.download_to_id(
-                        image_urls[0], "0_" + cert_num
-                    )
-                    if not self.label_classifier.is_front(image_0):
-                        path_1, image_1 = self.image_storage.download_to_id(
-                            image_urls[1], "1_" + cert_num
-                        )
-                        if self.label_classifier.images_are_inverted(image_0, image_1):
-                            swap_files(path_0, path_1)
-                        data.append(card_data)
-                        return True
+                card_data["image_urls"] = image_urls
+                # if card_data["game"] == POKEMON_TITLE and not self.image_storage.has(
+                #     "0_" + cert_num
+                # ):
+                #     if len(image_urls) == 2:
+                #         path_0, image_0 = self.image_storage.download_to_id(
+                #             image_urls[0], "0_" + cert_num
+                #         )
+                #         if not self.label_classifier.is_front(image_0):
+                #             path_1, image_1 = self.image_storage.download_to_id(
+                #                 image_urls[1], "1_" + cert_num
+                #             )
+                #             if self.label_classifier.images_are_inverted(
+                #                 image_0, image_1
+                #             ):
+                #                 swap_files(path_0, path_1)
+                data.append(card_data)
+                return True
             except Exception as e:
                 # print("Error", e)
                 self.failed.add(cert_num)
             return False
 
     def save_submission(self, sub_prefix, data):
-        self.json_storage.set(f"sub/{sub_prefix}", data)
+        self.sub_storage.set(sub_prefix, data)
 
     def has_submission(self, sub_prefix):
-        return self.json_storage.has(f"sub/{sub_prefix}")
+        return self.sub_storage.has(sub_prefix)
 
     def persist(self):
-        self.json_storage.set("seen", list(self.seen))
         self.json_storage.set("aborted", list(self.aborted))
         self.json_storage.set("failed", list(self.failed))
 
     def get_persisted(self):
-        self.seen = set(self.json_storage.get("seen", default=[]))
         self.aborted = set(self.json_storage.get("aborted", default=[]))
         self.failed = set(self.json_storage.get("failed", default=[]))
 
@@ -116,23 +118,13 @@ class CGCScraper:
             if l % self.CGC_BATCH_SIZE == 0:
                 self.times.append(time.time())
                 print(f"{thread_num}: Submissions remaining: {l}")
-                if len(self.times) > 2:
+                if len(self.times) > 10:
                     submission_rate = (
-                        self.CGC_BATCH_SIZE
-                        * len(self.times)
-                        / (self.times[-1] - self.times[0])
+                        self.CGC_BATCH_SIZE * 10 / (self.times[-1] - self.times[-9])
                     )
                     print(f"Submissions / second: {submission_rate}")
                     print("Time remaining (hours):", l / submission_rate / 3600)
                 self.persist()
-            if sub_prefix in self.seen or sub_prefix in self.aborted:
-                self.queue.task_done()
-                continue
-            if self.has_submission(sub_prefix) or sub_prefix in self.aborted:
-                self.seen.add(sub_prefix)
-                self.queue.task_done()
-                continue
-            self.seen.add(sub_prefix)
             data = []
             for i in range(1, 1000):
                 cert_num = sub_prefix + "{:0>3}".format(i)
@@ -151,6 +143,7 @@ class CGCScraper:
             self.queue.task_done()
 
     async def run(self):
+        self.seen = set(self.sub_storage.get_all_keys())
         for sub_num in range(self.CGC_TOP_SUB_NUM, self.CGC_BASE_SUB_NUM, -1):
             sub_prefix = "{:0>7}".format(sub_num)
             if sub_prefix not in self.seen and sub_prefix not in self.aborted:

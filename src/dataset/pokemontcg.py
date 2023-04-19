@@ -4,8 +4,8 @@ from src.shared.storage import Database, JSONStorage
 
 
 def get_pokemontcg_df():
-    json_storage = JSONStorage("pokemontcg", db=Database.SAMSUNG_T7)
-    image_storage = JSONStorage("pokemontcg/sets-eng", db=Database.SAMSUNG_T7)
+    json_storage = JSONStorage("pokemontcg", db=Database.LOCAL)
+    image_storage = JSONStorage("pokemontcg/sets-eng", db=Database.LOCAL)
     sets_eng = json_storage.get("sets-eng", default=[])
 
     dfs = []

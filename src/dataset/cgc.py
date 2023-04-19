@@ -1,3 +1,5 @@
+import concurrent.futures
+
 import pandas as pd
 
 from src.shared.constant import POKEMON_TITLE
@@ -9,14 +11,24 @@ def get_cgc_df():
     sub_storage = JSONStorage("cgc/sub", db=Database.SAMSUNG_T7)
 
     dfs = []
-    for key in sub_storage.get_all_keys():
-        try:
-            df = sub_storage.get_df(key)
-            dfs.append(df)
-        except Exception as e:
-            print(e)
-    cgc_df = pd.concat(dfs, ignore_index=True)
 
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future_to_key = {
+            executor.submit(sub_storage.get_df, key): key
+            for key in sub_storage.get_all_keys()
+        }
+
+        for future in concurrent.futures.as_completed(future_to_key):
+            key = future_to_key[future]
+            try:
+                df = future.result()
+                dfs.append(df)
+            except Exception as e:
+                print(e)
+            if len(dfs) % 1000 == 0:
+                print(len(dfs))
+
+    cgc_df = pd.concat(dfs, ignore_index=True)
     cgc_df = cgc_df[cgc_df["game"] == POKEMON_TITLE]
     cgc_df["key"] = cgc_df["cert_#"]
     cgc_df = cgc_df.set_index("key")

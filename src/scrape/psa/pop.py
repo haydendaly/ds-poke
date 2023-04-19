@@ -91,7 +91,11 @@ class PSAPopScraper:
 
     def get_sets_df(self):
         sets_data = list(self.sets.values())
-        return pd.DataFrame(sets_data)
+        sets_df = pd.DataFrame(sets_data)
+        sets_df["set_id"] = sets_df["HeadingID"]
+        sets_df = sets_df.set_index("HeadingID")
+        sets_df = sets_df[~sets_df.index.duplicated(keep="first")]
+        return sets_df
 
     def get_cards_df(self, set_id=None):
         all_cards = []
@@ -103,13 +107,13 @@ class PSAPopScraper:
                 self.get_persisted()
             sets = self.sets.keys()
 
-        for set_number in sets:
+        for set_number in list(sets):
             existing_data = self.sets_storage.get(set_number, default=None)
 
             try:
                 if existing_data:
-                    cards_data = existing_data
-                    for card in cards_data.values():
+                    for card in existing_data.values():
+                        card["set_id"] = set_number
                         all_cards.append(card)
             except Exception as e:
                 print(e, set_number, existing_data)
@@ -118,4 +122,11 @@ class PSAPopScraper:
         cards_df = pd.DataFrame(all_cards)
         cards_df = cards_df.set_index("SpecID")
         cards_df = cards_df[~cards_df.index.duplicated(keep="first")]
-        return cards_df
+
+        sets_df = self.get_sets_df()
+        cards_df["set_id"] = cards_df["set_id"].astype(str)
+        sets_df["set_id"] = sets_df["set_id"].astype(str)
+
+        merged_df = cards_df.merge(sets_df, on="set_id", how="left")
+
+        return merged_df

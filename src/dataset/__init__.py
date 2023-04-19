@@ -1,4 +1,5 @@
 from .cgc import *
+from .pkmncards import *
 from .pokemontcg import *
 from .pokumon import *
 from .psa import *
