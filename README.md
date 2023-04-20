@@ -15,6 +15,16 @@ $ poetry run setup
 
 If setup fails, make sure you have accepted the invite to `haydendaly/ds-poke-shared` which contains a dataset.
 
+### Classification CGC Only
+
+If you are also working on the classification CGC only project, you can run:
+
+```sh
+$ poetry run update-cgc
+```
+
+Which clones the images / labels from the `haydendaly/ds-poke-shared-cgc` repo.
+
 ## Usage
 
 ### Jupyter
@@ -51,32 +61,42 @@ $ poetry run cgc
 
 ## Directory Hierarchy
 
-The project is broken into different modules which export the methods / variables specified in the respective `__init__.py` files.
+The project is broken into different modules which export the methods / variables specified in the respective `__init__.py` files. Goal is to have `*.py` files act as modules (ex: `src.shared` contains the exports of `src.shared.dataset` and all other files it contains).
 
 ```sh
 src
 ├── classification
 │   ├── __init__.py
-│   └── cgc_label_classifier.py
+│   ├── cgc_label_classifier.py
+│   ├── classification_cgc.ipynb
+│   └── classification_oneshot.ipynb
 ├── dataset
 │   ├── __init__.py
+│   ├── analysis.ipynb
 │   ├── cgc.py
-│   ├── dataset.ipynb
+│   ├── classification.py
+│   ├── pkmncards.py
 │   ├── pokemontcg.py
 │   ├── pokumon.py
+│   ├── prepare_classification_cgc.ipynb
+│   ├── prepare_classification_one_shot.ipynb
+│   ├── psa.py
 │   └── segmentation.py
 ├── scrape
 │   ├── __init__.py
 │   ├── browser.py
-│   ├── cgc.py
+│   ├── cgc
+│   │   ├── __init__.py
+│   │   └── cert.py
 │   ├── pokumon.py
 │   └── psa
 │       ├── __init__.py
-│       └── pop.py
+│       ├── pop.py
+│       └── price.py
 ├── scripts
 │   ├── __init__.py
 │   ├── archive
-│   │   └── main.py
+│   │   └── reformat_json.py
 │   └── main.py
 ├── segmentation
 │   ├── __init__.py
@@ -94,6 +114,7 @@ src
     ├── storage
     │   ├── __init__.py
     │   ├── base.py
+    │   ├── dataframe.py
     │   ├── image.py
     │   └── json.py
     ├── time.py
