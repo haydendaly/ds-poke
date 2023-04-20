@@ -9,7 +9,7 @@ def get_oneshot_classification_df():
     return classification_df
 
 
-def get_full_classification_df():
+def get_cgc_classification_df():
     classification_df = DataFrameStorage("classification", db=Database.SHARED).get(
         "full"
     )
