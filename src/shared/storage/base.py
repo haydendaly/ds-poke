@@ -8,7 +8,7 @@ class Database(Enum):
     LOCAL = "db/local"
     SAMSUNG_T7 = f"/Volumes/{SSD_NAME}/db"
     SHARED = "db/shared"
-    SHARED_CGC = "db/shared/cgc"
+    SHARED_CGC = "db/shared-cgc"
 
 
 class Storage:
