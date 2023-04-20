@@ -1,4 +1,5 @@
 import glob
+import os
 import subprocess
 import sys
 
@@ -57,6 +58,20 @@ def setup():
             "Failed to clone shared repo, make sure you accepted the invitation to",
             shared_repo,
         )
+
+
+def update_cgc():
+    shared_repo = "https://github.com/haydendaly/ds-poke-shared-cgc.git"
+    if os.path.exists("./db/shared-cgc"):
+        subprocess.run(["git", "pull"], cwd="./db/shared-cgc")
+    else:
+        try:
+            subprocess.run(["git", "clone", shared_repo, "./db/shared-cgc"])
+        except:
+            print(
+                "Failed to clone shared repo, make sure you accepted the invitation to",
+                shared_repo,
+            )
 
 
 if __name__ == "__main__":

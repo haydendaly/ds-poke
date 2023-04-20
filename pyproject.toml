@@ -7,6 +7,7 @@ authors = ["haydendaly <hcd36@cornell.edu>"]
 [tool.poetry.scripts]
 lint = "src.scripts:lint"
 cgc = "src.scrape.cgc:main"
+update-cgc = "src.scripts:update_cgc"
 notebook = "src.scripts:notebook"
 setup = "src.scripts:setup"
 

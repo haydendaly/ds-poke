@@ -2,7 +2,8 @@
   "files.exclude": {
     "**/.ipynb_checkpoints": true,
     "**/.pytest_cache": true,
-    "**/__pycache__": true
+    "**/__pycache__": true,
+    "db/**/*.jpg": true
   },
   "python.linting.enabled": true,
   "editor.formatOnSave": true,
