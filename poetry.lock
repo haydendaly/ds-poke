@@ -887,6 +887,22 @@ files = [
 ]
 
 [[package]]
+name = "ebaysdk"
+version = "2.2.0"
+description = "eBay SDK for Python"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "ebaysdk-2.2.0-py3-none-any.whl", hash = "sha256:e43bb4fd36494170bf42bc7fe5686c43103ec9bda235c4e716f3ecb7b0688d7d"},
+    {file = "ebaysdk-2.2.0.tar.gz", hash = "sha256:2eb875d706b481f59ca8dd3074538df7e5196814f9ce12d0ef84690343a9c7f3"},
+]
+
+[package.dependencies]
+lxml = "*"
+requests = "*"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.1"
 description = "Backport of PEP 654 (exception groups)"
@@ -4353,4 +4369,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "dd8980520738eaa06dc17414cff96aff3cdbd430eda0f373ca67cd70dda8a5f7"
+content-hash = "9d4aa4d9b4970289a110f75d614c87cc4bb86733424627ce4ad996aef59998dd"
