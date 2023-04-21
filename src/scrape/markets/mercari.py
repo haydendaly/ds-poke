@@ -36,7 +36,16 @@ class MercariMarket(Market):
                 image = image.replace("c!/w=240/thumb", "item/detail/orig")
                 image = image.replace("c!/w=240,f=webp/thumb", "item/detail/orig")
 
-                items.append({"price": price, "name": name, "image": image})
+                item_id = image.split("photos/")[1].split("_1.jpg")[0]
+
+                items.append(
+                    {
+                        "price": price,
+                        "name": name,
+                        "image": image,
+                        "item_id": f"{self.name}-{item_id}",
+                    }
+                )
             except Exception as e:
                 print(e)
 

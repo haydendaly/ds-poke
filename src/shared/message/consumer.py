@@ -1,13 +1,13 @@
 from typing import List
 
-from kafka import KafkaConsumer
+from confluent_kafka import Consumer
 
-from .json import json_loads
+from src.shared.json import json_loads
 
 
-class Consumer:
+class MessageConsumer:
     def __init__(self):
-        self.consumer = KafkaConsumer(
+        self.consumer = Consumer(
             bootstrap_servers="localhost:29092",
             value_deserializer=lambda v: json_loads(v),
         )

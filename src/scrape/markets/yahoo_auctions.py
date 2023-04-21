@@ -1,3 +1,5 @@
+from bs4.element import Tag
+
 from src.scrape.browser import SSRBrowser
 from src.shared.error import NotImplementedError
 
@@ -16,21 +18,29 @@ class YahooAuctionsMarket(Market):
     def search(self, query):
         url = self._get_search_url(query)
         dom = self.browser.get(url)
-        raw_auctions = dom.find_all("ul", class_="Products__items")[0].children
+        raw_auctions_container = dom.find_all("ul", class_="Products__items")[0]
+        raw_auctions = [
+            elem for elem in raw_auctions_container.children if isinstance(elem, Tag)
+        ]
 
         auctions = []
         for raw_auction in raw_auctions:
             try:
-                auction = list(raw_auction.find_all("a", "Product__imageLink"))[0]
-                thumbnail = auction["data-auction-img"]
-                full_image = thumbnail.split("?pri")[0]
-                auctions.append(
-                    {
-                        "title": auction["data-auction-title"],
-                        "image": full_image,
-                        "price": float(auction["data-auction-price"]),
-                    }
-                )
+                auction = raw_auction.find("a", "Product__imageLink")
+                image = auction["data-auction-img"]
+                image = image.split("?pri")[0]
+
+                item_id = auction["data-auction-id"]
+                title = auction["data-auction-title"]
+                price = float(auction["data-auction-price"])
+
+                auction = {
+                    "title": title,
+                    "image": image,
+                    "price": price,
+                    "item_id": f"{self.name}-{item_id}",
+                }
+                auctions.append(auction)
             except Exception as e:
                 print(e)
 

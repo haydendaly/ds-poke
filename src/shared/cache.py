@@ -2,32 +2,35 @@ from enum import Enum
 
 import redis
 
+from src.shared.json import jsonify
+
 
 class CacheDatabase(Enum):
     AUCTION = "auction"
 
 
 class Cache:
-    def __init__(self):
+    def __init__(self, db: CacheDatabase = CacheDatabase.AUCTION):
         self.cache = redis.Redis(host="localhost", port=6379, db=0)
+        self.database = db.value
 
-    def get(self, database: CacheDatabase, key: str):
-        return self.cache.get(f"{database.value}:{key}")
+    def get(self, key: str):
+        return self.cache.get(f"{self.database}:{key}")
 
-    def set(self, database: CacheDatabase, key: str, value, expiry=None):
-        return self.cache.set(f"{database.value}:{key}", value)
+    def set(self, key: str, value, expiry=None):
+        return self.cache.set(f"{self.database}:{key}", jsonify(value))
 
-    def delete(self, database: CacheDatabase, key: str):
-        return self.cache.delete(f"{database.value}:{key}")
+    def delete(self, key: str):
+        return self.cache.delete(f"{self.database}:{key}")
 
-    def exists(self, database: CacheDatabase, key: str):
-        return self.cache.exists(f"{database.value}:{key}")
+    def exists(self, key: str):
+        return self.cache.exists(f"{self.database}:{key}")
 
-    def keys(self, database: CacheDatabase, pattern: str):
+    def keys(self, pattern: str):
         return [
             key.decode("utf-8").split(":", 1)[1]
-            for key in self.cache.keys(f"{database.value}:{pattern}")
+            for key in self.cache.keys(f"{self.database}:{pattern}")
         ]
 
-    def flush(self, database: CacheDatabase):
-        return self.cache.delete(f"{database.value}:*")
+    def flush(self):
+        return self.cache.delete(f"{self.database}:*")
