@@ -1,3 +1,7 @@
 {
-  "recommendations": ["poeticandroid.vscode-poetry", "github.copilot"]
+  "recommendations": [
+    "poeticandroid.vscode-poetry",
+    "github.copilot",
+    "ms-python.black-formatter"
+  ]
 }
