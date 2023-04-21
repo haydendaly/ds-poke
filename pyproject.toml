@@ -10,7 +10,6 @@ cgc = "src.scrape.cgc:main"
 update-cgc = "src.scripts:update_cgc"
 notebook = "src.scripts:notebook"
 setup = "src.scripts:setup"
-ya = "src.scrape.markets.yahoo_auctions:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"

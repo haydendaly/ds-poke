@@ -26,19 +26,19 @@ class MercariMarket(Market):
         items = []
         for raw_item in raw_items:
             try:
-                item = raw_item.find("mer-item-thumbnail")
-                name = item["alt"]
-                items.append(
-                    {
-                        "price": float(item["price"]),
-                        "name": name,
-                        "image": item["src"].replace(
-                            "c!/w=240/thumb", "item/detail/orig"
-                        ),
-                    }
-                )
+                thumbnail_elem = raw_item.find("div", class_="merItemThumbnail")
+                price_elem = raw_item.find("span", class_="merPrice")
+
+                name = thumbnail_elem["aria-label"]
+                price = float(list(price_elem.children)[1].text.replace(",", "", 10))
+
+                image = thumbnail_elem.find("source")["srcset"]
+                image = image.replace("c!/w=240/thumb", "item/detail/orig")
+                image = image.replace("c!/w=240,f=webp/thumb", "item/detail/orig")
+
+                items.append({"price": price, "name": name, "image": image})
             except Exception as e:
-                pass
+                print(e)
 
         return items
 

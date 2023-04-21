@@ -33,9 +33,8 @@ class YahooAuctionsMarket(Market):
                 )
             except Exception as e:
                 print(e)
-                pass
 
         return auctions
 
     def get_item_details(self, item_id):
-        raise NotImplementedError("Yahoo! Auctions does not support item details")
+        raise NotImplementedError("Yahoo! Auctions does not support item details yet")
