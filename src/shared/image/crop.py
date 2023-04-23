@@ -1,11 +1,12 @@
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
+from PIL import Image
 
 from .color import *
 
 
-def crop_image(image, top, right, bottom, left):
+def crop_image(image, top, right, bottom, left, rotation=0):
+    if rotation != 0:
+        image = image.rotate(rotation, resample=Image.BICUBIC, expand=True)
+
     width, height = image.size
     cropped = image.crop(
         (
@@ -18,7 +19,10 @@ def crop_image(image, top, right, bottom, left):
     return cropped
 
 
-def crop_image_px(image, top, right, bottom, left):
+def crop_image_px(image, top, right, bottom, left, rotation=0):
+    if rotation != 0:
+        image = image.rotate(rotation, resample=Image.BICUBIC, expand=True)
+
     cropped = image.crop(
         (
             left,
