@@ -74,5 +74,9 @@ def update_cgc():
             )
 
 
+def docker():
+    subprocess.run(["docker-compose", "up", "-d"])
+
+
 if __name__ == "__main__":
     load_dotenv()

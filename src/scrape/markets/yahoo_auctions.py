@@ -8,7 +8,7 @@ from .market import Market
 
 class YahooAuctionsMarket(Market):
     def __init__(self):
-        super().__init__("Yahoo! Auctions", "http://auctions.yahoo.co.jp/", "ja")
+        super().__init__("yahoo-auctions", "http://auctions.yahoo.co.jp/", "ja")
         self.browser = SSRBrowser()
 
     def _get_search_url(self, query):

@@ -7,7 +7,7 @@ MERCARI_TIMEOUT = 3
 
 class MercariMarket(Market):
     def __init__(self):
-        super().__init__("Mercari JP", "https://www.mercari.com/jp", "ja")
+        super().__init__("mercari-jp", "https://www.mercari.com/jp", "ja")
         self.browser = CSRBrowser()
 
     def _get_search_url(self, query):

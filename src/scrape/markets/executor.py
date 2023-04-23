@@ -11,7 +11,7 @@ class MarketExecutor:
     def __init__(self, min_interval=10, max_interval=300, update_speed=0.01):
         self.markets = [MercariMarket(), YahooAuctionsMarket()]
         self.cache = Cache(CacheDatabase.AUCTION)
-        self.message_producer = MessageProducer("listings")
+        self.message_producer = MessageProducer()
         self.min_interval = min_interval
         self.max_interval = max_interval
         self.update_speed = update_speed
@@ -35,7 +35,7 @@ class MarketExecutor:
 
                     if not exists:
                         self.cache.set(item_id, item)
-                        self.message_producer.send(market.name, item)
+                        self.message_producer.send("listings." + market.name, item)
                         new_items += 1
 
                 speed = new_items / total_items

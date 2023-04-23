@@ -24,7 +24,7 @@ class Cache:
         return self.cache.delete(f"{self.database}:{key}")
 
     def exists(self, key: str):
-        return self.cache.exists(f"{self.database}:{key}")
+        return self.cache.exists(f"{self.database}:{key}") != 0
 
     def keys(self, pattern: str):
         return [

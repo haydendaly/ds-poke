@@ -8,13 +8,13 @@ from src.classification import LabelClassifier
 from src.scrape.browser import SSRBrowser
 from src.shared.constant import POKEMON_TITLE
 from src.shared.file import swap_files
-from src.shared.storage import Database, ImageStorage, JSONStorage
+from src.shared.storage import Database, DataFrameStorage, ImageStorage, JSONStorage
 
 
 class CGCScraper:
     CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
-    CGC_BASE_SUB_NUM = 2000000
-    CGC_TOP_SUB_NUM = 4226544
+    CGC_BASE_SUB_NUM = 1100000
+    CGC_TOP_SUB_NUM = 4426544
     # cert seems to be two parts: submission_id `4126544`, card_number in submission `002`
     CGC_BATCH_SIZE = (
         50  # how many submissions to process before persisting to seen.json
@@ -40,6 +40,19 @@ class CGCScraper:
         self.get_persisted()
         self.semaphore = asyncio.Semaphore(self.MAX_CONNECTIONS)
         self.label_classifier = LabelClassifier()
+
+    def get_images(self, cert_num, image_urls):
+        if not self.image_storage.has("0_" + cert_num):
+            if len(image_urls) == 2:
+                path_0, image_0 = self.image_storage.download_to_id(
+                    image_urls[0], "0_" + cert_num
+                )
+                if not self.label_classifier.is_front(image_0):
+                    path_1, image_1 = self.image_storage.download_to_id(
+                        image_urls[1], "1_" + cert_num
+                    )
+                    if self.label_classifier.images_are_inverted(image_0, image_1):
+                        swap_files(path_0, path_1)
 
     async def parse_card_info(self, cert_num: str, data):
         async with self.semaphore:
@@ -75,21 +88,8 @@ class CGCScraper:
                 images = dom.select("div.certlookup-images img")
                 image_urls = [str(img["src"]) for img in images]
                 card_data["image_urls"] = image_urls
-                # if card_data["game"] == POKEMON_TITLE and not self.image_storage.has(
-                #     "0_" + cert_num
-                # ):
-                #     if len(image_urls) == 2:
-                #         path_0, image_0 = self.image_storage.download_to_id(
-                #             image_urls[0], "0_" + cert_num
-                #         )
-                #         if not self.label_classifier.is_front(image_0):
-                #             path_1, image_1 = self.image_storage.download_to_id(
-                #                 image_urls[1], "1_" + cert_num
-                #             )
-                #             if self.label_classifier.images_are_inverted(
-                #                 image_0, image_1
-                #             ):
-                #                 swap_files(path_0, path_1)
+                if card_data["game"] == POKEMON_TITLE:
+                    self.get_images(cert_num, image_urls)
                 data.append(card_data)
                 return True
             except Exception as e:
@@ -142,6 +142,18 @@ class CGCScraper:
 
             self.queue.task_done()
 
+    async def image_worker(self, df, thread_num):
+        while True:
+            i = await self.queue.get()
+            if i % 200 == 0:
+                print(f"{thread_num}: Images remaining: {len(df) - i}")
+            row = df.iloc[i]
+            try:
+                self.get_images(str(row["cert_#"]), row["image_urls"])
+            except Exception as e:
+                print(f"Failed to get images for {row['cert_#']}: {e}")
+            self.queue.task_done()
+
     async def run(self):
         self.seen = set(self.sub_storage.get_all_keys())
         for sub_num in range(self.CGC_TOP_SUB_NUM, self.CGC_BASE_SUB_NUM, -1):
@@ -165,10 +177,35 @@ class CGCScraper:
             for w in workers:
                 w.cancel()
 
+    async def run_images(self):
+        storage = DataFrameStorage("cgc", db=Database.LOCAL)
+        df = storage.get("images")
+        for i in range(len(df)):
+            await self.queue.put(i)
+
+        print(f"Processing {self.queue.qsize()} images in {self.num_threads} threads")
+
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=self.num_threads
+        ) as executor:
+            workers = [
+                asyncio.create_task(self.image_worker(df, thread_num))
+                for thread_num in range(self.num_threads)
+            ]
+            await asyncio.gather(*workers)
+            await self.queue.join()
+            for w in workers:
+                w.cancel()
+
 
 def scrape_cgc():
     scraper = CGCScraper()
     return scraper.run()
+
+
+def scrape_images():
+    scraper = CGCScraper()
+    return scraper.run_images()
 
 
 def main():

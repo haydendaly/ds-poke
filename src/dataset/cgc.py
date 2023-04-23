@@ -1,4 +1,5 @@
 import concurrent.futures
+import os
 
 import pandas as pd
 
@@ -12,7 +13,9 @@ def get_cgc_df():
 
     dfs = []
 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    num_threads = int(os.cpu_count()) * 10  # type: ignore
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         future_to_key = {
             executor.submit(sub_storage.get_df, key): key
             for key in sub_storage.get_all_keys()
@@ -40,6 +43,5 @@ def get_cgc_df():
         return "0_" + str(row["cert_#"]) in images
 
     cgc_df["exists"] = cgc_df.apply(exists, axis=1)
-    cgc_df = cgc_df[cgc_df["exists"]]
 
     return cgc_df

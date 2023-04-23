@@ -13,7 +13,7 @@ PWCC_TIMEOUT = 1
 
 class PWCC(Market):
     def __init__(self):
-        super().__init__("PWCC", "https://www.pwccmarketplace.com/")
+        super().__init__("pwcc", "https://www.pwccmarketplace.com/")
         self.browser = CSRBrowser(headless=False)
 
     def _get_search_url(self, query, page_num=None):

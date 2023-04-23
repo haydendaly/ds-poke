@@ -9,7 +9,7 @@ EBAY_APP_ID = os.environ.get("EBAY_APP_ID")
 
 class eBay(Market):
     def __init__(self):
-        super().__init__("eBay", "https://ebay.com/", "en")
+        super().__init__("ebay", "https://ebay.com/", "en")
         self.api = Finding(appid=EBAY_APP_ID, config_file=None)
 
     def search(self, query):
