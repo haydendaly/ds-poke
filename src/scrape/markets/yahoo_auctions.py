@@ -19,9 +19,7 @@ class YahooAuctionsMarket(Market):
         url = self._get_search_url(query)
         dom = self.browser.get(url)
         raw_auctions_container = dom.find_all("ul", class_="Products__items")[0]
-        raw_auctions = [
-            elem for elem in raw_auctions_container.children if isinstance(elem, Tag)
-        ]
+        raw_auctions = [elem for elem in raw_auctions_container.children]
 
         auctions = []
         for raw_auction in raw_auctions:

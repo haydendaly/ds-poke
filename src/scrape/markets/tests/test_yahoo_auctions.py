@@ -1,5 +1,3 @@
-import pytest
-
 from src.scrape.browser import SSRBrowser
 from src.scrape.markets.yahoo_auctions import YahooAuctionsMarket
 
@@ -18,7 +16,22 @@ mock_search_response = [
 ]
 
 
-# Mock DOM object for testing
+class MockRawAuction:
+    def __init__(self, auction_data):
+        self.auction_data = dict()
+        self.auction_data["data-auction-id"] = "123"
+        self.auction_data["data-auction-img"] = auction_data["image"] + "?pri"
+        self.auction_data["data-auction-title"] = auction_data["title"]
+        self.auction_data["data-auction-price"] = str(auction_data["price"])
+
+    def find(self, tag, class_):
+        if tag == "a" and class_ == "Product__imageLink":
+            return self.auction_data
+
+    def __getitem__(self, key):
+        return self.auction_data[key]
+
+
 class MockDom:
     def __init__(self):
         self.children = [MockRawAuction(auction) for auction in mock_search_response]
@@ -28,37 +41,19 @@ class MockDom:
             return [self]
 
 
-@pytest.fixture
-def mock_browser(monkeypatch):
-    def mock_get(self, url):
-        return MockDom()
-
-    monkeypatch.setattr(SSRBrowser, "get", mock_get)
+class MockSSRBrowser(SSRBrowser):
+    def get(self, url):
+        dom = MockDom()
+        return dom
 
 
-def test_yahoo_auctions_market_search(mock_browser):
+def test_yahoo_auctions_market_search():
     market = YahooAuctionsMarket()
+    market.browser = MockSSRBrowser()
     search_results = market.search("pokemon")
-
-    print(search_results)
 
     assert len(search_results) == len(mock_search_response)
     for i in range(len(search_results)):
         assert search_results[i]["title"] == mock_search_response[i]["title"]
         assert search_results[i]["image"] == mock_search_response[i]["image"]
         assert search_results[i]["price"] == mock_search_response[i]["price"]
-
-
-class MockRawAuction:
-    def __init__(self, auction_data):
-        self.auction_data = dict()
-        self.auction_data["data-auction-img"] = auction_data["image"] + "?pri"
-        self.auction_data["data-auction-title"] = auction_data["title"]
-        self.auction_data["data-auction-price"] = str(auction_data["price"])
-
-    def find_all(self, tag, class_):
-        if tag == "a" and class_ == "Product__imageLink":
-            return [self]
-
-    def __getitem__(self, key):
-        return self.auction_data[key]
