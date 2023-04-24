@@ -8,7 +8,8 @@ from src.classification import LabelClassifier
 from src.scrape.browser import SSRBrowser
 from src.shared.constant import POKEMON_TITLE
 from src.shared.file import swap_files
-from src.shared.storage import Database, DataFrameStorage, ImageStorage, JSONStorage
+from src.shared.storage import (Database, DataFrameStorage, ImageStorage,
+                                JSONStorage)
 
 
 class CGCScraper:
