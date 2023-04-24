@@ -10,12 +10,19 @@ class MercariMarket(Market):
         super().__init__("mercari-jp", "https://www.mercari.com/jp", "ja")
         self.browser = CSRBrowser()
 
-    def _get_search_url(self, query):
+    def _get_search_url(self, query, page=0):
         q = query.replace(" ", "%20")
-        return f"https://jp.mercari.com/search?keyword={q}&status=on_sale&sort=created_time&order=desc"
+        url = f"https://jp.mercari.com/search?keyword={q}&status=on_sale&sort=created_time&order=desc"
+        if page > 0:
+            url += f"&page_token=v1%3A{page}"
+        return url
 
-    def search(self, query):
-        url = self._get_search_url(query)
+    def _get_item_url(self, item_id):
+        item_id = item_id.split("-")[-1]
+        return f"https://jp.mercari.com/item/{item_id}"
+
+    def search(self, query, page=0):
+        url = self._get_search_url(query, page)
         self.browser.get(url, MERCARI_TIMEOUT)
         dom = self.browser.get_dom()
 

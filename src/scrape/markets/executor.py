@@ -8,13 +8,12 @@ from src.shared.message import MessageProducer
 
 
 class MarketExecutor:
-    def __init__(self, min_interval=10, max_interval=300, update_speed=0.01):
-        self.markets = [MercariMarket(), YahooAuctionsMarket()]
+    def __init__(self, min_interval=10, max_interval=300):
+        self.markets = [YahooAuctionsMarket(), MercariMarket()]
         self.cache = Cache(CacheDatabase.AUCTION)
         self.message_producer = MessageProducer()
         self.min_interval = min_interval
         self.max_interval = max_interval
-        self.update_speed = update_speed
 
     def run(self, query):
         for market in self.markets:
@@ -58,4 +57,4 @@ class MarketExecutor:
 
 def main():
     executor = MarketExecutor()
-    print(executor.run("pokemon"))
+    executor.run("pokemon")
