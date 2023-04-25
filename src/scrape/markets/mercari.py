@@ -48,9 +48,10 @@ class MercariMarket(Market):
                 items.append(
                     {
                         "price": price,
-                        "name": name,
-                        "image": image,
+                        "title": name,
+                        "thumbnail_url": image,
                         "item_id": f"{self.name}-{item_id}",
+                        "market": self.name,
                     }
                 )
             except Exception as e:

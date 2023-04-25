@@ -1,3 +1,5 @@
+from bs4 import BeautifulSoup
+
 from src.scrape.browser import SSRBrowser
 from src.shared.error import NotImplementedError
 
@@ -37,9 +39,10 @@ class YahooAuctionsMarket(Market):
 
                 auction = {
                     "title": title,
-                    "image": image,
+                    "thumbnail_url": image,
                     "price": price,
                     "item_id": f"{self.name}-{item_id}",
+                    "market": self.name,
                 }
                 auctions.append(auction)
             except Exception as e:
@@ -48,4 +51,52 @@ class YahooAuctionsMarket(Market):
         return auctions
 
     def get_item_details(self, item_id):
-        raise NotImplementedError("Yahoo! Auctions does not support item details yet")
+        url = self._get_item_url(item_id)
+        dom = self.browser.get(url)
+        raw_images_container = dom.find_all("ul", class_="ProductImage__images")[0]
+        raw_images = raw_images_container.find_all("li", class_="ProductImage__image")
+
+        images = []
+        for raw_image in raw_images:
+            try:
+                image_element = raw_image.find("img")
+                image_url = image_element["src"]
+                images.append(image_url)
+            except Exception as e:
+                pass
+
+        raw_description_element = dom.find(
+            "div", class_="ProductExplanation__commentBody"
+        )
+        description = BeautifulSoup(
+            raw_description_element.text, "html.parser"
+        ).get_text(strip=True)
+
+        raw_seller_element = dom.find("div", class_="Seller")
+        seller_name_element = raw_seller_element.find("p", class_="Seller__name")
+        seller_name = seller_name_element.get_text(strip=True)
+        seller_rating_element = raw_seller_element.find(
+            "div", class_="Seller__ratingRatio"
+        )
+        seller_rating = float(
+            seller_rating_element.get_text(strip=True).replace("%", "")
+        )
+        seller_location_element = raw_seller_element.find(
+            "dd", class_="Seller__areaName"
+        )
+        seller_location = seller_location_element.get_text(strip=True)
+
+        seller_info = {
+            "name": seller_name,
+            "rating": seller_rating,
+            "location": seller_location,
+        }
+
+        item_details = {
+            "item_id": item_id,
+            "images": images,
+            "description": description,
+            "seller_info": seller_info,
+        }
+
+        return item_details
