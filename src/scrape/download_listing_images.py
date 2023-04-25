@@ -1,4 +1,4 @@
-from src.scrape.markets import Market, PartialListingDetails
+from src.scrape.markets import Listing, Market
 from src.shared.storage import Database, ImageStorage
 from src.shared.threading import MessageWorkerBase
 
@@ -16,23 +16,19 @@ class ListingImageDownloader(MessageWorkerBase):
             Market.MERCARI: mercari_storage,
         }
 
-    def validate_message_format(self, message) -> bool:
-        return isinstance(message, PartialListingDetails)
-
-    async def process_message(self, message):
+    async def process_message(self, message: Listing):
         try:
             market = message["market"]
             print(
-                f"Downloading image for {market} listing {message['item_id']}",
-                message["images"],
+                f"Downloading {len(message['raw_image_urls'])} images for {market} listing {message['item_id']}"
             )
-            market = message["market"]
+            market = Market(message["market"])
             if market not in self.markets:
-                return False, f"unknown market {market}"
+                return False, f"unsupported market {market}"
 
-            for i, image_url in enumerate(message["images"]):
-                image_id = f"{message['item_id']}_{i}"
-                await self.markets[market].download_to_id_async(image_url, image_id)
+            # for i, image_url in enumerate(message["raw_image_urls"]):
+            #     image_id = f"{message['item_id']}_{i}"
+            #     await self.markets[market].download_to_id_async(image_url, image_id)
 
         except Exception as e:
             return False, e

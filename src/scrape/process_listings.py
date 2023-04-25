@@ -1,8 +1,8 @@
 import asyncio
 from typing import Optional, Tuple
 
-from src.scrape.markets import (MercariMarket, PartialListing,
-                                YahooAuctionsMarket)
+from src.scrape.markets import (Listing, Market, MercariMarket, PartialListing,
+                                PartialListingDetails, YahooAuctionsMarket)
 from src.shared.threading import MessageWorkerBase
 
 
@@ -35,30 +35,27 @@ class ListingProcessor(MessageWorkerBase):
         }
         self.segmentation = SegmentationMock()
 
-    def validate_message_format(self, message) -> bool:
-        return isinstance(message, PartialListing)
-
-    async def process_message(self, message) -> Tuple[bool, Optional[str]]:
-        if not self.validate_message_format(message):
-            return False, "invalid message format"
+    async def process_message(
+        self, message: PartialListing
+    ) -> Tuple[bool, Optional[str]]:
         try:
             thumbnail_url = message["thumbnail_url"]
             card_bounds = self.segmentation.get_card_bounds(thumbnail_url)
             if not card_bounds:
                 return False, "no card bounds"
 
-            market = message["market"]
+            market = Market(message["market"])
             if market not in self.markets:
-                return False, f"unknown market {market}"
+                return False, f"unsupported market {market}"
+            topic = f"semiprocessed-listings.{market.value}"
 
             async with self.markets[market]["semaphore"]:
-                item_details = self.markets[market]["market"].get_item_details(
-                    message["item_id"]
-                )
-                item = {**message, **item_details}
-                await self.message_producer.send(
-                    f"semiprocessed-listings.{market}", item
-                )
+                item_details: PartialListingDetails = self.markets[market][
+                    "market"
+                ].get_item_details(message["item_id"])
+
+                item: Listing = {**message, **item_details}  # type: ignore
+                await self.message_producer.send(topic, item)
 
         except Exception as e:
             return False, str(e)

@@ -54,8 +54,8 @@ class MercariMarket(MarketBase):
                         "price": price,
                         "title": name,
                         "thumbnail_url": image,
-                        "item_id": f"{self.name}-{item_id}",
-                        "market": self.name,
+                        "item_id": f"{self.name.value}-{item_id}",
+                        "market": self.name.value,
                     }
                 )
             except Exception as e:
@@ -69,7 +69,13 @@ class MercariMarket(MarketBase):
         dom = self.browser.get_dom()
 
         # TODO(hayden): this code is shit but works
-        seller: Seller = {"name": "", "rating": 0.0, "url": None, "sales": None}
+        seller: Seller = {
+            "name": "",
+            "rating": 0.0,
+            "url": None,
+            "sales": None,
+            "location": None,
+        }
         seller_elem = dom.find("a", {"data-location": "item_details:seller_info"})
         if seller_elem and seller_elem.children:
             seller_elem_child = list(seller_elem.children)[0]
@@ -83,12 +89,11 @@ class MercariMarket(MarketBase):
         desc_elem = dom.find("mer-show-more")
         description = list(desc_elem.children)[0].text
 
-        image_elems = dom.find(
-            "div", {"data-testid": "vertical-thumbnail-scroll"}
-        ).find_all("img")
         image_urls = []
-        for image_elem in image_elems:
-            image_urls.append(image_elem["src"])
+        scroll_container = dom.find("div", {"data-testid": "vertical-thumbnail-scroll"})
+        if scroll_container:
+            for image_elem in scroll_container.find_all("img"):
+                image_urls.append(image_elem["src"])
 
         item: PartialListingDetails = {
             "raw_image_urls": image_urls,

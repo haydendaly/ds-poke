@@ -45,8 +45,8 @@ class YahooAuctionsMarket(MarketBase):
                     "title": title,
                     "thumbnail_url": image,
                     "price": price,
-                    "item_id": f"{self.name}-{item_id}",
-                    "market": self.name,
+                    "item_id": f"{self.name.value}-{item_id}",
+                    "market": self.name.value,
                 }
                 auctions.append(auction)
             except Exception as e:

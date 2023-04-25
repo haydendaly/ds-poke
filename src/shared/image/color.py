@@ -37,53 +37,6 @@ def display_image(image):
     plt.show()
 
 
-def crop_image(image, top, right, bottom, left):
-    width, height = image.size
-    cropped = image.crop(
-        (
-            left * width,
-            top * height,
-            (1 - right) * width,
-            (1 - bottom) * height,
-        )
-    )
-    return cropped
-
-
-def crop_image_px(image, top, right, bottom, left):
-    cropped = image.crop(
-        (
-            left,
-            top,
-            right,
-            bottom,
-        )
-    )
-    return cropped
-
-
-def extract_color_histogram(image, bins=(8, 8, 8)):
-    hist = cv2.calcHist([image], [0, 1, 2], None, bins, [0, 256, 0, 256, 0, 256])
-    cv2.normalize(hist, hist)
-    return hist.flatten()
-
-
-def find_closest_image(image, sample_images):
-    image_color = get_average_color(image)
-    closest_sample = None
-    min_distance = float("inf")
-
-    for i, sample in enumerate(sample_images):
-        sample_color = get_average_color(sample)
-        distance = color_distance(image_color, sample_color)
-
-        if distance < min_distance:
-            min_distance = distance
-            closest_sample = i
-
-    return closest_sample
-
-
 def extract_color_histogram(image, bins=(8, 8, 8)):
     hist = cv2.calcHist([image], [0, 1, 2], None, bins, [0, 256, 0, 256, 0, 256])
     cv2.normalize(hist, hist)

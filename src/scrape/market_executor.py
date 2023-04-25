@@ -14,7 +14,7 @@ class MarketExecutor:
             yahoo_auctions.name: yahoo_auctions,
             mercari.name: mercari,
         }
-        self.cache = Cache(CacheDatabase.AUCTION)
+        self.cache = Cache(CacheDatabase.LISTING)
         self.min_interval = min_interval
         self.max_interval = max_interval
 
@@ -32,38 +32,43 @@ class MarketExecutor:
         return min(max(adaptive_interval, self.min_interval), self.max_interval)
 
     async def execute_market(self, market: Market, query):
+        topic = f"raw-listings.{market.value}"
         while True:
-            start_time = time.time()
-            items = self.markets[market].search(query)
+            try:
+                start_time = time.time()
+                items = self.markets[market].search(query)
 
-            if items:
-                new_items = 0
-                total_items = len(items)
+                if items:
+                    new_items = 0
+                    total_items = len(items)
 
-                for item in items:
-                    item_id = item["item_id"]
-                    exists = self.cache.exists(item_id)
+                    for item in items:
+                        item_id = item["item_id"]
+                        exists = self.cache.exists(item_id)
 
-                    if not exists:
-                        self.cache.set(item_id, item)
-                        await self.message_producer.send(f"raw-listings.{market}", item)
-                        new_items += 1
+                        if not exists:
+                            self.cache.set(item_id, item)
+                            await self.message_producer.send(topic, item)
+                            new_items += 1
 
-                speed = new_items / total_items
-                interval = self.calculate_interval(speed)
-                execution_time = time.time() - start_time
-                print(
-                    f"Market: {market}, New Items: {new_items}, Total Items: {total_items}, Speed: {speed}, Interval: {interval}, Execution Time: {execution_time}"
-                )
+                    speed = new_items / total_items
+                    interval = self.calculate_interval(speed)
+                    execution_time = time.time() - start_time
+                    print(
+                        f"Market: {market.value}, New Items: {new_items}, Total Items: {total_items}, Speed: {speed}, Interval: {interval}, Execution Time: {execution_time}"
+                    )
 
-            else:
-                interval = self.max_interval
+                else:
+                    interval = self.max_interval
 
-            await asyncio.sleep(interval)
+                await asyncio.sleep(interval)
+            except Exception as e:
+                print(e)
+                await asyncio.sleep(self.min_interval)
 
     async def run(self, query):
         tasks = []
-        for market in self.markets.values():
+        for market in self.markets.keys():
             task = asyncio.create_task(self.execute_market(market, query))
             tasks.append(task)
         await asyncio.gather(*tasks)

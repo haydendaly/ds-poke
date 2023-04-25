@@ -11,7 +11,7 @@ class Market(Enum):
 
 class PartialListing(TypedDict):
     item_id: str
-    market: Market
+    market: str
     title: str
     thumbnail_url: Optional[str]
     price: Optional[float]

@@ -11,6 +11,8 @@ class MessageProducer:
         self.producer = AIOKafkaProducer(
             bootstrap_servers="localhost:29092",
             value_serializer=lambda v: jsonify(v).encode("utf-8"),
+            request_timeout_ms=30000,  # 30s
+            retry_backoff_ms=1000,  # 1s
         )
         await self.producer.start()
         return self
