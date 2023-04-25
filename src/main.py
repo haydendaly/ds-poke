@@ -1,8 +1,8 @@
 import asyncio
 
-import src.scrape.markets.executor as executor
-import src.scrape.markets.process_images as processor_images
-import src.scrape.markets.process_scrape as processor_scrape
+import src.scrape.executor as executor
+import src.scrape.process_images as processor_images
+import src.scrape.process_scrape as processor_scrape
 
 
 def market():

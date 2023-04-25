@@ -1,5 +1,5 @@
-from src.scrape.browser import SSRBrowser
 from src.scrape.markets.yahoo_auctions import YahooAuctionsMarket
+from src.shared.browser import SSRBrowser
 
 # Mock data for testing
 mock_search_response = [

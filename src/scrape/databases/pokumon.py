@@ -2,7 +2,7 @@ import asyncio
 import concurrent.futures
 import os
 
-from src.scrape.browser import SSRBrowser
+from src.shared.browser import SSRBrowser
 from src.shared.storage import Database, ImageStorage, JSONStorage
 
 

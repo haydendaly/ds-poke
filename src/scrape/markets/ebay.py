@@ -2,15 +2,15 @@ import os
 
 from ebaysdk.finding import Connection as Finding
 
-from .market import Market
+from src.scrape.markets.market import Market, MarketBase
 
 EBAY_APP_ID = os.environ.get("EBAY_APP_ID")
 
 
 # TODO(hayden): should do this as a webscraper instead of using the API
-class eBay(Market):
+class eBay(MarketBase):
     def __init__(self):
-        super().__init__("ebay", "https://ebay.com/", "en")
+        super().__init__(Market.EBAY, "https://ebay.com/")
         raise NotImplementedError("eBay does not support search yet")
         self.api = Finding(appid=EBAY_APP_ID, config_file=None)
 

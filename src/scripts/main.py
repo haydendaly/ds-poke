@@ -78,5 +78,9 @@ def docker():
     subprocess.run(["docker-compose", "up", "-d"])
 
 
+def typecheck():
+    subprocess.run(["mypy", "src"])
+
+
 if __name__ == "__main__":
     load_dotenv()
