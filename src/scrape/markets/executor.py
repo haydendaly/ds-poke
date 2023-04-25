@@ -1,5 +1,5 @@
+import asyncio
 import time
-from threading import Thread
 
 from src.scrape.markets.mercari import MercariMarket
 from src.scrape.markets.yahoo_auctions import YahooAuctionsMarket
@@ -8,19 +8,27 @@ from src.shared.message import MessageProducer
 
 
 class MarketExecutor:
-    def __init__(self, min_interval=10, max_interval=300, update_speed=0.01):
-        self.markets = [MercariMarket(), YahooAuctionsMarket()]
+    def __init__(self, min_interval=10, max_interval=300):
+        self.markets = [YahooAuctionsMarket(), MercariMarket()]
         self.cache = Cache(CacheDatabase.AUCTION)
-        self.message_producer = MessageProducer()
         self.min_interval = min_interval
         self.max_interval = max_interval
-        self.update_speed = update_speed
 
-    def run(self, query):
-        for market in self.markets:
-            Thread(target=self.execute_market, args=(market, query)).start()
+    async def __aenter__(self):
+        self.message_producer = await MessageProducer().__aenter__()
+        return self
 
-    def execute_market(self, market, query):
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.message_producer.__aexit__(exc_type, exc_val, exc_tb)
+        pass
+
+    # adapt query interval based on speed
+    def calculate_interval(self, speed):
+        interval_range = self.max_interval - self.min_interval
+        adaptive_interval = interval_range * (1 - speed) + self.min_interval
+        return min(max(adaptive_interval, self.min_interval), self.max_interval)
+
+    async def execute_market(self, market, query):
         while True:
             start_time = time.time()
             items = market.search(query)
@@ -35,7 +43,9 @@ class MarketExecutor:
 
                     if not exists:
                         self.cache.set(item_id, item)
-                        self.message_producer.send("listings." + market.name, item)
+                        await self.message_producer.send(
+                            "raw-listings." + market.name, item
+                        )
                         new_items += 1
 
                 speed = new_items / total_items
@@ -48,14 +58,16 @@ class MarketExecutor:
             else:
                 interval = self.max_interval
 
-            time.sleep(interval)
+            await asyncio.sleep(interval)
 
-    def calculate_interval(self, speed):
-        interval_range = self.max_interval - self.min_interval
-        adaptive_interval = interval_range * (1 - speed) + self.min_interval
-        return min(max(adaptive_interval, self.min_interval), self.max_interval)
+    async def run(self, query):
+        tasks = []
+        for market in self.markets:
+            task = asyncio.create_task(self.execute_market(market, query))
+            tasks.append(task)
+        await asyncio.gather(*tasks)
 
 
-def main():
-    executor = MarketExecutor()
-    print(executor.run("pokemon"))
+async def run():
+    async with MarketExecutor() as executor:
+        await executor.run("pokemon")

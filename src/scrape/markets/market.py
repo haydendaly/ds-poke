@@ -5,7 +5,7 @@ class Market:
         self.url = url
         self.language = language
 
-    def search(self, query):
+    def search(self, query, page=0):
         # search for items based on the query
         pass
 

@@ -6,14 +6,13 @@ authors = ["haydendaly <hcd36@cornell.edu>"]
 
 [tool.poetry.scripts]
 lint = "src.scripts:lint"
-cgc = "src.scrape.cgc:main"
 update-cgc = "src.scripts:update_cgc"
 notebook = "src.scripts:notebook"
 setup = "src.scripts:setup"
-market = "src.scrape.markets.executor:main"
-log = "src.scrape.markets.log:main"
 docker = "src.scripts:docker"
-au_train = "src.classification.au_classifier:main"
+market = "src.main:market"
+process_scrape = "src.main:process_scrape"
+process_images = "src.main:process_images"
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -71,6 +70,7 @@ ebaysdk = "^2.2.0"
 redis = "^4.5.4"
 kafka-python = "^2.0.2"
 yolov7 = "^0.0.1"
+aiokafka = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.3.0"
