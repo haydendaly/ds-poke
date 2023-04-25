@@ -26,9 +26,7 @@ class YahooAuctionsMarket(MarketBase):
         url = self._get_search_url(query, page)
         dom = self.browser.get(url)
         raw_auctions_container = dom.find_all("ul", class_="Products__items")[0]
-        raw_auctions = [
-            elem for elem in raw_auctions_container.children if isinstance(elem, Tag)
-        ]
+        raw_auctions = [elem for elem in raw_auctions_container.children]
 
         auctions: List[PartialListing] = []
         for raw_auction in raw_auctions:
@@ -50,7 +48,7 @@ class YahooAuctionsMarket(MarketBase):
                 }
                 auctions.append(auction)
             except Exception as e:
-                pass
+                print(e)
 
         return auctions
 
