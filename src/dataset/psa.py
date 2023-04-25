@@ -1,4 +1,4 @@
-from src.scrape.psa import PSAPopScraper
+from src.scrape.graders.psa import PSAPopScraper
 
 
 def get_psa_pop_df():
