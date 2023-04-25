@@ -1,32 +1,34 @@
+from typing import List
+
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 
-from src.scrape.browser import SSRBrowser
-from src.shared.error import NotImplementedError
+from src.scrape.markets.market import (Market, MarketBase, PartialListing,
+                                       PartialListingDetails, Seller)
+from src.shared.browser import SSRBrowser
 
-from .market import Market
 
-
-class YahooAuctionsMarket(Market):
+class YahooAuctionsMarket(MarketBase):
     def __init__(self):
-        super().__init__("yahoo-auctions", "http://auctions.yahoo.co.jp/", "ja")
+        super().__init__(Market.YAHOO_AUCTIONS, "http://auctions.yahoo.co.jp/")
         self.browser = SSRBrowser()
 
-    def _get_search_url(self, query, page=0):
+    def _get_search_url(self, query: str, page: int = 0) -> str:
         q = query.replace(" ", "+")
         # TODO(hayden): add page support
         return f"https://auctions.yahoo.co.jp/search/search?p={q}&va=pokemon&fixed=2&exflg=1&b=1&n=100&s1=new&o1=d&mode=2"
 
-    def _get_item_url(self, item_id):
+    def _get_item_url(self, item_id: str) -> str:
         item_id = item_id.split("-")[-1]
         return f"https://page.auctions.yahoo.co.jp/jp/auction/{item_id}"
 
-    def search(self, query, page=0):
+    def search(self, query: str, page: int = 0) -> List[PartialListing]:
         url = self._get_search_url(query, page)
         dom = self.browser.get(url)
         raw_auctions_container = dom.find_all("ul", class_="Products__items")[0]
         raw_auctions = [elem for elem in raw_auctions_container.children]
 
-        auctions = []
+        auctions: List[PartialListing] = []
         for raw_auction in raw_auctions:
             try:
                 auction = raw_auction.find("a", "Product__imageLink")
@@ -37,20 +39,20 @@ class YahooAuctionsMarket(Market):
                 title = auction["data-auction-title"]
                 price = float(auction["data-auction-price"])
 
-                auction = {
+                auction: PartialListing = {
                     "title": title,
                     "thumbnail_url": image,
                     "price": price,
-                    "item_id": f"{self.name}-{item_id}",
-                    "market": self.name,
+                    "item_id": f"{self.name.value}-{item_id}",
+                    "market": self.name.value,
                 }
                 auctions.append(auction)
             except Exception as e:
-                pass
+                print(e)
 
         return auctions
 
-    def get_item_details(self, item_id):
+    def get_item_details(self, item_id: str) -> PartialListingDetails:
         url = self._get_item_url(item_id)
         dom = self.browser.get(url)
         raw_images_container = dom.find_all("ul", class_="ProductImage__images")[0]
@@ -86,17 +88,19 @@ class YahooAuctionsMarket(Market):
         )
         seller_location = seller_location_element.get_text(strip=True)
 
-        seller_info = {
+        seller: Seller = {
             "name": seller_name,
             "rating": seller_rating,
             "location": seller_location,
+            "url": None,
+            "sales": None,
         }
 
-        item_details = {
-            "item_id": item_id,
-            "images": images,
+        item_details: PartialListingDetails = {
+            "raw_image_urls": images,
             "description": description,
-            "seller_info": seller_info,
+            "seller": seller,
+            "url": url,
         }
 
         return item_details

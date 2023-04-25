@@ -1,2 +1,2 @@
-from .kafka_worker import *
+from .message_worker import *
 from .worker import *

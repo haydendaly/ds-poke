@@ -4,7 +4,7 @@ from datetime import datetime
 import pandas as pd
 import requests
 
-from src.scrape.browser import SSRBrowser
+from src.shared.browser import SSRBrowser
 from src.shared.storage import Database, JSONStorage
 
 

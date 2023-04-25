@@ -5,7 +5,7 @@ from src.shared.message import MessageConsumer, MessageProducer
 from src.shared.threading.worker import WorkerBase
 
 
-class KafkaWorkerBase(WorkerBase):
+class MessageWorkerBase(WorkerBase):
     def __init__(self, pattern, num_threads=None):
         self.pattern = pattern
         super().__init__(num_threads=num_threads)

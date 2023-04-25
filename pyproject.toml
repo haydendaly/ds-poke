@@ -9,10 +9,6 @@ lint = "src.scripts:lint"
 update-cgc = "src.scripts:update_cgc"
 notebook = "src.scripts:notebook"
 setup = "src.scripts:setup"
-docker = "src.scripts:docker"
-market = "src.main:market"
-process_scrape = "src.main:process_scrape"
-process_images = "src.main:process_images"
 
 [tool.poetry.dependencies]
 python = "^3.9"

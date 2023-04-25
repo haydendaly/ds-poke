@@ -1,17 +1,17 @@
 import asyncio
 
-import src.scrape.markets.executor as executor
-import src.scrape.markets.process_images as processor_images
-import src.scrape.markets.process_scrape as processor_scrape
+import src.scrape.download_listing_images as download_listing_images
+import src.scrape.market_executor as market_executor
+import src.scrape.process_listings as process_listings
 
 
 def market():
-    asyncio.run(executor.run())
+    asyncio.run(market_executor.run())
 
 
 def process_scrape():
-    asyncio.run(processor_scrape.run())
+    asyncio.run(process_listings.run())
 
 
 def process_images():
-    asyncio.run(processor_images.run())
+    asyncio.run(download_listing_images.run())
