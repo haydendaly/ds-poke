@@ -5,13 +5,14 @@ import time
 from collections import deque
 
 from src.classification import LabelClassifier
-from src.scrape.browser import SSRBrowser
+from src.shared.browser import SSRBrowser
 from src.shared.constant import POKEMON_TITLE
 from src.shared.file import swap_files
-from src.shared.storage import Database, DataFrameStorage, ImageStorage, JSONStorage
+from src.shared.storage import Database, ImageStorage, JSONStorage
+from src.shared.threading import WorkerBase
 
 
-class CGCScraper:
+class CGCScraper(WorkerBase):
     CGC_BASE_URL = "https://www.cgccards.com/certlookup/"
     CGC_BASE_SUB_NUM = 1100000
     CGC_TOP_SUB_NUM = 4426544
@@ -22,20 +23,19 @@ class CGCScraper:
     MAX_CONNECTIONS = 58
 
     def __init__(self, single_threaded=False):
+        cpus = os.cpu_count()
+        if cpus is None or single_threaded:
+            cpus = 1
+        else:
+            cpus *= 6
+        super().__init__(cpus)
+
         self.image_storage = ImageStorage("cgc", db=Database.SAMSUNG_T7)
         self.json_storage = JSONStorage("cgc", db=Database.SAMSUNG_T7)
         self.sub_storage = JSONStorage("cgc/sub", db=Database.SAMSUNG_T7)
         self.browser = SSRBrowser()
 
         self.times = deque()
-
-        cpus = os.cpu_count()
-        if cpus is None or single_threaded:
-            cpus = 1
-        else:
-            cpus *= 6
-        self.num_threads = cpus
-        self.queue = asyncio.Queue()
 
         self.get_persisted()
         self.semaphore = asyncio.Semaphore(self.MAX_CONNECTIONS)
@@ -111,7 +111,7 @@ class CGCScraper:
         self.aborted = set(self.json_storage.get("aborted", default=[]))
         self.failed = set(self.json_storage.get("failed", default=[]))
 
-    async def cgc_worker(self, thread_num):
+    async def worker(self, thread_num):
         while True:
             sub_prefix = await self.queue.get()
             l = self.queue.qsize()
@@ -142,18 +142,6 @@ class CGCScraper:
 
             self.queue.task_done()
 
-    async def image_worker(self, df, thread_num):
-        while True:
-            i = await self.queue.get()
-            if i % 200 == 0:
-                print(f"{thread_num}: Images remaining: {len(df) - i}")
-            row = df.iloc[i]
-            try:
-                self.get_images(str(row["cert_#"]), row["image_urls"])
-            except Exception as e:
-                print(f"Failed to get images for {row['cert_#']}: {e}")
-            self.queue.task_done()
-
     async def run(self):
         self.seen = set(self.sub_storage.get_all_keys())
         for sub_num in range(self.CGC_TOP_SUB_NUM, self.CGC_BASE_SUB_NUM, -1):
@@ -169,27 +157,7 @@ class CGCScraper:
             max_workers=self.num_threads
         ) as executor:
             workers = [
-                asyncio.create_task(self.cgc_worker(thread_num))
-                for thread_num in range(self.num_threads)
-            ]
-            await asyncio.gather(*workers)
-            await self.queue.join()
-            for w in workers:
-                w.cancel()
-
-    async def run_images(self):
-        storage = DataFrameStorage("cgc", db=Database.LOCAL)
-        df = storage.get("images")
-        for i in range(len(df)):
-            await self.queue.put(i)
-
-        print(f"Processing {self.queue.qsize()} images in {self.num_threads} threads")
-
-        with concurrent.futures.ThreadPoolExecutor(
-            max_workers=self.num_threads
-        ) as executor:
-            workers = [
-                asyncio.create_task(self.image_worker(df, thread_num))
+                asyncio.create_task(self.worker(thread_num))
                 for thread_num in range(self.num_threads)
             ]
             await asyncio.gather(*workers)
@@ -201,11 +169,6 @@ class CGCScraper:
 def scrape_cgc():
     scraper = CGCScraper()
     return scraper.run()
-
-
-def scrape_images():
-    scraper = CGCScraper()
-    return scraper.run_images()
 
 
 def main():

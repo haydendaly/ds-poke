@@ -6,20 +6,15 @@ import joblib
 import numpy as np
 import torch
 from PIL import Image
-
 # gradientboosting
 from sklearn.ensemble import GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 from src.shared.image import crop_image, display_image
+from src.shared.storage import Database, ImageStorage
 
 WEIGHTS_PATH = "./db/local/models/au_classifier"
-
-
-from src.shared.image import crop_image
-from src.shared.storage import Database, ImageStorage
 
 
 class AUClassifier:

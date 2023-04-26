@@ -1,20 +1,30 @@
-from kafka import KafkaProducer
+from aiokafka import AIOKafkaProducer
 
 from src.shared.json import jsonify
 
 
 class MessageProducer:
     def __init__(self):
-        self.producer = KafkaProducer(
-            bootstrap_servers=["localhost:29092"],
+        pass
+
+    async def __aenter__(self):
+        self.producer = AIOKafkaProducer(
+            bootstrap_servers="localhost:29092",
             value_serializer=lambda v: jsonify(v).encode("utf-8"),
+            request_timeout_ms=30000,  # 30s
+            retry_backoff_ms=1000,  # 1s
         )
+        await self.producer.start()
+        return self
 
-    def send(self, topic, data):
-        self.producer.send(topic, data)
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.close()
 
-    def flush(self):
-        self.producer.flush()
+    async def send(self, topic, data):
+        await self.producer.send(topic, data)
 
-    def close(self):
-        self.producer.close()
+    async def flush(self):
+        await self.producer.flush()
+
+    async def close(self):
+        await self.producer.stop()

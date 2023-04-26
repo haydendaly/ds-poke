@@ -1,26 +1,34 @@
 from typing import List
 
-from kafka import KafkaConsumer
+from aiokafka import AIOKafkaConsumer
 
 from src.shared.json import json_loads
 
 
 class MessageConsumer:
     def __init__(self):
-        self.consumer = KafkaConsumer(
-            bootstrap_servers=["localhost:29092"],
+        pass
+
+    async def __aenter__(self):
+        self.consumer = AIOKafkaConsumer(
+            bootstrap_servers="localhost:29092",
             value_deserializer=lambda v: json_loads(v),
         )
+        await self.consumer.start()
+        return self
 
-    def consume_topics(self, topics: List[str]):
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.close()
+
+    async def consume_topics(self, topics: List[str]):
         self.consumer.subscribe(topics)
-        for message in self.consumer:
+        async for message in self.consumer:
             yield message.value
 
-    def consume_pattern(self, pattern: str = "*"):
+    async def consume_pattern(self, pattern: str = "*"):
         self.consumer.subscribe(pattern=pattern)
-        for message in self.consumer:
+        async for message in self.consumer:
             yield message.value
 
-    def close(self):
-        self.consumer.close()
+    async def close(self):
+        await self.consumer.stop()

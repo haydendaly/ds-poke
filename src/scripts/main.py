@@ -74,8 +74,12 @@ def update_cgc():
             )
 
 
-def docker():
-    subprocess.run(["docker-compose", "up", "-d"])
+# def docker():
+#     subprocess.run(["docker-compose", "up", "-d"])
+
+
+# def typecheck():
+#     subprocess.run(["mypy", "src"])
 
 
 if __name__ == "__main__":

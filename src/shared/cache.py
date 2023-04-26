@@ -6,11 +6,11 @@ from src.shared.json import jsonify
 
 
 class CacheDatabase(Enum):
-    AUCTION = "auction"
+    LISTING = "listing"
 
 
 class Cache:
-    def __init__(self, db: CacheDatabase = CacheDatabase.AUCTION):
+    def __init__(self, db: CacheDatabase):
         self.cache = redis.Redis(host="localhost", port=6379, db=0)
         self.database = db.value
 

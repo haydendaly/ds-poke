@@ -2,17 +2,21 @@ import os
 
 from ebaysdk.finding import Connection as Finding
 
-from .market import Market
+from src.scrape.markets.market import Market, MarketBase
 
 EBAY_APP_ID = os.environ.get("EBAY_APP_ID")
 
 
-class eBay(Market):
+# TODO(hayden): should do this as a webscraper instead of using the API
+class eBay(MarketBase):
     def __init__(self):
-        super().__init__("ebay", "https://ebay.com/", "en")
+        super().__init__(Market.EBAY, "https://ebay.com/")
+        raise NotImplementedError("eBay does not support search yet")
         self.api = Finding(appid=EBAY_APP_ID, config_file=None)
 
     def search(self, query):
+        raise NotImplementedError("eBay does not support search yet")
+
         sort_order = "StartTimeNewest"
         itemFilters = [{"name": "ListingType", "value": "Auction"}]
         response = self.api.execute(

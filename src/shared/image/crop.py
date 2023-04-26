@@ -1,7 +1,5 @@
 from PIL import Image
 
-from .color import *
-
 
 def crop_image(image, top, right, bottom, left, rotation=0):
     if rotation != 0:

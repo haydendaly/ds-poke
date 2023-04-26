@@ -3,20 +3,19 @@ import re
 
 from selenium.webdriver.common.keys import Keys
 
-from src.scrape.browser import CSRBrowser
-
-from .market import Market
+from src.scrape.markets.market import Market, MarketBase
+from src.shared.browser import CSRBrowser
 
 PWCC_ITEMS_PER_PAGE = 96
 PWCC_TIMEOUT = 1
 
 
-class PWCC(Market):
+class PWCC(MarketBase):
     def __init__(self):
-        super().__init__("pwcc", "https://www.pwccmarketplace.com/")
+        super().__init__(Market.PWCC, "https://www.pwccmarketplace.com/")
         self.browser = CSRBrowser(headless=False)
 
-    def _get_search_url(self, query, page_num=None):
+    def _get_search_url(self, query, page_num=None) -> str:
         q = query.replace(" ", "+")
         base_url = f"https://www.pwccmarketplace.com/weekly-auction?q={q}&items_per_page={PWCC_ITEMS_PER_PAGE}"
         if page_num:
