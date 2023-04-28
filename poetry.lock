@@ -3119,7 +3119,7 @@ virtualenv = ">=20.10.0"
 name = "prometheus-client"
 version = "0.16.0"
 description = "Python client for the Prometheus monitoring system."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -5034,4 +5034,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d98e15828b30aa2950d3259a2cfd4e006936b17191168d92fb4246901ffeeba5"
+content-hash = "d04784544d27b403971377d700d84dec0fbcf63268ef77e32b4445246087c565"
