@@ -43,37 +43,23 @@ services:
     volumes:
       - redis:/data
 
-  prometheus:
-    image: prom/prometheus:latest
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-
-  grafana:
-    image: grafana/grafana:latest
-    ports:
-      - "3000:3000"
-    depends_on:
-      - prometheus
-
   market:
     build:
-      context: ./path/to/service_directory
+      context: ./Dockerfile.dev
       args:
-        ENTRYPOINT_MODULE: "src.main:market"
+        ENTRYPOINT_MODULE: "src.services.market:main"
 
-  process_scrape:
+  details:
     build:
-      context: ./path/to/service_directory
+      context: ./Dockerfile.dev
       args:
-        ENTRYPOINT_MODULE: "src.main:process_scrape"
+        ENTRYPOINT_MODULE: "src.services.details:main"
 
-  process_images:
+  images:
     build:
-      context: ./path/to/service_directory
+      context: ./Dockerfile.dev
       args:
-        ENTRYPOINT_MODULE: "src.main:process_images"
+        ENTRYPOINT_MODULE: "src.images.market:main"
 
 volumes:
   postgres:

@@ -3,5 +3,5 @@ import asyncio
 import src.scrape.process_listings as process_listings
 
 
-def process_scrape():
+def main():
     asyncio.run(process_listings.run())

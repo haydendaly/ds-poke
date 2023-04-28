@@ -1366,6 +1366,22 @@ torch = ["torch"]
 typing = ["types-PyYAML", "types-requests", "types-simplejson", "types-toml", "types-tqdm", "types-urllib3"]
 
 [[package]]
+name = "hupper"
+version = "1.12"
+description = "Integrated process monitor for developing and reloading daemons."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "hupper-1.12-py3-none-any.whl", hash = "sha256:b8bc41bb75939e816f30f118026d0ba99544af4d6992583df3b4813765af27ef"},
+    {file = "hupper-1.12.tar.gz", hash = "sha256:18b1653d9832c9f8e7d3401986c7e7af2ae6783616be0bc406bfe0b14134a5c6"},
+]
+
+[package.extras]
+docs = ["Sphinx", "pylons-sphinx-themes", "setuptools", "watchdog"]
+testing = ["mock", "pytest", "pytest-cov", "watchdog"]
+
+[[package]]
 name = "identify"
 version = "2.5.22"
 description = "File identification library for Python"
@@ -5034,4 +5050,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d04784544d27b403971377d700d84dec0fbcf63268ef77e32b4445246087c565"
+content-hash = "633142c655dbaa291a1077e6bdaaa756023c33f42755a0834311c336a0472335"
