@@ -10,6 +10,9 @@ update-cgc = "src.scripts:update_cgc"
 notebook = "src.scripts:notebook"
 setup = "src.scripts:setup"
 docker = "src.scripts:main:docker"
+market = "src.services.market:main"
+details = "src.services.details:main"
+images = "src.services.images:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
