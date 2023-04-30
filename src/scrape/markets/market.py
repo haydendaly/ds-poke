@@ -21,7 +21,7 @@ class Seller(TypedDict):
     name: str
     rating: float
     location: Optional[str]
-    url: Optional[str]
+    id: Optional[str]
     sales: Optional[int]
 
 
