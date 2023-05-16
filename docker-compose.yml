@@ -43,6 +43,24 @@ services:
     volumes:
       - redis:/data
 
+  # market:
+  #   build:
+  #     context: ./Dockerfile.dev
+  #     args:
+  #       ENTRYPOINT_MODULE: "src.services.market:main"
+
+  # details:
+  #   build:
+  #     context: ./Dockerfile.dev
+  #     args:
+  #       ENTRYPOINT_MODULE: "src.services.details:main"
+
+  # images:
+  #   build:
+  #     context: ./Dockerfile.dev
+  #     args:
+  #       ENTRYPOINT_MODULE: "src.images.market:main"
+
 volumes:
   postgres:
   redis:

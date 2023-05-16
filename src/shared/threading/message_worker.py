@@ -6,12 +6,13 @@ from src.shared.threading.worker import WorkerBase
 
 
 class MessageWorkerBase(WorkerBase):
-    def __init__(self, pattern, num_threads=None):
+    def __init__(self, pattern, group_id: str = "default", num_threads=None):
+        self.group_id = group_id
         self.pattern = pattern
         super().__init__(num_threads=num_threads)
 
     async def __aenter__(self):
-        self.message_consumer = await MessageConsumer().__aenter__()
+        self.message_consumer = await MessageConsumer(self.group_id).__aenter__()
         self.message_producer = await MessageProducer().__aenter__()
         return self
 
@@ -26,8 +27,12 @@ class MessageWorkerBase(WorkerBase):
         while True:
             message = await self.queue.get()
             success, error = await self.process_message(message)
+
             if error:
                 await self.handle_error(error)
+            else:
+                await self.message_consumer.commit()  # Commit the offset after successful processing
+
             self.queue.task_done()
 
     async def run(self):
@@ -37,7 +42,7 @@ class MessageWorkerBase(WorkerBase):
             workers = [
                 asyncio.create_task(self.worker()) for _ in range(self.num_threads)
             ]
-            async for message in self.message_consumer.consume_pattern(self.pattern):
+            async for message in self.message_consumer.consume_topics([self.pattern]):
                 await self.queue.put(message)
             await self.queue.join()
             for w in workers:

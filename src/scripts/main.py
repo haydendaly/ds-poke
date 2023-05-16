@@ -74,8 +74,31 @@ def update_cgc():
             )
 
 
-# def docker():
-#     subprocess.run(["docker-compose", "up", "-d"])
+def docker():
+    subprocess.run(["docker-compose", "up", "-d"])
+
+
+def docker_build():
+    if len(argv) < 1:
+        print("Usage: poetry run build <service_name> <dev?>")
+        return
+    service_name = argv[0]
+    build_context = f"./src/services/{service_name}"
+    entrypoint_module = f"src.services.{service_name}:main"
+    is_dev = argv and argv[1] == "dev"
+
+    subprocess.run(
+        [
+            "docker",
+            "build",
+            "-t",
+            service_name,
+            "--build-arg",
+            f"ENTRYPOINT_MODULE={entrypoint_module}",
+            "Dockerfile" + (".dev" if is_dev else ""),
+            build_context,
+        ],
+    )
 
 
 # def typecheck():
