@@ -73,6 +73,7 @@ yolov7 = "^0.0.1"
 aiokafka = "^0.8.0"
 prometheus-client = "^0.16.0"
 sqlalchemy = "^2.0.11"
+pytesseract = "^0.3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.3.0"
